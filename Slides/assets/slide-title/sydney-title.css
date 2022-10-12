@@ -3,7 +3,7 @@
  ***********/
 
 .remark-slide-content {
-  padding-top: 25px;
+  padding-top: 5px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -22,8 +22,8 @@ To specify the margin of the first title h1
 */
 
 .remark-slide-content > h1:first-of-type {
-  margin-top: 110px;
-  margin-bottom: -90px;
+  margin-top: 40px;
+  margin-bottom: -10px;
 }
 
 .remark-slide-content > h2:first-of-type {
@@ -595,6 +595,10 @@ slides > slide {
 /* Font size */
 .font100 {
   font-size: 100%;
+}
+
+.font120 {
+  font-size: 120%;
 }
 
 .font80 {
