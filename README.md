@@ -14,8 +14,9 @@
 
 <br>
 
-:calendar: 28, 29 e 30 de Novembro 2022 :calendar: 01 e 02 de Dezembro
-2022
+:calendar: 28, 29 e 30 de Novembro 2022
+
+:calendar: 01 e 02 de Dezembro 2022
 
 :alarm_clock: **08h00min - 13h00min**
 
