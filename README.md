@@ -9,7 +9,7 @@
 <div>
 <img src="Slides/fig/slide-title/ufpa2.png" width="150" align="middle" class="center">
     
-<img src="Slides/fig/slide-title/logo_ppgbc.jpeg" width="150" align="middle" class="center">
+<img src="Slides/fig/slide-title/ppgbc.png" width="150" align="middle" class="center">
 <div>
 
 <br>
@@ -45,8 +45,10 @@ Campus Universitário de Altamira-PA.
 Os slides da disciplina **Estatística Computacional (PPGBC0030)** estão
 detalhados a seguir.
 
-| Slide | Link |
-|:------|:-----|
+| Slide                       | Link                                                                                              |
+|:----------------------------|:--------------------------------------------------------------------------------------------------|
+| Slides/00-Programacao.html  | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/00-Programacao.html>  |
+| Slides/01-Introducao-R.html | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/01-Introducao-R.html> |
 
 # Conjunto de dados
 
