@@ -10,7 +10,7 @@
 
 /* Custom color number slide*/
 .remark-slide-number {
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 10pt;
   margin-bottom: -5px;
@@ -58,8 +58,8 @@ To specify the margin of the first title h1
 /* footer and header */
 
 div.my-header {
-    background-color: #006633;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffb76b), color-stop(0%,#ffa73d), color-stop(0%,#00994d), color-stop(10%,#00994d), color-stop(25%,#006633), color-stop(100%,#006633));
+    background-color: #ffe066;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffcc00), color-stop(0%,#ffa73d), color-stop(0%,#ffcc00), color-stop(10%,#ffcc00), color-stop(25%,#ffe066), color-stop(100%,#ffe066));
     position: fixed;
     top: 0px;
     left: 0px;
@@ -69,11 +69,13 @@ div.my-header {
 }
 
 div2 {
-  color: yellow;
+  color: #0000ff;
+  font-weight: bold;
 }
 
 div3 {
-  color: orange;
+  color: #339933;
+  font-weight: bold;
 }
 
 .brown{
@@ -85,14 +87,14 @@ div3 {
 }
 
 div.my-footer {
-    background-color: #004d26;
+    background-color: #ffcc00;
     position: absolute;
     bottom: 0px;
     left: 0px;
     height: 30px;
     width: 100%;
     text-align: left;
-    color: white;
+    color: black;
 }
 
 div.my-footer span {
@@ -696,7 +698,7 @@ h2 {
 
 /* H1 fonts */
 .title-slide h1 {
-  color: green; /* first of type is master brand red */
+  color: black; /* first of type is master brand red */
   font-size: 40px;
   font-weight: bold;
   padding-top: 30px;
@@ -740,7 +742,7 @@ h2 {
 
 /* H4 fonts */
 .title-slide h4 {
-  color: white !important;
+  color: black !important;
   font-size: 20px;
   font-weight: normal;
   padding-top: 0px;
@@ -754,9 +756,9 @@ h2 {
 
 /* H5 fonts */
 .title-slide h5 {
-  color: white !important;
+  color: black !important;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: normal;
   padding-top: 0px;
   padding-left: 0px;
   padding-bottom: 0px;

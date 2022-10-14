@@ -116,25 +116,24 @@ use_clipboard()
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Introdução ao R para Análise de Dados</div3>/ <div2>Programação e Orientações</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Programação e Orientações</div2> </div>
 
 ---
 
 <br>
 ## Programação
 <br>
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] possui a seguinte programação:
-<br>
+A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 4 módulos:
+<br><br>
 
 .pull-left-4[
 .font80[
+**Módulo 1** - Linguagem de Programação R
+
 - Introdução ao R-base;
-- Importação de dados com pacote readr;
-- Manipulação de dados com dplyr;
-- Visualização de dados com ggplot2 e extensões;
-- Código com Análise Exploratória de Dados de Inventário Florestal 100%
-- Uma aplicação de Regressão Linear (Se der tempo!)
-- Uma base de Inventário Florestal 100% será usada de brinquedo🌳
+- Importação de dados com pacote .green[**readr**];
+- Manipulação de dados com pacote .green[**dplyr**]; e
+- Visualização de dados com pacote .green[**ggplot2**] e extensões.
 ]
 ]
 
@@ -175,22 +174,16 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ---
 
 <br>
-## Orientações e materias do minicurso
+## Orientações e materias da disciplina
 <br>
 
 .font90[
-- Todo material do minicurso está disponível gratuitamente no repositório GitHub
-do facilitador. 
+- Todo material da disciplina está disponível gratuitamente no repositório GitHub do facilitador. 
 <br><br>
-- Link para acesso ao repositório: https://github.com/DeivisonSouza/SCIFLOR-2021
+- Link para acesso ao repositório: https://github.com/DeivisonSouza/PPGBC0030-Estatistica-Computacional
 <br><br>
-- Esta é a primeira versão deste material. Mas, a ideia é continuar melhorando continuamente, e ajudar mais e mais pessoas...
+- Esta é a primeira versão deste material. Mas, a ideia é continuar melhorando continuamente...
 <br><br><br>
 ]
-
-.blue[**Se alguém tiver sugestões de melhorias, ficarei feliz em recebê-las!**]
-<br><br>
-
-**Email**: deivisonvs@ufpa.br
 
 

@@ -1,50 +1,67 @@
----
-title: "Estatística Computacional (PPGBC0030)"
-subtitle: "Parte 1 - Introdução à Linguagem de Programação R"
-author: "Prof. Dr. Deivison Venicio Souza"
-institute: "Universidade Federal do Pará (UFPA)"
-date: 
-encoding: "UTF-8"
-header-includes: 
-   - \usepackage{xcolor}
-output:
-  xaringan::moon_reader:
-    css:
-      - default
-      - assets/sydney-fonts.css
-      - assets/slide-title/sydney-title.css
-    self_contained: false
-    seal: false
-    includes:
-      in_header: "assets/mathjax-equation-numbers.html"
-    nature:
-      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
-      highlightStyle: github
-      highlightLines: true
-      countIncrementalSlides: false
-      highlightLanguage: ["r", "css", "yaml"]
-      ratio: '16:9'
-      navigation:
-        scroll: false
----
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Estatística Computacional (PPGBC0030)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
+    <script src="01-Introducao-R_files/header-attrs-2.14/header-attrs.js"></script>
+    <link href="01-Introducao-R_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/fabric-4.3.1/fabric.min.js"></script>
+    <link href="01-Introducao-R_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="01-Introducao-R_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="01-Introducao-R_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="01-Introducao-R_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="01-Introducao-R_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link href="01-Introducao-R_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x06c6cffd2344bec86d316fa138da309","expires":1}</script>
+    <script src="01-Introducao-R_files/himalaya-1.1.0/himalaya.js"></script>
+    <script src="01-Introducao-R_files/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="01-Introducao-R_files/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/editable-0.2.6/editable.js"></script>
+    <link href="01-Introducao-R_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="01-Introducao-R_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="01-Introducao-R_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="01-Introducao-R_files/jquery-3.5.1/jquery.min.js"></script>
+    <link href="01-Introducao-R_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/datatables-binding-0.17/datatables.js"></script>
+    <link href="01-Introducao-R_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="01-Introducao-R_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+    <link href="01-Introducao-R_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="01-Introducao-R_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/slide-title/sydney-title.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
 class: title-slide, center, middle
 background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/ppgbc2.png), url(fig/slide-title/capa.png)
 background-position: 90% 90%, 10% 90%
 background-size: 250px, 200px, cover
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  fig.showtext = TRUE,
-  fig.align = "center", 
-  cache = FALSE,
-  error = FALSE,
-  message = FALSE, 
-  warning = FALSE, 
-  collapse = TRUE ,
-  dpi = 600)
-```
 
-```{css, echo=FALSE}
+
+&lt;style type="text/css"&gt;
 .with-logo::before {
 	content: '';
 	width: 120px;
@@ -71,83 +88,100 @@ knitr::opts_chunk$set(
 .logo-plumber::before {
 	background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/plumber.png);
 }
-```
+&lt;/style&gt;
 
 
-```{r packages, include=FALSE}
-# remotes::install_github("dill/emoGG")
-library(ggplot2)
-library(dplyr)
-library(ggimage)
-library(kableExtra)
-```
 
-```{r xaringan-logo, echo=FALSE}
-library(xaringanExtra)
-use_logo(
-  image_url = "fig/slide-title/ppgbc1.jpeg",
-  position = css_position(top = "1.5em", right = "0.6em"),
-  width = "210px",
-  height = "210px"
-)
 
-use_scribble() # para escrever nos slides
-use_share_again()
-use_progress_bar()
-#use_animate_all(style = c("slide_down"))
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 210px;
+height: 210px;
+z-index: 0;
+background-image: url(fig/slide-title/ppgbc1.jpeg);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1.5em;right:0.6em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div><style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: red;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
 
-use_extra_styles(
-  hover_code_line = TRUE,         #<<
-  mute_unhighlighted_code = TRUE  #<<
-)
-xaringanExtra::use_editable(expires = 1)
-#.can-edit[Você pode editar este título de slide]
-#.can-edit.key-firstSlideTitle[Change this title and then reload the page]
-use_clipboard()
-```
 
-```{r icon, echo=FALSE}
-#remotes::install_github("mitchelloharawild/icons")
-#remotes::install_github('emitanaka/anicon')
-#library(icons)
-#download_fontawesome()
-#download_simple_icons()
-```
 
-<!-- title-slide -->
-# .font120[Estatística Computacional <br> (PPGBC0030)]
+&lt;!-- title-slide --&gt;
+# .font120[Estatística Computacional &lt;br&gt; (PPGBC0030)]
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Introdução à Linguagem R `r anicon::faa("pagelines", animate="horizontal", colour="green")`
-<br>
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Introdução à Linguagem R <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+&lt;br&gt;
 
 #### **Prof. Dr. Deivison Venicio Souza**
 ##### Universidade Federal do Pará (UFPA) 
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
-<br>
-##### 1ª versão: 14/outubro/2022 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`)
+&lt;br&gt;
+##### 1ª versão: 14/outubro/2022 &lt;br&gt; (Atualizado em: 14/outubro/2022)
 
 ---
 
 layout: true
 class: with-logo logo-ufpa
-<div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Parte 1 - Introdução à Linguagem R</div2> </div>
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Parte 1 - Introdução à Linguagem R&lt;/div2&gt; &lt;/div&gt;
 
 ---
 
 ## Objetivos
-<br><br>
+&lt;br&gt;&lt;br&gt;
 Ao final desta primeira parte (**Introdução à Linguagem R**) espera-se que os discentes possam alcançar conhecimentos para...
 
 * Entender a importância e reconhecer a praticidade de uso de Linguagem de Programação;
 * Compreender e construir as principais estruturas de dados na Linguagem R;
 * Realizar indexação de diferentes estruturas de dados no R; e
 * Conhecer e aprender a usar operadores no R (aritméticos, relacionais, lógicos).
-<!--* .red[Compreender e desenvolver suas próprias funções no R.]-->
-<!-- * Compreender e aprender a usar estruturas de controle no R; -->
-<!-- * Criar gráficos usando funções de pacotes do R-base; e -->
-<!-- * Realizar uma análise exploratória de dados. -->
+&lt;!--* .red[Compreender e desenvolver suas próprias funções no R.]--&gt;
+&lt;!-- * Compreender e aprender a usar estruturas de controle no R; --&gt;
+&lt;!-- * Criar gráficos usando funções de pacotes do R-base; e --&gt;
+&lt;!-- * Realizar uma análise exploratória de dados. --&gt;
 ---
 
 ## Conteúdo
@@ -225,11 +259,11 @@ Ao final desta primeira parte (**Introdução à Linguagem R**) espera-se que os
 
 [2 - Operadores no R](#Oper)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.1 - Aritméticos](#arit)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.1 - Aritméticos](#arit)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.2 - Relacionais](#relac)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.2 - Relacionais](#relac)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.3 - Lógicos](#log)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.3 - Lógicos](#log)
 
 [3 - Funções matemáticas usuais](#FunsMat)
 
@@ -243,14 +277,14 @@ class: inverse, top, right
 background-image: url(fig/part1/arara.jpg)
 background-size: cover
 
-.font200[**.yellow[Parte 1] <br> .white[Conhecendo o R e <br> o IDE Rstudio]**]
+.font200[**.yellow[Parte 1] &lt;br&gt; .white[Conhecendo o R e &lt;br&gt; o IDE Rstudio]**]
 
 ---
 
 layout: true
 class: with-logo logo-ufpa
-<div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Introdução ao R para Análise de Dados</div3>/ <div2>Parte 1 - Introdução à Linguagem de Programação R</div2> </div>
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Introdução ao R para Análise de Dados&lt;/div3&gt;/ &lt;div2&gt;Parte 1 - Introdução à Linguagem de Programação R&lt;/div2&gt; &lt;/div&gt;
 
 ---
 name: R
@@ -278,178 +312,138 @@ name: R
 ]
 
 .pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://petsistemas.ufms.br/wp-content/uploads/2017/02/main-qimg-7012cde5b60209165cdc281d888b33ac.png")
-
-```
+&lt;img src="https://petsistemas.ufms.br/wp-content/uploads/2017/02/main-qimg-7012cde5b60209165cdc281d888b33ac.png" width="30%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://blog.efpsa.org/wp-content/uploads/2019/04/pic1.png")
-
-```
+&lt;img src="https://blog.efpsa.org/wp-content/uploads/2019/04/pic1.png" width="30%" style="display: block; margin: auto;" /&gt;
 
 ]
 
 .pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
-```
+&lt;img src="https://ggplot2.tidyverse.org/logo.png" width="30%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://pkgs.rstudio.com/rmarkdown/reference/figures/logo.png")
-```
+&lt;img src="https://pkgs.rstudio.com/rmarkdown/reference/figures/logo.png" width="30%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo.png")
-```
+&lt;img src="https://tidyverse.tidyverse.org/articles/tidyverse-logo.png" width="30%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
 name: pqR
 ## Por que usar a linguagem R?
 
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/part1/WhyR.png')
-```
+&lt;img src="fig/part1/WhyR.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 name: RGui
 ## RGui - Download e instalação
-<br>
+&lt;br&gt;
 
 **1⁰ Passo**: Acessar a página do projeto R em: https://www.r-project.org/;
 
 **2⁰ Passo**: Do lado esquerdo da página clique sobre o menu .green[CRAN];
 
 **3⁰ Passo**: Será aberta uma página com diversos links de .green[CRAN Mirrors], isto é, espelhos CRAN. 
-<br>
+&lt;br&gt;
 Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
 .center2[
-```{r echo=FALSE}
-df <- data.frame(Link = 
-                   c("http://cran-r.c3sl.ufpr.br/",
-                     "http://nbcgib.uesc.br/mirrors/cran/", 
-                     "https://cran.fiocruz.br/",
-                     "https://vps.fmvz.usp.br/CRAN/",
-                     "http://brieger.esalq.usp.br/CRAN/"),
-                 Instituição = 
-                   c("Universidade Federal do Paraná - UFPR",
-                     "Center for Comp Biol at Universidade Estadual de Santa Cruz",
-                     "Oswaldo Cruz Foundation, Rio de Janeiro",
-                     "University of São Paulo, São Paulo",
-                     "University of São Paulo, Piracicaba")
-                 )
-
-df %>% 
-   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
-                 class = "display", width = '750px',
-                 caption = '',
-     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
-       initComplete = htmlwidgets::JS(
-          "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
-          "}")
-       ) 
-     )
-```
+<div id="htmlwidget-4ac0bf1837db98d71347" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4ac0bf1837db98d71347">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
 
 ## RGui - Download e instalação
-<br>
+&lt;br&gt;
 
 **4⁰ Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção .green[Download and Install R], clicar em um dos três links, conforme o Sistema Operacional do usuário:
 
 1. Download R for Windows;
 2. Download R for Linux; ou
 3. Download R for MacOS.
-<br>
+&lt;br&gt;
 
 **5⁰ Passo**: Clicar no link do .green[subdiretório base] ou em o .green[install R for the first time] para instalar o R pela primeira vez;
-<br>
+&lt;br&gt;
 
 **6⁰ Passo**: Clicar, por exemplo, em .green[Download R-4.1.0. for Windows] (.red[escolha seu SO]). Assim, será iniciado o download do R Development Core Team para o respectivo sistema; e
-<br>
+&lt;br&gt;
 
 **7⁰ Passo**: Por fim, basta usar o setup baixado para instalar o programa.
 
 ---
 
 ## RGui - Interface
-<br>
+&lt;br&gt;
 
 Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
 
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R Console'}
-knitr::include_graphics('fig/part1/Rgui.png')
-```
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="fig/part1/Rgui.png" alt="R Console" width="50%" /&gt;
+&lt;p class="caption"&gt;R Console&lt;/p&gt;
+&lt;/div&gt;
 
 ---
 
 ## RGui - Interface
 
 - No contato inicial do usuário com o RGui tem-se a visão do .green[R Console].
-- O sinal .red[>] é o prompt de comando.
+- O sinal .red[&gt;] é o prompt de comando.
 - Execute as funções .green[demo(), help(), help.start(), q()].
 
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R Console'}
-knitr::include_graphics('fig/part1/Rgui.png')
-```
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="fig/part1/Rgui.png" alt="R Console" width="50%" /&gt;
+&lt;p class="caption"&gt;R Console&lt;/p&gt;
+&lt;/div&gt;
 
 ---
 
 ## RGui - R editor
 
-O RGui possui um .green[R editor] $\rightarrow$ Abrir script.
+O RGui possui um .green[R editor] `\(\rightarrow\)` Abrir script.
 
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R editor'}
-knitr::include_graphics('fig/part1/Reditor.png')
-```
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="fig/part1/Reditor.png" alt="R editor" width="50%" /&gt;
+&lt;p class="caption"&gt;R editor&lt;/p&gt;
+&lt;/div&gt;
 
 ---
 name: Rstudio
 ## IDE RStudio - download e instalação
-<br>
+&lt;br&gt;
 
 O .green[RStudio] é um ambiente de desenvolvimento integrado (*Integrated Development Environment - IDE*) de códigos em R mais comumente usado por usuários da linguagem.
 
 **1⁰ Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
 
-**2⁰ Passo**: Products $\rightarrow$ RStudio;
+**2⁰ Passo**: Products `\(\rightarrow\)` RStudio;
 
 **3⁰ Passo**: Selecionar a versão do RStudio para Desktop;
 
-**4⁰ Passo**: Na edição Open source $\rightarrow$ Download Rstudio Desktop;
+**4⁰ Passo**: Na edição Open source `\(\rightarrow\)` Download Rstudio Desktop;
 
 **5⁰ Passo**: Por fim, basta usar o setup baixado para instalar o programa.
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
-```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
-knitr::include_graphics('fig/part1/RStudio.png')
-```
+&lt;img src="fig/part1/RStudio.png" width="30%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## IDE RStudio - Interface
 
-```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
-knitr::include_graphics('fig/part1/RstudioIG.svg')
-```
-<!-- http://material.curso-r.com/rbase/ -->
+&lt;img src="fig/part1/RstudioIG.svg" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;!-- http://material.curso-r.com/rbase/ --&gt;
 
 ---
 
 ## IDE RStudio - Interface (Painéis)
-<br>
+&lt;br&gt;
 
 **Editor**: Painel de desenvolvimento dos códigos R.
 
@@ -474,14 +468,14 @@ class: inverse, top, right
 background-image: url(fig/part1/arara2.jpg)
 background-size: cover
 
-.font200[**.yellow[Parte 2] <br> .white[Estrutura de dados <br> na linguagem R]**]
+.font200[**.yellow[Parte 2] &lt;br&gt; .white[Estrutura de dados &lt;br&gt; na linguagem R]**]
 
 ---
 
 layout: true
 class: with-logo logo-ufpa
-<div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Introdução ao R para Análise de Dados</div3>/ <div2>Parte 1 - Introdução à Linguagem de Programação R</div2> </div>
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Introdução ao R para Análise de Dados&lt;/div3&gt;/ &lt;div2&gt;Parte 1 - Introdução à Linguagem de Programação R&lt;/div2&gt; &lt;/div&gt;
 
 ---
 
@@ -489,32 +483,30 @@ class: with-logo logo-ufpa
 
 - O R pode armazenar dados em diferentes estruturas.
 
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/part1/EstrDados.png")
-```
+&lt;img src="fig/part1/EstrDados.png" width="40%" style="display: block; margin: auto;" /&gt;
 
 
-<!-- .pull-right-4[ -->
-<!-- .font90[ -->
-<!-- **Vetores - Características**  -->
+&lt;!-- .pull-right-4[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- **Vetores - Características**  --&gt;
 
-<!-- a) Sequência de elementos; b) possui uma dimensão; c) admitem apenas elementos da mesma natureza. -->
+&lt;!-- a) Sequência de elementos; b) possui uma dimensão; c) admitem apenas elementos da mesma natureza. --&gt;
 
-<!-- **Matrizes - Características**  -->
+&lt;!-- **Matrizes - Características**  --&gt;
 
-<!-- a) Admite duas dimensões (linhas e colunas); b) formada por elementos de uma única classe. -->
+&lt;!-- a) Admite duas dimensões (linhas e colunas); b) formada por elementos de uma única classe. --&gt;
 
-<!-- **Data Frames - Características**  -->
+&lt;!-- **Data Frames - Características**  --&gt;
 
-<!-- a) Admite duas dimensões (linhas e colunas); b) Pode reunir vetores de diferentes classes, com a condição de possuírem igual -->
-<!-- comprimento. -->
+&lt;!-- a) Admite duas dimensões (linhas e colunas); b) Pode reunir vetores de diferentes classes, com a condição de possuírem igual --&gt;
+&lt;!-- comprimento. --&gt;
 
-<!-- **Lista - Características** -->
+&lt;!-- **Lista - Características** --&gt;
 
-<!-- a) Admite diferentes estruturas de dados (vetores, matrizes, data frames e inclusive outras listas). -->
+&lt;!-- a) Admite diferentes estruturas de dados (vetores, matrizes, data frames e inclusive outras listas). --&gt;
 
-<!-- ] -->
-<!-- ] -->
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
 
 ---
 
@@ -522,9 +514,7 @@ knitr::include_graphics("fig/part1/EstrDados.png")
 
 - O R pode armazenar dados em diferentes estruturas
 
-```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("http://venus.ifca.unican.es/Rintro/_images/dataStructuresNew.png")
-```
+&lt;img src="http://venus.ifca.unican.es/Rintro/_images/dataStructuresNew.png" width="80%" style="display: block; margin: auto;" /&gt;
 .font70[
 **Fonte**: http://venus.ifca.unican.es/Rintro/dataStruct.html]
 
@@ -535,7 +525,7 @@ knitr::include_graphics("http://venus.ifca.unican.es/Rintro/_images/dataStructur
 ---
 name: vet
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores
 
@@ -548,26 +538,24 @@ name: vet
 
 .pull-right-4[
 .center[**Principais classes de vetores**]
-<br>
+&lt;br&gt;
 
-```{r echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/part1/Clv.png")
-```
+&lt;img src="fig/part1/Clv.png" width="75%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - Principais funções do R-base para criar vetores...
-<br>
+&lt;br&gt;
 
 .pull-left-4[
 **1. Função .black[c() (concatenate)]**
 
 Função genérica que permite concatenar (combinar) argumentos para formar um vetor.
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
 **2. Função .black[seq() (sequence)]**
 
@@ -579,7 +567,7 @@ Função genérica usada para gerar sequências de números em intervalos pré-d
 **3. Função .black[rep() (replicate)]**
 
 Função genérica usada para replicar um elemento “x”.
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
 **4. Função .black[scan()]**
 
@@ -589,35 +577,39 @@ Usada para criar vetores diretamente no R Console.
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - .black[Função c() (concatenate)]
 
 .pull-top[
 .pull-left-4[
 **Classe "character"**
-```{r, echo=T, eval=F}
+
+```r
 # Cria um vetor
 c("Acapu", "Araucaria", "Mogno", "Cedro")
 ```
 
-```{r, echo=T, eval=F}
+
+```r
 # Cria um vetor e faz atribuição
-especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
+especie &lt;- c("Acapu", "Mogno", "Cedro", "Ipe")
 #class(especie)
 ```
 ]
 
 .pull-right-4[
 **Classe "numeric"**
-```{r, echo=T, eval=F}
+
+```r
 # Cria um vetor
 c(23.0, 27.0, 33.6, 42.6, 52.1)
 ```
 
-```{r, echo=T, eval=F}
+
+```r
 # Cria um vetor e faz atribuição
-diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
+diametro &lt;- c(23.0, 27.0, 33.6, 42.6, 52.1)
 #class(diametro)
 ```
 ]
@@ -626,7 +618,7 @@ diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - .black[Função c() (concatenate)]
 
@@ -641,24 +633,31 @@ diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
 ]
 
 .pull-right-10[
-```{r, echo=T, eval=T}
+
+```r
 # Cria um vetor - Fitofisionomia
-(Fito <- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA"))
+(Fito &lt;- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA"))
+## [1] "FOM" "FOA" "FOM" "FOM" "FOM" "FOA"
 class(Fito)
+## [1] "character"
 ```
 
-```{r, echo=T, eval=T}
+
+```r
 # Codifica para "factor"
-Fito <- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA")
-(Fito <- factor(Fito))
+Fito &lt;- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA")
+(Fito &lt;- factor(Fito))
+## [1] FOM FOA FOM FOM FOM FOA
+## Levels: FOA FOM
 class(Fito)
+## [1] "factor"
 ```
 ]
 
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - .black[Função c() (concatenate)]
 
@@ -674,20 +673,26 @@ class(Fito)
 .pull-right-10[
 .font90[
 **Níveis do mês não ordenados**
-```{r}
-(mes <- factor(
+
+```r
+(mes &lt;- factor(
   c("Janeiro", "Abril", "Julho", "Outubro")
   ))
+## [1] Janeiro Abril   Julho   Outubro
+## Levels: Abril Janeiro Julho Outubro
 ```
 
 **Níveis do mês ordenados**
 
-```{r size=3}
-(mes <- 
+
+```r
+(mes &lt;- 
    factor(x = mes,
           levels = c("Janeiro", "Abril", 
                      "Julho", "Outubro"),
                ordered = TRUE))
+## [1] Janeiro Abril   Julho   Outubro
+## Levels: Janeiro &lt; Abril &lt; Julho &lt; Outubro
 ```
 
 ]
@@ -696,14 +701,14 @@ class(Fito)
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - .black[Função seq() (sequence)]
-<br>
+&lt;br&gt;
 
 .blockquote[
 .center[.blue[seq(]**from** = ?, **to** = ?, **by** = ?, **length.out** = ?, **along.with** = ?.blue[)]]
-<br>
+&lt;br&gt;
 
 .font90[
 **from** = define um valor inicial (start) para a sequência.
@@ -721,13 +726,14 @@ class(Fito)
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - .black[Função seq() (sequence)]
 
 .pull-top[
 .pull-left-4[
-```{r seq1, echo=T, eval=F}
+
+```r
 # 1 a 10, com intervalo 1.
 seq(10)
 
@@ -744,13 +750,20 @@ seq(from = -2, to = 10, by = 2)
 seq(from=0, to=1, length.out = 5)
 
 # Sequência do tamanho do vetor-espécie.
-especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
+especie &lt;- c("Acapu", "Mogno", "Cedro", "Ipe")
 seq(along.with = especie)
 ```
 ]
 
 .pull-right-4[
-```{r ref.label="seq1", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10
+##  [1]  1  2  3  4  5  6  7  8  9 10
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## [1] -2  0  2  4  6  8 10
+## [1] 0.00 0.25 0.50 0.75 1.00
+## [1] 1 2 3 4
 ```
 ]
 ]
@@ -758,14 +771,14 @@ seq(along.with = especie)
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - .black[Função rep() (replicate)]
-<br>
+&lt;br&gt;
 
 .blockquote[
 .center[.blue[rep(]**x** = ?, **times** = ?, **each** = ?.blue[)]]
-<br>
+&lt;br&gt;
 
 .font90[
 **x** = escalar, vetor ou uma lista, entre outros.
@@ -779,14 +792,15 @@ seq(along.with = especie)
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - .black[Função rep() (replicate)]
 
 .pull-top[
 .pull-left-4[
 .font90[
-```{r rep1, echo=T, eval=F}
+
+```r
 # Repete a sequência de 1 a 4 (2x).
 rep(x = 1:4, 2)
 
@@ -812,7 +826,15 @@ rep(1:2, each = 2, times = 3)
 ]
 
 .pull-right-4[
-```{r ref.label="rep1", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+## [1] 1 2 3 4 1 2 3 4
+##  [1] 1 2 3 4 1 2 3 4 1 2 3 4
+## [1] 1 1 2 2 3 3 4 4
+## [1] 1 1 2 2 3 3 4 4
+## [1] 1 1 2 3 3 4
+## [1] 1 1 2 2
+##  [1] 1 1 2 2 1 1 2 2 1 1 2 2
 ```
 ]
 ]
@@ -820,7 +842,7 @@ rep(1:2, each = 2, times = 3)
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Vetores - .black[Função scan()]
 
@@ -828,38 +850,41 @@ rep(1:2, each = 2, times = 3)
 .font90[
 **Procedimento**
 
-**Passo 1⁰**: digitar no R console, por exemplo: y <- scan()
+**Passo 1⁰**: digitar no R console, por exemplo: y &lt;- scan()
 
-**Passo 2⁰**: Digitar o primeiro dado e apertar $<ENTER>$. Seguir esse passo até o último dado.
+**Passo 2⁰**: Digitar o primeiro dado e apertar `\(&lt;ENTER&gt;\)`. Seguir esse passo até o último dado.
 
-**Passo 3⁰**: Para encerrar a entrada de dados basta apertar $<ENTER>$ duas vezes.
+**Passo 3⁰**: Para encerrar a entrada de dados basta apertar `\(&lt;ENTER&gt;\)` duas vezes.
 ]
 ]
 
 .pull-right-4[
 .font90[
-**Atividade para** `r anicon::faa("home", animate="horizontal")`
+**Atividade para** <span>&lt;i class="fas  fa-home faa-horizontal animated "&gt;&lt;/i&gt;</span>
 
 Use a função .blue[scan()] para criar vetores para as variáveis da tabela a seguir diretamente no R console:
-<br>
+&lt;br&gt;
 
-```{r echo=F, eval=T}
-data.frame(especie = c("Acapu", "Araucaria", 
-                       "Mogno", "Cedro", "Ipe"),
-           diametro = c(23.0, 27.0, 33.6, 42.6, 52.1),
-           altura = c(8.5, 9.2, 10.5, 13.4, 15.8))
+
+```
+##     especie diametro altura
+## 1     Acapu     23.0    8.5
+## 2 Araucaria     27.0    9.2
+## 3     Mogno     33.6   10.5
+## 4     Cedro     42.6   13.4
+## 5       Ipe     52.1   15.8
 ```
 
 **Obs.**: Para vetores da class **character** especifique o argumento **what = character()**. 
 
-y <- scan(what = character())
+y &lt;- scan(what = character())
 ]
 ]
 
 ---
 name: mat
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Matrizes - .black[Propriedades]
 
@@ -878,7 +903,7 @@ name: mat
 .blockquote[
 .font90[
 .center[.blue[matrix(]**data** = NA, **nrow** = 1, **ncol** = 1, **byrow** = FALSE, **dimnames** = NULL.blue[)]]
-<br>
+&lt;br&gt;
 
 **data** = um vetor de dados (opcional).
 
@@ -896,25 +921,27 @@ name: mat
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Matrizes - .black[Função matrix()]
 
 .pull-top[
 .pull-left-4[
 .font90[
-```{r mat, echo=T, eval=F}
+
+```r
 # Cria uma matriz de 1 a 6, com 2 linhas e 3 colunas
-(mat1 <- matrix(data=1:6, nrow=2, ncol=3))
+(mat1 &lt;- matrix(data=1:6, nrow=2, ncol=3))
 ```
 
-```{r mat2, echo=T, eval=F}
+
+```r
 # Atribui nomes às linhas e colunas
-rownames(mat1) <- c("L1","L2"); print(mat1)
+rownames(mat1) &lt;- c("L1","L2"); print(mat1)
 
-colnames(mat1) <- c("C1","C2","C3"); print(mat1)
+colnames(mat1) &lt;- c("C1","C2","C3"); print(mat1)
 ```
-<br>
+&lt;br&gt;
 
 - Se desejável, pode-se usar as funções .green[rownames()] e .green[colnames()] para atribuir nomes às linhas e colunas da matriz.
 
@@ -923,10 +950,24 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 ]
 
 .pull-right-4[
-```{r ref.label="mat", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
 ```
 
-```{r ref.label="mat2", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##    [,1] [,2] [,3]
+## L1    1    3    5
+## L2    2    4    6
+```
+
+```
+##    C1 C2 C3
+## L1  1  3  5
+## L2  2  4  6
 ```
 
 ]
@@ -934,7 +975,7 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Matrizes - .black[Função matrix()]
 
@@ -942,8 +983,9 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 
 
 .pull-left-4[
-```{r mat3, echo=T, eval=F}
-(mat2 <- 
+
+```r
+(mat2 &lt;- 
    matrix(data=1:6, nrow=2, 
           ncol=3, byrow=TRUE,
           dimnames=list(c("L1", "L2"),
@@ -952,7 +994,11 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 ]
 
 .pull-right-4[
-```{r ref.label="mat3", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##    C1 C2 C3
+## L1  1  2  3
+## L2  4  5  6
 ```
 ]
 
@@ -960,13 +1006,13 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Matrizes - .black[Situações especiais]
-<br>
+&lt;br&gt;
 
 - Ao criar-se matrizes atentar-se para duas situações:
-<br>
+&lt;br&gt;
 
 1 - **Descarte de elementos**: Quando a quantidade de elementos (n) for maior que a quantidade de linhas e colunas (ncol x nrow).
 
@@ -975,7 +1021,7 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 ---
 name: arrays
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Arrays - .black[Propriedades]
 
@@ -999,7 +1045,7 @@ name: arrays
 .blockquote[
 .font80[
 .center[.blue[array(]**data** = NA, **dim** = length(data), **dimnames** = NULL.blue[)]]
-<br>
+&lt;br&gt;
 
 **data** = um vetor (incluindo uma lista) que fornecerá dados para preencher a matriz.
 
@@ -1013,16 +1059,17 @@ name: arrays
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Arrays - .black[Função array()]
 
 .pull-top[
 .pull-left-4[
 .font90[
-```{r array, echo=T, eval=F}
+
+```r
 # Cria um array sem elementos
-(ar1 <- array(dim = c(3, 2, 2)))
+(ar1 &lt;- array(dim = c(3, 2, 2)))
 
 # 3: número de linhas
 # 2: número de colunas
@@ -1034,7 +1081,21 @@ name: arrays
 ]
 
 .pull-right-4[
-```{r ref.label="array", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+## , , 1
+## 
+##      [,1] [,2]
+## [1,]   NA   NA
+## [2,]   NA   NA
+## [3,]   NA   NA
+## 
+## , , 2
+## 
+##      [,1] [,2]
+## [1,]   NA   NA
+## [2,]   NA   NA
+## [3,]   NA   NA
 ```
 ]
 
@@ -1042,18 +1103,19 @@ name: arrays
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Arrays - .black[Função array()]
 
 .pull-top[
 .pull-left-4[
 .font90[
-```{r array2, echo=T, eval=F}
+
+```r
 # Cria um array com elementos
-(ar2 <- array(data = 1:12, dim = c(3, 2, 2)))
+(ar2 &lt;- array(data = 1:12, dim = c(3, 2, 2)))
 ```
-<br>
+&lt;br&gt;
 
 - Veja que os valores do vetor .blue[1:12] foram distribuídos nas 2 matrizes na ordem dos elementos e por colunas das matrizes.
 
@@ -1063,50 +1125,80 @@ name: arrays
 ]
 
 .pull-right-4[
-```{r ref.label="array2", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## , , 1
+## 
+##      [,1] [,2]
+## [1,]    1    4
+## [2,]    2    5
+## [3,]    3    6
+## 
+## , , 2
+## 
+##      [,1] [,2]
+## [1,]    7   10
+## [2,]    8   11
+## [3,]    9   12
 ```
 ]
 
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Arrays - .black[Função array()]
 
 .pull-top[
 .pull-left-4[
 .font90[
-```{r array3, echo=T, eval=F}
+
+```r
 # Cria um array a partir de vetores de 
 # tamanhos diferentes
-vect1 <- c(3, 6, 1)
-vect2 <- c(15, 18, 13, 11, 17, 16)
+vect1 &lt;- c(3, 6, 1)
+vect2 &lt;- c(15, 18, 13, 11, 17, 16)
 
-(ar3 <- array(c(vect1, vect2), dim = c(3, 3, 2)))
+(ar3 &lt;- array(c(vect1, vect2), dim = c(3, 3, 2)))
 ```
-<br>
+&lt;br&gt;
 
 ]
 ]
 ]
 
 .pull-right-4[
-```{r ref.label="array3", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## , , 1
+## 
+##      [,1] [,2] [,3]
+## [1,]    3   15   11
+## [2,]    6   18   17
+## [3,]    1   13   16
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3]
+## [1,]    3   15   11
+## [2,]    6   18   17
+## [3,]    1   13   16
 ```
 ]
 
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Arrays - .black[Função array()] - Nomeando dimensões
 
 .pull-top[
 .pull-left-4[
 .font90[
-```{r array4, echo=T, eval=F}
+
+```r
 # Nomeando linhas, colunas e matrizes do array
 array(c(vect1, vect2),
       dim = c(3, 3, 2),
@@ -1114,7 +1206,7 @@ array(c(vect1, vect2),
                       c("C1", "C2", "C3"),
                       c("M1", "M2")))
 ```
-<br>
+&lt;br&gt;
 
 - Use o argumento **dimnames** para nomear as linhas, colunas e
 matrizes do array.
@@ -1124,7 +1216,21 @@ matrizes do array.
 ]
 
 .pull-right-4[
-```{r ref.label="array4", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## , , M1
+## 
+##    C1 C2 C3
+## L1  3 15 11
+## L2  6 18 17
+## L3  1 13 16
+## 
+## , , M2
+## 
+##    C1 C2 C3
+## L1  3 15 11
+## L2  6 18 17
+## L3  1 13 16
 ```
 ]
 
@@ -1132,7 +1238,7 @@ matrizes do array.
 ---
 name: df
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Data Frames - .black[Propriedades]
 
@@ -1149,15 +1255,18 @@ name: df
 --
 
 .pull-right-4[
-**Atividade para** `r anicon::faa("home", animate="horizontal")`
+**Atividade para** <span>&lt;i class="fas  fa-home faa-horizontal animated "&gt;&lt;/i&gt;</span>
 
-Use o comando x <- edit(data.frame()) e crie a tabela a seguir:
+Use o comando x &lt;- edit(data.frame()) e crie a tabela a seguir:
 
-```{r echo=F, eval=T}
-data.frame(especie = c("Acapu", "Araucaria", 
-                       "Mogno", "Cedro", "Ipe"),
-           diametro = c(23.0, 27.0, 33.6, 42.6, 52.1),
-           altura = c(8.5, 9.2, 10.5, 13.4, 15.8))
+
+```
+##     especie diametro altura
+## 1     Acapu     23.0    8.5
+## 2 Araucaria     27.0    9.2
+## 3     Mogno     33.6   10.5
+## 4     Cedro     42.6   13.4
+## 5       Ipe     52.1   15.8
 ```
 
 ]
@@ -1165,25 +1274,32 @@ data.frame(especie = c("Acapu", "Araucaria",
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Data Frames - .black[Função data.frame()]
 
 .pull-left-4[
 .font90[
 **Cria um data frame a partir de vetores existentes**
-```{r df1, echo=T, eval=F}
-especie <- c("Acapu", "Araucaria", "Cedro", "Tauari")
-diametro <- c(23.0, 27.0, 33.6, 52.6)
-altura <- c(8.4, 8.7, 9.1, 18.2)
-cortar <- c("Não", "Não", "Não", "Sim")
 
-(invFlor1 <- 
+```r
+especie &lt;- c("Acapu", "Araucaria", "Cedro", "Tauari")
+diametro &lt;- c(23.0, 27.0, 33.6, 52.6)
+altura &lt;- c(8.4, 8.7, 9.1, 18.2)
+cortar &lt;- c("Não", "Não", "Não", "Sim")
+
+(invFlor1 &lt;- 
   data.frame(especie, diametro, altura, cortar,
              stringsAsFactors = TRUE))
 ```
 
-```{r ref.label="df1", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##     especie diametro altura cortar
+## 1     Acapu     23.0    8.4    Não
+## 2 Araucaria     27.0    8.7    Não
+## 3     Cedro     33.6    9.1    Não
+## 4    Tauari     52.6   18.2    Sim
 ```
 ]
 ]
@@ -1193,8 +1309,9 @@ cortar <- c("Não", "Não", "Não", "Sim")
 .pull-right-4[
 .font90[
 **Cria um data frame com apenas um comando**
-```{r df2, echo=T, eval=F}
-(invFlor2 <- 
+
+```r
+(invFlor2 &lt;- 
   data.frame(
     especie=c("Acapu", "Araucaria", "Cedro", "Tauari"),
     diametro=c(23.0, 27.0, 33.6, 52.6),
@@ -1203,7 +1320,13 @@ cortar <- c("Não", "Não", "Não", "Sim")
     stringsAsFactors=FALSE))
 ```
 
-```{r ref.label="df2", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##     especie diametro altura cortar
+## 1     Acapu     23.0    8.4    Não
+## 2 Araucaria     27.0    8.7    Não
+## 3     Cedro     33.6    9.1    Não
+## 4    Tauari     52.6   18.2    Sim
 ```
 **Explore as funções dim() e str().**
 ]
@@ -1212,7 +1335,7 @@ cortar <- c("Não", "Não", "Não", "Sim")
 ---
 name: list
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Listas - .black[Propriedades]
 
@@ -1227,22 +1350,23 @@ função list().
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Listas - .black[Função list()]
 
 .pull-left-4[
 **Uma lista a partir de objetos já existentes**
-```{r list1, echo=T, eval=F}
-especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
-diametro <- c(23.0, 27.0, 33.6, 52.6)
-altura <- c(8.4, 8.7, 9.1, 18.2)
+
+```r
+especie &lt;- c("Acapu", "Mogno", "Cedro", "Ipe")
+diametro &lt;- c(23.0, 27.0, 33.6, 52.6)
+altura &lt;- c(8.4, 8.7, 9.1, 18.2)
 
 # Sem atribuir nomes aos objetos da lista
-(list1 <- list(especie, diametro, altura))
+(list1 &lt;- list(especie, diametro, altura))
 
 # Atribuindo nomes aos objetos da lista
-(list2 <- list(Esp = especie, 
+(list2 &lt;- list(Esp = especie, 
                DAP = diametro, 
                H = altura))
 ```
@@ -1253,37 +1377,58 @@ altura <- c(8.4, 8.7, 9.1, 18.2)
 --
 
 .pull-right-4[
-```{r ref.label="list1", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## [[1]]
+## [1] "Acapu" "Mogno" "Cedro" "Ipe"  
+## 
+## [[2]]
+## [1] 23.0 27.0 33.6 52.6
+## 
+## [[3]]
+## [1]  8.4  8.7  9.1 18.2
+```
+
+```
+## $Esp
+## [1] "Acapu" "Mogno" "Cedro" "Ipe"  
+## 
+## $DAP
+## [1] 23.0 27.0 33.6 52.6
+## 
+## $H
+## [1]  8.4  8.7  9.1 18.2
 ```
 ]
 
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Listas - .black[Função list()]
 
 .pull-left-4[
 .font90[
 **Uma lista com diferentes estruturas de dados**
-```{r list3, echo=T, eval=F}
-diametro <- c(23.0, 27.0, 33.6, 52.6)
 
-mat <- 
+```r
+diametro &lt;- c(23.0, 27.0, 33.6, 52.6)
+
+mat &lt;- 
    matrix(data=1:6, nrow=2, 
           ncol=3, byrow=TRUE,
           dimnames=list(c("L1", "L2"),
                         c("C1", "C2", "C3")))
 
-invFlor <- 
+invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Ipe"),
     cortar=c("Não", "Não", "Não", "Sim"),
     stringsAsFactors=FALSE)
 
 # Criando lista nomeada
-(list3 <- list(Vetor = diametro, 
+(list3 &lt;- list(Vetor = diametro, 
                Matriz = mat,
                DataFrame = invFlor))
 
@@ -1294,7 +1439,22 @@ invFlor <-
 --
 
 .pull-right-4[
-```{r ref.label="list3", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## $Vetor
+## [1] 23.0 27.0 33.6 52.6
+## 
+## $Matriz
+##    C1 C2 C3
+## L1  1  2  3
+## L2  4  5  6
+## 
+## $DataFrame
+##   especie cortar
+## 1   Acapu    Não
+## 2   Mogno    Não
+## 3   Cedro    Não
+## 4     Ipe    Sim
 ```
 **Explore as funções length() e names()**.
 
@@ -1303,7 +1463,7 @@ invFlor <-
 ---
 
 ## Estrutura de dados na linguagem R
-<br>
+&lt;br&gt;
 
 ### Listas - .black[Coagindo lista para data frame]
 
@@ -1319,9 +1479,10 @@ a função .green[as.data.frame()].
 
 .pull-right-4[
 **Lista para Data Frame**
-```{r listDF, echo=T, eval=F}
+
+```r
 # Criando lista nomeada
-list4 <- list(
+list4 &lt;- list(
   Esp = c("Acapu", "Mogno", "Cedro", "Ipe"),
   DAP = c(23.0, 27.0, 33.6, 52.6), 
   H = c(8.4, 8.7, 9.1, 18.2))
@@ -1329,7 +1490,13 @@ list4 <- list(
 as.data.frame(list4)
 ```
 
-```{r ref.label="listDF", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##     Esp  DAP    H
+## 1 Acapu 23.0  8.4
+## 2 Mogno 27.0  8.7
+## 3 Cedro 33.6  9.1
+## 4   Ipe 52.6 18.2
 ```
 ]
 
@@ -1340,19 +1507,19 @@ class: inverse, top, right
 background-image: url(fig/part1/arara2.jpg)
 background-size: cover
 
-.font200[**.yellow[Parte 3] <br> .white[Indexação no R]**]
+.font200[**.yellow[Parte 3] &lt;br&gt; .white[Indexação no R]**]
 
 ---
 
 layout: true
 class: with-logo logo-ufpa
-<div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Introdução ao R para Análise de Dados</div3>/ <div2>Parte 1 - Introdução à Linguagem de Programação R</div2> </div>
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Introdução ao R para Análise de Dados&lt;/div3&gt;/ &lt;div2&gt;Parte 1 - Introdução à Linguagem de Programação R&lt;/div2&gt; &lt;/div&gt;
 
 ---
 name: Ind
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 - Quando o interesse é **extrair**, **excluir** ou **substituir** elementos de objetos é possível fazê-lo por meio de algum mecanismo de indexação.
 - Operadores de indexação: .red[[ ]], .red[[[ ]]] e .red[$].
@@ -1362,30 +1529,31 @@ name: Ind
 ---
 name: IndV
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de vetores
 
 .font90[
-- Para extrair, excluir ou substituir elementos no objeto-vetor usa-se o comando [ $i$ ].
-- O índice $i$ indica a posição do elemento no objeto, e inicia no valor 1.
+- Para extrair, excluir ou substituir elementos no objeto-vetor usa-se o comando [ `\(i\)` ].
+- O índice `\(i\)` indica a posição do elemento no objeto, e inicia no valor 1.
 - A função .blue[c()] pode ser usada para concatenar as posições dentro de colchetes.
 ]
 
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de vetores - Extração
 
 .pull-left-4[
 .font90[
 **Extração por indexação positiva**
-```{r Vext, echo=T, eval=F}
+
+```r
 # cria os vetores
-especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
-diametro <- c(23.0, 27.0, 33.6, 42.6)
+especie &lt;- c("Acapu", "Mogno", "Cedro", "Ipe")
+diametro &lt;- c(23.0, 27.0, 33.6, 42.6)
 
 # Um elemento.
 especie[2]
@@ -1405,25 +1573,40 @@ diametro[seq(from = 1, to = 4, by = 1)]
 --
 
 .pull-right-4[
-<br><br>
-```{r ref.label="Vext", echo=FALSE, eval=TRUE, collapse=F}
+&lt;br&gt;&lt;br&gt;
+
+```
+## [1] "Mogno"
+```
+
+```
+## [1] 23.0 27.0 33.6
+```
+
+```
+## [1] "Acapu" "Cedro" "Ipe"
+```
+
+```
+## [1] 23.0 27.0 33.6 42.6
 ```
 ]
 
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de vetores - Extração
 
 .pull-left-4[
 .font90[
 **Extração por indexação negativa**
-```{r VextN, echo=T, eval=F}
+
+```r
 # cria os vetores
-especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
-diametro <- c(23.0, 27.0, 33.6, 42.6)
+especie &lt;- c("Acapu", "Mogno", "Cedro", "Ipe")
+diametro &lt;- c(23.0, 27.0, 33.6, 42.6)
 
 # Um elemento.
 especie[-2]
@@ -1440,30 +1623,41 @@ especie[-c(1,3,5)]
 --
 
 .pull-right-4[
-<br><br>
-```{r ref.label="VextN", echo=FALSE, eval=TRUE, collapse=F}
+&lt;br&gt;&lt;br&gt;
+
+```
+## [1] "Acapu" "Cedro" "Ipe"
+```
+
+```
+## [1] 42.6
+```
+
+```
+## [1] "Mogno" "Ipe"
 ```
 ]
 
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de vetores - Extração
 
 .pull-left-4[
 .font90[
 **Extração por indexação lógica**
-```{r VextL, echo=T, eval=F}
-Especie <- c("Mogno", "Cedro", "Ipe", "Tauari")
-Diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
+
+```r
+Especie &lt;- c("Mogno", "Cedro", "Ipe", "Tauari")
+Diametro &lt;- c(23.0, 27.0, 33.6, 42.6, 52.1)
 
 # Extrai árvores que não sejam Tauari
 Especie[Especie != "Tauari"]
 
-# Diâmetros >= 50cm.
-Diametro[Diametro >= 50]
+# Diâmetros &gt;= 50cm.
+Diametro[Diametro &gt;= 50]
 ```
 ]
 ]
@@ -1471,34 +1665,41 @@ Diametro[Diametro >= 50]
 --
 
 .pull-right-4[
-<br><br>
-```{r ref.label="VextL", echo=FALSE, eval=TRUE, collapse=F}
+&lt;br&gt;&lt;br&gt;
+
+```
+## [1] "Mogno" "Cedro" "Ipe"
+```
+
+```
+## [1] 52.1
 ```
 ]
 
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de vetores - Substituição
 
 .pull-left-4[
 .font90[
 
-```{r Vsub, echo=T, eval=F}
-Especie <- c("Mogno", "Cedro", "Ipe", NA, NA)
-Diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
+
+```r
+Especie &lt;- c("Mogno", "Cedro", "Ipe", NA, NA)
+Diametro &lt;- c(23.0, 27.0, 33.6, 42.6, 52.1)
 
 # Substitui os NAs
-Especie[is.na(Especie)] <- "NI"
+Especie[is.na(Especie)] &lt;- "NI"
 print(Especie)
 
 # Altera posição 3, e atribui 33.5.
-Diametro[3] <- 33.5; print(Diametro)
+Diametro[3] &lt;- 33.5; print(Diametro)
 
 # Altera posições 4 e 5, e atribui 55.3 e 63.4
-Diametro[c(4, 5)] <- c(55.3, 63.4); print(Diametro)
+Diametro[c(4, 5)] &lt;- c(55.3, 63.4); print(Diametro)
 ```
 ]
 ]
@@ -1506,8 +1707,18 @@ Diametro[c(4, 5)] <- c(55.3, 63.4); print(Diametro)
 --
 
 .pull-right-4[
-<br><br>
-```{r ref.label="Vsub", echo=FALSE, eval=TRUE, collapse=F}
+&lt;br&gt;&lt;br&gt;
+
+```
+## [1] "Mogno" "Cedro" "Ipe"   "NI"    "NI"
+```
+
+```
+## [1] 23.0 27.0 33.5 42.6 52.1
+```
+
+```
+## [1] 23.0 27.0 33.5 55.3 63.4
 ```
 ]
 
@@ -1515,29 +1726,30 @@ Diametro[c(4, 5)] <- c(55.3, 63.4); print(Diametro)
 ---
 name: IndM
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de matrizes
 
-- Para **extrair**, **excluir** ou **substituir** elementos de uma matriz usa-se o comando [ $i$, $j$ ]. 
-- O índice $i$ indica as linhas e o índice $j$ indica as colunas da matriz.
-- Se o argumento for do tipo [ $i$, ] ter-se-á acesso a todos os elementos da linha $i$ especificada.
-- Se o argumento for do tipo [ , $j$ ] ter-se-á acesso a todos os elementos da coluna $j$ especificada.
+- Para **extrair**, **excluir** ou **substituir** elementos de uma matriz usa-se o comando [ `\(i\)`, `\(j\)` ]. 
+- O índice `\(i\)` indica as linhas e o índice `\(j\)` indica as colunas da matriz.
+- Se o argumento for do tipo [ `\(i\)`, ] ter-se-á acesso a todos os elementos da linha `\(i\)` especificada.
+- Se o argumento for do tipo [ , `\(j\)` ] ter-se-á acesso a todos os elementos da coluna `\(j\)` especificada.
 - Se nem o número da linha e nem o número da coluna é informado [ , ]: a matriz é acessada por completa.
 
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de matrizes - Extração
 
 .pull-left-4[
 .font90[
 **Extração por indexação positiva**
-```{r Mext, echo=T, eval=F}
+
+```r
 # Cria uma matriz
-(mat <- 
+(mat &lt;- 
   matrix(1:6, nrow=2, ncol=3, byrow = TRUE,
          dimnames = list(c("L1", "L2"),
                          c("C1", "C2", "C3"))))
@@ -1562,7 +1774,31 @@ mat[c(1, 2), c(2, 3)]
 
 .pull-right-4[
 .font90[
-```{r ref.label="Mext", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##    C1 C2 C3
+## L1  1  2  3
+## L2  4  5  6
+```
+
+```
+## [1] 5
+```
+
+```
+## C1 C2 C3 
+##  4  5  6
+```
+
+```
+## L1 L2 
+##  3  6
+```
+
+```
+##    C2 C3
+## L1  2  3
+## L2  5  6
 ```
 ]
 ]
@@ -1570,16 +1806,17 @@ mat[c(1, 2), c(2, 3)]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de matrizes - Extração
 
 .pull-left-4[
 .font90[
 **Extração por indexação negativa**
-```{r MextN, echo=T, eval=F}
+
+```r
 # Cria uma matriz
-(mat <- 
+(mat &lt;- 
   matrix(1:6, nrow=2, ncol=3, byrow = TRUE,
          dimnames = list(c("L1", "L2"),
                          c("C1", "C2", "C3"))))
@@ -1596,9 +1833,24 @@ mat[, -2]
 --
 
 .pull-right-4[
-<br>
+&lt;br&gt;
 .font90[
-```{r ref.label="MextN", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##    C1 C2 C3
+## L1  1  2  3
+## L2  4  5  6
+```
+
+```
+## L1 L2 
+##  2  5
+```
+
+```
+##    C1 C3
+## L1  1  3
+## L2  4  6
 ```
 ]
 ]
@@ -1606,25 +1858,26 @@ mat[, -2]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de matrizes - Substituição
 
 .pull-left-4[
 .font90[
 **Substituição de elementos na matriz**
-```{r Msub, echo=T, eval=F}
+
+```r
 # Cria uma matriz
-(mat <- 
+(mat &lt;- 
   matrix(1:6, nrow=2, ncol=3, byrow = TRUE,
          dimnames = list(c("L1", "L2"),
                          c("C1", "C2", "C3"))))
 
 # substitui o elemento da posição 1 por zero.
-mat[1, 1] <- 0; print(mat)
+mat[1, 1] &lt;- 0; print(mat)
 
 # substitui os elementos das posições 1 e 5 por zero.
-mat[c(1,5)] <- c(0,0); print(mat)
+mat[c(1,5)] &lt;- c(0,0); print(mat)
 ```
 ]
 ]
@@ -1632,9 +1885,25 @@ mat[c(1,5)] <- c(0,0); print(mat)
 --
 
 .pull-right-4[
-<br>
+&lt;br&gt;
 .font90[
-```{r ref.label="Msub", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##    C1 C2 C3
+## L1  1  2  3
+## L2  4  5  6
+```
+
+```
+##    C1 C2 C3
+## L1  0  2  3
+## L2  4  5  6
+```
+
+```
+##    C1 C2 C3
+## L1  0  2  0
+## L2  4  5  6
 ```
 ]
 ]
@@ -1642,29 +1911,30 @@ mat[c(1,5)] <- c(0,0); print(mat)
 ---
 name: iae
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de arrays
 
 - A ideia de indexação de **arrays** é **similar** ao aprendido para **matrizes**.
 - No caso de arrays, deve-se apenas considerar que existe mais dimensões.
-- Portanto, a indexação pode ser realizada usando o comando [ $i$, $j$, $z$ ].
-- Então: $i$ = linha, $j$ = coluna, $z$ = matriz.
+- Portanto, a indexação pode ser realizada usando o comando [ `\(i\)`, `\(j\)`, `\(z\)` ].
+- Então: `\(i\)` = linha, `\(j\)` = coluna, `\(z\)` = matriz.
 - Se o número da linha, coluna e matriz não é informado [ , , ]: o array é acessado por completo.
 
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de arrays - Extração
 
 .pull-left-4[
 .font90[
 **Extração por indexação positiva**
-```{r arext, echo=T, eval=F}
+
+```r
 # Cria um array
-arr <- array(1:18,
+arr &lt;- array(1:18,
       dim = c(3, 3, 2),
       dimnames = list(c("L1", "L2", "L3"),
                       c("C1", "C2", "C3"),
@@ -1684,7 +1954,19 @@ arr[ , , 2]
 
 .pull-right-4[
 .font90[
-```{r ref.label="arext", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##    C1 C2 C3
+## L1  1  4  7
+## L2  2  5  8
+## L3  3  6  9
+```
+
+```
+##    C1 C2 C3
+## L1 10 13 16
+## L2 11 14 17
+## L3 12 15 18
 ```
 ]
 ]
@@ -1692,14 +1974,15 @@ arr[ , , 2]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de arrays - Extração
 
 .pull-left-4[
 .font90[
 **Extração por indexação positiva**
-```{r arext2, echo=T, eval=F}
+
+```r
 
 # extrai 1ª linha da matriz "M1"
 arr[1, , 1]
@@ -1720,7 +2003,26 @@ arr[1, 2, 1]
 
 .pull-right-4[
 .font90[
-```{r ref.label="arext2", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## C1 C2 C3 
+##  1  4  7
+```
+
+```
+## L1 L2 L3 
+## 13 14 15
+```
+
+```
+##    M1 M2
+## C1  1 10
+## C2  4 13
+## C3  7 16
+```
+
+```
+## [1] 4
 ```
 ]
 ]
@@ -1728,14 +2030,15 @@ arr[1, 2, 1]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de arrays - Extração
 
 .pull-left-4[
 .font90[
 **Extração por indexação negativa**
-```{r arext3, echo=T, eval=F}
+
+```r
 
 # extrai matriz, exceto a 1ª
 arr[ , , -1]   
@@ -1753,7 +2056,22 @@ arr[1, -2, -2]
 
 .pull-right-4[
 .font90[
-```{r ref.label="arext3", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##    C1 C2 C3
+## L1 10 13 16
+## L2 11 14 17
+## L3 12 15 18
+```
+
+```
+## C1 C2 C3 
+## 10 13 16
+```
+
+```
+## C1 C3 
+##  1  7
 ```
 ]
 ]
@@ -1761,17 +2079,18 @@ arr[1, -2, -2]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de arrays - Substituição
 
 .pull-left-4[
 .font90[
 **Substituição de elementos**
-```{r arext4, echo=T, eval=F}
+
+```r
 # Substitui o elemento da 1ª linha e 1ª coluna 
 # da matriz 1
-arr[1, 1, 1] <- 0; print(arr)
+arr[1, 1, 1] &lt;- 0; print(arr)
 ```
 ]
 ]
@@ -1780,7 +2099,21 @@ arr[1, 1, 1] <- 0; print(arr)
 
 .pull-right-4[
 .font90[
-```{r ref.label="arext4", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## , , M1
+## 
+##    C1 C2 C3
+## L1  0  4  7
+## L2  2  5  8
+## L3  3  6  9
+## 
+## , , M2
+## 
+##    C1 C2 C3
+## L1 10 13 16
+## L2 11 14 17
+## L3 12 15 18
 ```
 ]
 ]
@@ -1789,17 +2122,18 @@ arr[1, 1, 1] <- 0; print(arr)
 
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de arrays - Substituição
 
 .pull-left-4[
 .font90[
 **Substituição de elementos**
-```{r arext5, echo=T, eval=F}
+
+```r
 # Substitui todos os elementos da 1ª linha 
 # da matriz 2
-arr[1, , 2] <- c(50,60,70); print(arr)
+arr[1, , 2] &lt;- c(50,60,70); print(arr)
 ```
 ]
 ]
@@ -1808,7 +2142,21 @@ arr[1, , 2] <- c(50,60,70); print(arr)
 
 .pull-right-4[
 .font90[
-```{r ref.label="arext5", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## , , M1
+## 
+##    C1 C2 C3
+## L1  0  4  7
+## L2  2  5  8
+## L3  3  6  9
+## 
+## , , M2
+## 
+##    C1 C2 C3
+## L1 50 60 70
+## L2 11 14 17
+## L3 12 15 18
 ```
 ]
 ]
@@ -1816,28 +2164,29 @@ arr[1, , 2] <- c(50,60,70); print(arr)
 ---
 name: IndDF
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de data frames
 
 - A **extração**, **inclusão** ou **substituição** de vetores em um data frame pode ser feita usando os comandos: .red[[ .black[*i*, *j*] ]] e .red[$].
 - O comando .red[$] é usual para colunas nomeadas.
 - O comando .red[[ .black[*i*, *j*] ]] segue a lógica de matrizes. Em que, *i* = linhas e *j* = colunas.
-- Operadores **lógicos** (.red[&, |, !]) e de **comparação** (.red[<, >, >=, <=, !=, ==, %in%]) podem ser usados para extrair informações específicas do data frame.
+- Operadores **lógicos** (.red[&amp;, |, !]) e de **comparação** (.red[&lt;, &gt;, &gt;=, &lt;=, !=, ==, %in%]) podem ser usados para extrair informações específicas do data frame.
 - As funções .blue[attach()] (attachment) e .blue[with()] também podem ser usadas para facilitar o acesso à colunas de data frames.
 
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de data frames - .black[Comando] .red[[ .black[*i*, *j*] ]]
 
 .pull-left-4[
 .font90[
 **Extração de elementos do data frame**
-```{r DF, echo=T, eval=F}
-(invFlor <- 
+
+```r
+(invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
     diametro=c(39.5, 45.6, 49.5, 70.4),
@@ -1862,7 +2211,29 @@ invFlor[, 2, drop=FALSE]
 
 .pull-right-4[
 .font90[
-```{r ref.label="DF", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##   especie diametro altura cortar
+## 1   Acapu     39.5   10.5    Não
+## 2   Mogno     45.6   13.6    Não
+## 3   Cedro     49.5   14.5    Não
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+## [1] "Mogno"
+```
+
+```
+## [1] 39.5 45.6 49.5 70.4
+```
+
+```
+##   diametro
+## 1     39.5
+## 2     45.6
+## 3     49.5
+## 4     70.4
 ```
 ]
 ]
@@ -1870,15 +2241,16 @@ invFlor[, 2, drop=FALSE]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de data frames - .black[Comando] .red[[ .black[*i*, *j*] ]]
 
 .pull-left-4[
 .font90[
 **Extração de elementos do data frame**
-```{r DF2, echo=T, eval=F}
-(invFlor <- 
+
+```r
+(invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
     diametro=c(39.5, 45.6, 49.5, 70.4),
@@ -1902,7 +2274,33 @@ invFlor[, c("cortar", "especie")]
 
 .pull-right-4[
 .font80[
-```{r ref.label="DF2", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##   especie diametro altura cortar
+## 1   Acapu     39.5   10.5    Não
+## 2   Mogno     45.6   13.6    Não
+## 3   Cedro     49.5   14.5    Não
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+## [1] "Acapu"  "Mogno"  "Cedro"  "Tauari"
+```
+
+```
+##   cortar altura
+## 1    Não   10.5
+## 2    Não   13.6
+## 3    Não   14.5
+## 4    Sim   17.4
+```
+
+```
+##   cortar especie
+## 1    Não   Acapu
+## 2    Não   Mogno
+## 3    Não   Cedro
+## 4    Sim  Tauari
 ```
 ]
 ]
@@ -1910,15 +2308,16 @@ invFlor[, c("cortar", "especie")]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de data frames - .black[Comando] .red[$]
 
 .pull-left-4[
 .font90[
 **Extração de elementos do data frame**
-```{r DF3, echo=T, eval=F}
-(invFlor <- 
+
+```r
+(invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
     diametro=c(39.5, 45.6, 49.5, 70.4),
@@ -1939,9 +2338,23 @@ invFlor$altura[c(3,4)]
 --
 
 .pull-right-4[
-<br><br>
+&lt;br&gt;&lt;br&gt;
 .font80[
-```{r ref.label="DF3", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##   especie diametro altura cortar
+## 1   Acapu     39.5   10.5    Não
+## 2   Mogno     45.6   13.6    Não
+## 3   Cedro     49.5   14.5    Não
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+## [1] 39.5 45.6 49.5 70.4
+```
+
+```
+## [1] 14.5 17.4
 ```
 ]
 ]
@@ -1949,15 +2362,16 @@ invFlor$altura[c(3,4)]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de data frames - .red[$] .black[+] .black[Operadores de comparação]
 
 .pull-left-4[
 .font90[
 **Extração de elementos do data frame**
-```{r DF4, echo=T, eval=F}
-(invFlor <- 
+
+```r
+(invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
     diametro=c(39.5, 45.6, 49.5, 70.4),
@@ -1966,10 +2380,10 @@ invFlor$altura[c(3,4)]
     stringsAsFactors=FALSE))
 
 # Quais árvores têm mais de 14 m?
-invFlor$altura > 14
+invFlor$altura &gt; 14
 
-# Quais árvores têm diâmetros >= 50cm?
-invFlor$diametro >= 50
+# Quais árvores têm diâmetros &gt;= 50cm?
+invFlor$diametro &gt;= 50
 
 # Quais árvores estão previstas para corte?
 invFlor$cortar == "Sim"
@@ -1980,9 +2394,27 @@ invFlor$cortar == "Sim"
 --
 
 .pull-right-4[
-<br>
+&lt;br&gt;
 .font80[
-```{r ref.label="DF4", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##   especie diametro altura cortar
+## 1   Acapu     39.5   10.5    Não
+## 2   Mogno     45.6   13.6    Não
+## 3   Cedro     49.5   14.5    Não
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+## [1] FALSE FALSE  TRUE  TRUE
+```
+
+```
+## [1] FALSE FALSE FALSE  TRUE
+```
+
+```
+## [1] FALSE FALSE FALSE  TRUE
 ```
 
 **Observe que as saídas dos comandos são respostas booleanas (TRUE ou FALSE). No entanto, na maioria das vezes deseja-se extrair os elementos.**
@@ -1993,15 +2425,16 @@ invFlor$cortar == "Sim"
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de data frames - .red[[ .black[*i*, *j*] ]] .black[+] .red[$] .black[+] .black[Operadores (lógicos e comparação)]
 
 .pull-left-4[
 .font80[
 **Extração de elementos do data frame**
-```{r DF5, echo=T, eval=F}
-(invFlor <- 
+
+```r
+(invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
     diametro=c(39.5, 45.6, 49.5, 70.4),
@@ -2010,17 +2443,17 @@ invFlor$cortar == "Sim"
     stringsAsFactors=FALSE))
 
 # Quais árvores têm mais de 14 m?
-invFlor[invFlor$altura > 14, ]
+invFlor[invFlor$altura &gt; 14, ]
 
-# Quais árvores têm diâmetros >= 50cm?
-invFlor[invFlor$diametro >= 50, ]
+# Quais árvores têm diâmetros &gt;= 50cm?
+invFlor[invFlor$diametro &gt;= 50, ]
 
 # Quais árvores estão previstas para corte?
 invFlor[invFlor$cortar == "Sim", ]
 
-# Quais árvores têm diametro < 50
+# Quais árvores têm diametro &lt; 50
 # e não estão previstas para corte?
-invFlor[invFlor$diametro < 50 & invFlor$cortar == "Não", ]
+invFlor[invFlor$diametro &lt; 50 &amp; invFlor$cortar == "Não", ]
 ```
 ]
 ]
@@ -2029,7 +2462,36 @@ invFlor[invFlor$diametro < 50 & invFlor$cortar == "Não", ]
 
 .pull-right-4[
 .font70[
-```{r ref.label="DF5", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##   especie diametro altura cortar
+## 1   Acapu     39.5   10.5    Não
+## 2   Mogno     45.6   13.6    Não
+## 3   Cedro     49.5   14.5    Não
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+##   especie diametro altura cortar
+## 3   Cedro     49.5   14.5    Não
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+##   especie diametro altura cortar
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+##   especie diametro altura cortar
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+##   especie diametro altura cortar
+## 1   Acapu     39.5   10.5    Não
+## 2   Mogno     45.6   13.6    Não
+## 3   Cedro     49.5   14.5    Não
 ```
 ]
 ]
@@ -2037,14 +2499,15 @@ invFlor[invFlor$diametro < 50 & invFlor$cortar == "Não", ]
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de data frames - .black[Adição de linhas e colunas]
 
 .pull-left-4[
 .font80[
-```{r DF6, echo=T, eval=F}
-(invFlor <- 
+
+```r
+(invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
     diametro=c(39.5, 45.6, 49.5, 70.4),
@@ -2053,14 +2516,14 @@ invFlor[invFlor$diametro < 50 & invFlor$cortar == "Não", ]
     stringsAsFactors=FALSE))
 
 # Cria um vetor sobre proteção
-protegida <- c("Sim", "Sim", "Sim", "Não")
+protegida &lt;- c("Sim", "Sim", "Sim", "Não")
 
 # Adiciona como nova coluna
-invFlor$protegida <- protegida
+invFlor$protegida &lt;- protegida
 print(invFlor)
 
 # Substitui linha na posição 1
-invFlor[1,] <- c("Acapu", 50.9, 15.6, "Não", "Sim")
+invFlor[1,] &lt;- c("Acapu", 50.9, 15.6, "Não", "Sim")
 print(invFlor)
 
 ```
@@ -2071,7 +2534,29 @@ print(invFlor)
 
 .pull-right-4[
 .font70[
-```{r ref.label="DF6", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+##   especie diametro altura cortar
+## 1   Acapu     39.5   10.5    Não
+## 2   Mogno     45.6   13.6    Não
+## 3   Cedro     49.5   14.5    Não
+## 4  Tauari     70.4   17.4    Sim
+```
+
+```
+##   especie diametro altura cortar protegida
+## 1   Acapu     39.5   10.5    Não       Sim
+## 2   Mogno     45.6   13.6    Não       Sim
+## 3   Cedro     49.5   14.5    Não       Sim
+## 4  Tauari     70.4   17.4    Sim       Não
+```
+
+```
+##   especie diametro altura cortar protegida
+## 1   Acapu     50.9   15.6    Não       Sim
+## 2   Mogno     45.6   13.6    Não       Sim
+## 3   Cedro     49.5   14.5    Não       Sim
+## 4  Tauari     70.4   17.4    Sim       Não
 ```
 ]
 ]
@@ -2079,7 +2564,7 @@ print(invFlor)
 ---
 name: IndL
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de listas
 
@@ -2090,24 +2575,25 @@ name: IndL
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de listas - .black[Níveis superiores não nomeados]
 
 .pull-left-4[
 .font90[
 **Lista com níveis superiores não nomeados**
-```{r IndL, echo=T, eval=F}
-diametro <- c(23.0, 27.0, 33.6, 52.6)
 
-invFlor <- 
+```r
+diametro &lt;- c(23.0, 27.0, 33.6, 52.6)
+
+invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
     cortar=c("Não", "Não", "Não", "Sim"),
     stringsAsFactors=FALSE)
 
 # Criando lista não nomeada
-(list <- list(diametro, invFlor))
+(list &lt;- list(diametro, invFlor))
 
 # extrai o componente 1
 list[[1]]
@@ -2123,9 +2609,35 @@ list[[2]]$especie
 --
 
 .pull-right-4[
-<br>
+&lt;br&gt;
 .font70[
-```{r ref.label="IndL", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## [[1]]
+## [1] 23.0 27.0 33.6 52.6
+## 
+## [[2]]
+##   especie cortar
+## 1   Acapu    Não
+## 2   Mogno    Não
+## 3   Cedro    Não
+## 4  Tauari    Sim
+```
+
+```
+## [1] 23.0 27.0 33.6 52.6
+```
+
+```
+##   especie
+## 1   Acapu
+## 2   Mogno
+## 3   Cedro
+## 4  Tauari
+```
+
+```
+## [1] "Acapu"  "Mogno"  "Cedro"  "Tauari"
 ```
 ]
 ]
@@ -2133,24 +2645,25 @@ list[[2]]$especie
 ---
 
 ## Indexação no R
-<br>
+&lt;br&gt;
 
 ### Indexação de listas - .black[Níveis superiores nomeados]
 
 .pull-left-4[
 .font90[
 **Lista com níveis superiores nomeados**
-```{r IndL1, echo=T, eval=F}
-diametro <- c(23.0, 27.0, 33.6, 52.6)
 
-invFlor <- 
+```r
+diametro &lt;- c(23.0, 27.0, 33.6, 52.6)
+
+invFlor &lt;- 
   data.frame(
     especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
     cortar=c("Não", "Não", "Não", "Sim"),
     stringsAsFactors=FALSE)
 
 # Criando lista não nomeada
-(list <- list(DAP = diametro, Inventario = invFlor))
+(list &lt;- list(DAP = diametro, Inventario = invFlor))
 
 # extrai o componente da posição 1
 list$DAP
@@ -2158,8 +2671,8 @@ list$DAP
 # extrai a coluna espécie do componente 2
 list$Inventario$especie
 
-# extrai as árvores para corte com DAP > 50
-list$Inventario[diametro > 50 & cortar == "Sim", ]
+# extrai as árvores para corte com DAP &gt; 50
+list$Inventario[diametro &gt; 50 &amp; cortar == "Sim", ]
 ```
 ]
 ]
@@ -2167,9 +2680,32 @@ list$Inventario[diametro > 50 & cortar == "Sim", ]
 --
 
 .pull-right-4[
-<br>
+&lt;br&gt;
 .font70[
-```{r ref.label="IndL1", echo=FALSE, eval=TRUE, collapse=F}
+
+```
+## $DAP
+## [1] 23.0 27.0 33.6 52.6
+## 
+## $Inventario
+##   especie cortar
+## 1   Acapu    Não
+## 2   Mogno    Não
+## 3   Cedro    Não
+## 4  Tauari    Sim
+```
+
+```
+## [1] 23.0 27.0 33.6 52.6
+```
+
+```
+## [1] "Acapu"  "Mogno"  "Cedro"  "Tauari"
+```
+
+```
+##   especie cortar
+## 4  Tauari    Sim
 ```
 ]
 ]
@@ -2177,7 +2713,7 @@ list$Inventario[diametro > 50 & cortar == "Sim", ]
 ---
 name: func
 ## Funções no R
-<br>
+&lt;br&gt;
 
 ### Criando funções no R
 
@@ -2200,11 +2736,11 @@ das chaves .green[\{\}], e este irá trabalhar sobre os argumentos da função.
 .blockquote[
 .font90[
 
-.center[.blue[function(]arglist = **arg1**, **arg2**, ..., **argn**.blue[)].magenta[\{] <br>
-**expr** <br>
-.blue[return(]value.blue[)]<br>
+.center[.blue[function(]arglist = **arg1**, **arg2**, ..., **argn**.blue[)].magenta[\{] &lt;br&gt;
+**expr** &lt;br&gt;
+.blue[return(]value.blue[)]&lt;br&gt;
 .magenta[\}]]
-<br>
+&lt;br&gt;
 
 **arglist** = um argumento ou lista de argumentos sobre o(s) qual(is) irá atuar o código **expr**;
 
@@ -2221,7 +2757,7 @@ das chaves .green[\{\}], e este irá trabalhar sobre os argumentos da função.
 ---
 
 ## Funções no R
-<br>
+&lt;br&gt;
 
 ### Criando funções no R
 
@@ -2229,22 +2765,22 @@ das chaves .green[\{\}], e este irá trabalhar sobre os argumentos da função.
 .font80[
 .blue[**1. Função para calcular a média aritmética de um vetor x**].
 
-```{r "func", echo=T, eval=T}
+
+```r
 # Criando uma função
 
-Media <- function(x){
+Media &lt;- function(x){
   n = length(x)
   Soma = sum(x)
   Media = Soma/n
   
   return(Media)                                
 }
-
 ```
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
 **Lembre-se**: O R-base já possui a função .green[mean()].
-<br>
+&lt;br&gt;
 
 **É claro que esta função não está em um nível profissional! :)**
 
@@ -2254,16 +2790,19 @@ Media <- function(x){
 --
 
 .pull-right-4[
-<br>
+&lt;br&gt;
 .font90[
 
 **Dado um vetor de diâmetros de árvores pode-se calcular a média usando a função:**
 
-```{r, echo=T, eval=T, collapse=T}
-diametro <- c(23.4, 54.3, 45.1, 67.1, 34.7)
+
+```r
+diametro &lt;- c(23.4, 54.3, 45.1, 67.1, 34.7)
 Media(diametro)
+## [1] 44.92
 
 mean(diametro) # R-base
+## [1] 44.92
 ```
 
 
@@ -2274,7 +2813,7 @@ mean(diametro) # R-base
 ---
 
 ## Funções no R
-<br>
+&lt;br&gt;
 
 ### Criando funções no R
 
@@ -2282,19 +2821,19 @@ mean(diametro) # R-base
 .font80[
 .blue[**2. Função para calcular o coeficiente de variação de um vetor x**].
 
-```{r echo=T, eval=T}
+
+```r
 # Criando uma função para CV
 
-CV <- function(x){
+CV &lt;- function(x){
   Media = sum(x)/length(x)
   DP = sqrt(sum((x-mean(x))^2)/(length(x)-1))
   CV = (DP/Media)*100
   
   return(CV)                                                                            
 }
-
 ```
-<br>
+&lt;br&gt;
 
 **Nota**: O R-base **NÃO possui** uma função para o calcular coeficiente de variação. No entanto, possui as funções .green[sd()] e .green[mean()], para calcular o **desvio padrão** e a **média**, respectivamente.
 
@@ -2304,14 +2843,16 @@ CV <- function(x){
 --
 
 .pull-right-4[
-<br>
+&lt;br&gt;
 .font90[
 
 **Dado um vetor de diâmetros de árvores pode-se calcular o CV usando a função:**
 
-```{r, echo=T, eval=T, collapse=T}
-diametro <- c(23.4, 54.3, 45.1, 67.1, 34.7)
+
+```r
+diametro &lt;- c(23.4, 54.3, 45.1, 67.1, 34.7)
 CV(diametro)
+## [1] 37.70612
 ```
 
 ]
@@ -2325,19 +2866,19 @@ class: inverse, top, right
 background-image: url(fig/part1/arara.jpg)
 background-size: cover
 
-.font200[**.yellow[Parte 5] <br> .white[Um pouco mais <br> sobre o R]**]
+.font200[**.yellow[Parte 5] &lt;br&gt; .white[Um pouco mais &lt;br&gt; sobre o R]**]
 
 ---
 
 layout: true
 class: with-logo logo-ufpa
-<div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Introdução ao R para Análise de Dados</div3>/ <div2>Parte 1 - Introdução à Linguagem de Programação R</div2> </div>
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Introdução ao R para Análise de Dados&lt;/div3&gt;/ &lt;div2&gt;Parte 1 - Introdução à Linguagem de Programação R&lt;/div2&gt; &lt;/div&gt;
 
 ---
 name: Sint
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Sintaxe da linguagem R
 
@@ -2347,35 +2888,42 @@ name: Sint
 ]
 
 .pull-left[
-```{r r1, echo=TRUE, eval=FALSE}
+
+```r
 "a" == "A"
 "mogno" == "Mogno"
 
 # Cria um vetor de nomes
-esp <- c("Cedro", "Ipe", "Ipe", "Ipe", "Cedro",
+esp &lt;- c("Cedro", "Ipe", "Ipe", "Ipe", "Cedro",
          "Ipe", "Ipe", "Cedro", "Ipe", "ipe")
 table(esp) # tabela de frequências
 ```
 ]
 
 .pull-right[
-```{r ref.label="r1", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+## [1] FALSE
+## [1] FALSE
+## esp
+## Cedro   ipe   Ipe 
+##     3     1     6
 ```
 ]
 
-<br>
+&lt;br&gt;
 
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
 
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Sintaxe da linguagem R
 .font90[
 - **Comandos elementares no R**: consistem em .green[expressões] ou .green[atribuições].
-<br>
+&lt;br&gt;
 
 Se uma expressão é um comando, então o R: .blue[avalia], .blue[imprime] (a menos que seja especificado ao contrário) e o resultado é ".blue[perdido]".
 
@@ -2383,9 +2931,10 @@ Se uma atribuições é um comando, então o R: .blue[avalia], .blue[atribui] o 
 ]
 
 .pull-left[
-```{r r2, echo=TRUE, eval=FALSE}
+
+```r
 # Atribuição: Avalia, atribui e suprime
-DAP <- c(49, 56, 44, 46, 56, 
+DAP &lt;- c(49, 56, 44, 46, 56, 
          87, 45, 98, 100, 120)
 
 # Expressão: Avalia, imprime e perde o resultado
@@ -2394,7 +2943,9 @@ mean(DAP)
 ]
 
 .pull-right[
-```{r ref.label="r2", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+## [1] 70.1
 ```
 ]
 
@@ -2405,38 +2956,36 @@ Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Sintaxe da linguagem R
 
 - **Separação de comandos**: ponto e vírgula (.red[;]) ou por uma nova linha;
 - **Comentários**: precedidos pelo símbolo .red[\#] (tudo após .red[\#] não é executado);
 - **Comando incompleto**: se o comando R não estiver sintaticamente completo (em uma linha de código), o prompt aparecerá com o símbolo: .red[+]. Esse símbolo indica continuação do comando inicial.
-<br><br><br><br><br><br>
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
 
 ---
 name: Oper
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores no R
 
 - Na linguagem R existe três tipos de operadores
 - Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
 
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/part1/OpR.png")
-```
+&lt;img src="fig/part1/OpR.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Tipos de operadores
-<br>
+&lt;br&gt;
 
 .font80[
 .pull-left-8[
@@ -2459,8 +3008,8 @@ knitr::include_graphics("fig/part1/OpR.png")
 
 | Símbolo | Descrição                       |
 |---------|---------------------------------|
-| &       | E (and) - versão vetorizada     |
-| &&      | E (and) - versão não-vetorizada |
+| &amp;       | E (and) - versão vetorizada     |
+| &amp;&amp;      | E (and) - versão não-vetorizada |
 | ⎮       | Ou (or) - versão vetorizada     |
 | ⎮⎮      | Ou (or) - versão não-vetorizada |
 | !       | Não...                          |
@@ -2473,10 +3022,10 @@ knitr::include_graphics("fig/part1/OpR.png")
 
 | Símbolo | Descrição                |
 |---------|--------------------------|
-| <       | Menor do que...          |
-| >       | Maior do que...          |
-| <=      | Menor ou igual do que... |
-| >=      | Maior ou igual do que... |
+| &lt;       | Menor do que...          |
+| &gt;       | Maior do que...          |
+| &lt;=      | Menor ou igual do que... |
+| &gt;=      | Maior ou igual do que... |
 | ==      | Igual a...               |
 | !=      | Diferente de...          |
 | %in%    | Contém                   |
@@ -2487,7 +3036,7 @@ knitr::include_graphics("fig/part1/OpR.png")
 ---
 name: arit
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores aritméticos - Expressões básicas
 
@@ -2495,7 +3044,8 @@ name: arit
 
 .pull-left[
 .font80[
-```{r refname, echo=TRUE, eval=FALSE}
+
+```r
 2+3             # adição
 4*9             # multiplicação
 20/5            # divisão
@@ -2505,12 +3055,14 @@ name: arit
 10%/%3          # Parte inteira da divisão
 ```
 
-```{r refname3, echo=TRUE, eval=FALSE}
-(x <- c(2,4,6,8))
-(y <- c(1,5,9,0))
+
+```r
+(x &lt;- c(2,4,6,8))
+(y &lt;- c(1,5,9,0))
 ```
 
-```{r refname4, echo=TRUE, eval=FALSE}
+
+```r
 x + y
 y/x+2
 ```
@@ -2519,13 +3071,27 @@ y/x+2
 
 .pull-right[
 .font80[
-```{r ref.label="refname", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+## [1] 5
+## [1] 36
+## [1] 4
+## [1] 22
+## [1] 125
+## [1] 1
+## [1] 3
 ```
 
-```{r ref.label="refname3", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+## [1] 2 4 6 8
+## [1] 1 5 9 0
 ```
 
-```{r ref.label="refname4", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+## [1]  3  9 15  8
+## [1] 2.50 3.25 3.50 2.00
 ```
 ]
 ]
@@ -2535,14 +3101,15 @@ Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Sl
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores aritméticos - Expressões mais complexas
 
 - Regra **PEMDAS** (**P**arênteses, **E**xponenciação, **M**ultiplicação, **D**ivisão, **A**dição e **S**ubtração).
 
 .pull-left[
-```{r refname2, echo=TRUE, eval=FALSE}
+
+```r
 (2+3)*10
 4*3**3
 5+8-4*9/3
@@ -2553,14 +3120,21 @@ Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Sl
 ]
 
 .pull-right[
-```{r ref.label="refname2", echo=FALSE, eval=TRUE, collapse=TRUE}
+
+```
+## [1] 50
+## [1] 108
+## [1] 1
+## [1] 17
+## [1] 35
+## [1] 40
 ```
 ]
 
 ---
 name: relac
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores relacionais (ou comparação)
 
@@ -2568,26 +3142,28 @@ name: relac
 
 .pull-left-9[
 .font80[
-```{r logVar, echo=TRUE, eval=FALSE}
+
+```r
 # vetor com um elemento
-(x <- 20)
-(y <- 10)
-(v <- 1)
+(x &lt;- 20)
+(y &lt;- 10)
+(v &lt;- 1)
 
 # vetor com mais de um elemento
-(z <- c(1:5))
-(w <- c(5:1))
+(z &lt;- c(1:5))
+(w &lt;- c(5:1))
 ```
 
-```{r logname, echo=TRUE, eval=FALSE}
-x > y        # x é maior do que y?
-x < y        # x é menor do que y?
+
+```r
+x &gt; y        # x é maior do que y?
+x &lt; y        # x é menor do que y?
 x != y       # x é diferente de y?
-y <= x       # y é menor ou igual a x?
-y >= x       # y é maior ou igual a x?
+y &lt;= x       # y é menor ou igual a x?
+y &gt;= x       # y é maior ou igual a x?
 z == w       # elementos de z são iguais aos de w?
 z != w       # elementos de z são dif. aos de w?
-x >= w       # x é >= aos elementos de w?
+x &gt;= w       # x é &gt;= aos elementos de w?
 w %in% v     # w contém v?
 ```
 ]
@@ -2595,11 +3171,27 @@ w %in% v     # w contém v?
 
 .pull-right-9[
 .font80[
-```{r ref.label="logVar", echo=FALSE, eval=TRUE, collapse=T}
-```
-<br>
 
-```{r ref.label="logname", echo=FALSE, eval=TRUE, collapse=T}
+```
+## [1] 20
+## [1] 10
+## [1] 1
+## [1] 1 2 3 4 5
+## [1] 5 4 3 2 1
+```
+&lt;br&gt;
+
+
+```
+## [1] TRUE
+## [1] FALSE
+## [1] TRUE
+## [1] TRUE
+## [1] FALSE
+## [1] FALSE FALSE  TRUE FALSE FALSE
+## [1]  TRUE  TRUE FALSE  TRUE  TRUE
+## [1] TRUE TRUE TRUE TRUE TRUE
+## [1] FALSE FALSE FALSE FALSE  TRUE
 ```
 ]
 ]
@@ -2607,7 +3199,7 @@ w %in% v     # w contém v?
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores relacionais (ou comparação) - .black[operador %in%]
 
@@ -2619,8 +3211,9 @@ Considere um vetor de nomes de espécies florestais...
 
 .pull-left-9[
 .font80[
-```{r IN, echo=TRUE, eval=FALSE}
-especie <- 
+
+```r
+especie &lt;- 
    c("Vouacapoua-americana", "Cedrela-odorata",
      "Bertholletia-excelsa", "Dinizia-excelsa Ducke",
      "Bertholletia-excelsa", "Manilkara-huberi",
@@ -2635,7 +3228,7 @@ especie <-
 .pull-right-9[
 .font80[
 Agora, você deseja descobrir se esse vetor contém *Bertholletia excelsa* e *Swietenia macrophylla*?
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
 Essas espécies estão classificadas na categoria Vulnerável (VU), conforme a [Portaria MMA 443, de 17 de dezembro de 2014](http://dados.gov.br/dataset/portaria_443). Portanto, sofrem as restrições estabelecidas no art. 2º, incluindo a proibição de manejo.
 ]
@@ -2643,9 +3236,10 @@ Essas espécies estão classificadas na categoria Vulnerável (VU), conforme a [
 
 .pull-left[
 .font80[
-```{r ref.label="IN", echo=FALSE, eval=TRUE, collapse=T}
-"Bertholletia-excelsa" %in% especie
-"Swietenia-macrophylla" %in% especie
+
+```
+## [1] TRUE
+## [1] FALSE
 ```
 ]
 ]
@@ -2653,19 +3247,20 @@ Essas espécies estão classificadas na categoria Vulnerável (VU), conforme a [
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores relacionais (ou comparação)
 
 .pull-left-9[
-```{r IN2, echo=TRUE, eval=FALSE}
-especie <- 
+
+```r
+especie &lt;- 
    c("Vouacapoua-americana", "Cedrela-odorata",
      "Bertholletia-excelsa", "Dinizia-excelsa Ducke",
      "Bertholletia-excelsa", "Manilkara-huberi",
      "Couratari-guianensis")
 
-ameacadas <- 
+ameacadas &lt;- 
   c("Vouacapoua-americana", "Bertholletia-excelsa",
     "Cedrela-odorata", "Swietenia-macrophylla")
 
@@ -2684,14 +3279,16 @@ especie %in% ameacadas
 ]
 
 .pull-down[
-```{r ref.label="IN2", echo=FALSE, eval=TRUE, collapse=T}
+
+```
+## [1]  TRUE  TRUE  TRUE FALSE  TRUE FALSE FALSE
 ```
 ]
 
 ---
 name: log
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores lógicos
 
@@ -2699,7 +3296,7 @@ name: log
 .font80[
 - Em programação, estes operadores são usados para realizar **operações lógicas**, cuja saída é uma **resposta booleana**.
 - Uma resposta booleana indica se algo é Verdadeiro (`TRUE`) ou Falso (`FALSE`).
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
 **Mogno brasileiro** = *Swietenia macrophylla*
 
@@ -2708,116 +3305,98 @@ name: log
 ]
 
 .pull-right-5[
-```{r , echo=FALSE, eval=TRUE}
-
-data <- data.frame(
-  Especie = c("Swietenia macrophylla", "Swietenia macrophylla", "Swietenia macrophylla", "Hymenolobium petraeum","Hymenolobium petraeum", "Hymenolobium petraeum", "Hymenolobium petraeum","Hymenolobium petraeum", "Swietenia macrophylla", "Swietenia macrophylla"),
-              DAP = c(33.6, 42.6, 52.1, 80.3, 90.8,
-                      49.4, 70.5, 100.5, 60.7, 27.1),
-              H = c(9.1, 13.2, 15.4, 18.6, 19.5,
-                    16.8, 17.9, 22.4, 15.3, 8.7),
-              Cipo = c("Sim", "Não", "Sim", "Não", "Sim",
-                         "Não", "Sim", "Não", "Sim", "Sim"),
-              QF = c(2, 1, 3, 1, 2, 1, 2, 3, 1, 3),
-              Selecao = c("Protegida", "Protegida", "Protegida", "Explorar", "Explorar",
-                          "Remanescente", "Explorar", "Remanescente","Protegida", "Protegida"),
-  stringsAsFactors = T)
-
-data %>% 
-   DT::datatable(editable = 'cell', 
-                 rownames = FALSE, style = "default",
-                 class = "display", width = '800px',
-                 caption = 'Dados fictícios para 10 árvores de duas espécies florestais.',
-     options=list(pageLength = 10, dom = 'tip',
-                  autoWidth = T,
-       initComplete = htmlwidgets::JS(
-          "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
-          "}")
-       ) 
-     )
-```
+<div id="htmlwidget-dacce153f197a7c295dc" style="width:800px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dacce153f197a7c295dc">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores lógicos
 
-#### Operador `&` - versão vetorizada
+#### Operador `&amp;` - versão vetorizada
 
-Use o operador lógico `&` para responder as questões a seguir:
+Use o operador lógico `&amp;` para responder as questões a seguir:
 
-`r anicon::faa("hand-point-right", animate="horizontal")` Quais árvores possuem **DAP maior ou igual a 50cm** .red[e] **Qualidade de Fuste (QF) igual a 1**❓
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Quais árvores possuem **DAP maior ou igual a 50cm** .red[e] **Qualidade de Fuste (QF) igual a 1**❓
 
 --
 
-```{r operE, echo=TRUE, eval=FALSE}
-data$DAP >= 50 & data$QF == 1
-#data[data$DAP >= 50 & data$QF == 1, ]
+
+```r
+data$DAP &gt;= 50 &amp; data$QF == 1
+#data[data$DAP &gt;= 50 &amp; data$QF == 1, ]
 ```
 
 --
 
-```{r ref.label="operE", echo=FALSE, eval=TRUE, collapse=T}
+
+```
+##  [1] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE
 ```
 
 --
-<br>
+&lt;br&gt;
 🌳**Legislação florestal!**🌳
 
 .font80[
-A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/legiabre.cfm?codlegi=597) (Publicada no DOU nº 26, de 06/02/2009, pág. 100) estabelece em seu art. 6º um <bdi style="font-weight:bold">Diâmetro Mínimo de Corte (DMC) de 50 cm</bdi> para todas as espécies, para as quais ainda não se estabeleceu o DMC específico.
+A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/legiabre.cfm?codlegi=597) (Publicada no DOU nº 26, de 06/02/2009, pág. 100) estabelece em seu art. 6º um &lt;bdi style="font-weight:bold"&gt;Diâmetro Mínimo de Corte (DMC) de 50 cm&lt;/bdi&gt; para todas as espécies, para as quais ainda não se estabeleceu o DMC específico.
 ]
 
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Operadores lógicos
 
-#### Operador `&` - versão vetorizada (cont.)
+#### Operador `&amp;` - versão vetorizada (cont.)
 
-`r anicon::faa("hand-point-right", animate="horizontal")` Quais árvores possuem **cipós ausentes**, **QF igual a 1** .red[e] **DAP maior ou igual a 50cm**❓
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Quais árvores possuem **cipós ausentes**, **QF igual a 1** .red[e] **DAP maior ou igual a 50cm**❓
 
 --
 
-```{r operE2, echo=TRUE, eval=FALSE}
-data$Cipo == "Não" & data$QF == 1 & data$DAP >= 50
-#data[data$Cipo == "Não" & data$QF == 1 & data$DAP >= 50,]
+
+```r
+data$Cipo == "Não" &amp; data$QF == 1 &amp; data$DAP &gt;= 50
+#data[data$Cipo == "Não" &amp; data$QF == 1 &amp; data$DAP &gt;= 50,]
 ```
 
 --
 
-```{r ref.label="operE2", echo=FALSE, eval=TRUE, collapse=T}
+
+```
+##  [1] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE
 ```
 
 --
-`r anicon::faa("hand-point-right", animate="horizontal")` Quais árvores estão selecionadas para **explorar** .red[e] **QF igual a 1**❓
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Quais árvores estão selecionadas para **explorar** .red[e] **QF igual a 1**❓
 
 --
-```{r operE3, echo=TRUE, eval=FALSE}
-data$Selecao == "Explorar" & data$QF == 1
-#data[data$Selecao == "Explorar" & data$QF == 1, ]
+
+```r
+data$Selecao == "Explorar" &amp; data$QF == 1
+#data[data$Selecao == "Explorar" &amp; data$QF == 1, ]
 ```
 
 --
-```{r ref.label="operE3", echo=FALSE, eval=TRUE, collapse=T}
+
+```
+##  [1] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE
 ```
 
 ---
 name: FunsMat
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Funções matemáticas usuais
 
 A linguagem R dispõe de funções matemáticas usualmente encontradas em calculadoras científicas.
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
 
 | Função                 | Descrição                        |
@@ -2834,10 +3413,10 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Alguns comandos básicos
-<br>
+&lt;br&gt;
 
 .font80[
 | **Comando**                             | **Ação**                                      |
@@ -2857,10 +3436,10 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 ---
 
 ## Um pouco mais sobre o R
-<br>
+&lt;br&gt;
 
 ### Alguns comandos básicos (cont.)
-<br>
+&lt;br&gt;
 
 .font80[
 | **Comando**               | **Ação**                                       |
@@ -2877,7 +3456,7 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 ]
 
 
-<!--Slide XX -->
+&lt;!--Slide XX --&gt;
 ---
 layout: false
 class: inverse, top, right
@@ -2887,10 +3466,153 @@ background-size: cover
 .font300[
 .yellow[Obrigado!]
 ]
-<br><br>
+&lt;br&gt;&lt;br&gt;
 
-.white[**Email**:] <a href="mailto:deivisonvs@ufpa.br">.white[deivisonvs@ufpa.br]</a>
+.white[**Email**:] &lt;a href="mailto:deivisonvs@ufpa.br"&gt;.white[deivisonvs@ufpa.br]&lt;/a&gt;
 
-.white[**Github**:] <a href="https://github.com/DeivisonSouza">.white[@DeivisonSouza]</a>
+.white[**Github**:] &lt;a href="https://github.com/DeivisonSouza"&gt;.white[@DeivisonSouza]&lt;/a&gt;
 
 .left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"highlightLanguage": ["r", "css", "yaml"],
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
