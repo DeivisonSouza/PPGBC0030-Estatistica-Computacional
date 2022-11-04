@@ -1,6 +1,6 @@
 ---
 title: "Estatística Computacional (PPGBC0030)"
-subtitle: "Importação de dados com R"
+subtitle: "Tidyverse: importação de dados"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: 

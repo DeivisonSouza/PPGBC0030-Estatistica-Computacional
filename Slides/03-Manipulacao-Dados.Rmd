@@ -1,6 +1,6 @@
 ---
 title: "Estatística Computacional (PPGBC0030)"
-subtitle: "Manipulação de dados com R"
+subtitle: "Tidyverse: manipulação de dados"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: 
