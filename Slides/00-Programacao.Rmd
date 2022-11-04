@@ -140,36 +140,27 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 .pull-right-4[
 
 .pull-left-4[
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo.png")
+
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://readr.tidyverse.org/logo.png")
 ```
 
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://patchwork.data-imaginist.com/reference/figures/logo.png")
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ```
 
 ]
 
-
 .pull-right-4[
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
 ```
 
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://readr.tidyverse.org/logo.png")
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://patchwork.data-imaginist.com/reference/figures/logo.png")
 ```
 ]
-
-.pull-down[
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
-```
 ]
-
-
-]
-
 
 ---
 
