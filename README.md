@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file. -->
+<!-- README.md is generated from README.Rmd. Please edit that file.. -->
 <!-- badges: start -->
 <!-- badges: end -->
 <!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
@@ -45,21 +45,22 @@ Campus Universitário de Altamira-PA.
 Os slides da disciplina **Estatística Computacional (PPGBC0030)** estão
 detalhados a seguir.
 
-| Slide                      | Link                                                                                             |
-|:---------------------------|:-------------------------------------------------------------------------------------------------|
-| Slides/00-Programacao.html | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/00-Programacao.html> |
+| Slide                       | Link                                                                                              |
+|:----------------------------|:--------------------------------------------------------------------------------------------------|
+| Slides/00-Programacao.html  | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/00-Programacao.html>  |
+| Slides/01-Introducao-R.html | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/01-Introducao-R.html> |
 
 # Conjunto de dados
 
 Serão usados os seguintes conjuntos na disciplina:
 
 1 - **UPA07DVS.csv**
-![\\rightarrow](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crightarrow "\rightarrow")
+![\rightarrow](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crightarrow "\rightarrow")
 São dados de Inventário Florestal 100% (IF100%) realizado em Área de
 Manejo Florestal Sustentável na Amazônia brasileira.
 
 2 - **data.csv**
-![\\rightarrow](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crightarrow "\rightarrow")
+![\rightarrow](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crightarrow "\rightarrow")
 É simplesmente uma pequena amostra aleatória de IF100%.
 
 | Slide                    | Link                                                                                           |
