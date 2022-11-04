@@ -120,7 +120,6 @@ class: with-logo logo-ufpa
 
 ---
 
-<br>
 ## Programação
 <br>
 A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 4 módulos:
@@ -128,43 +127,58 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 
 .pull-left-4[
 .font80[
-**Módulo 1** - Linguagem de Programação R
+**Módulo 1** - .orange[**Introdução ao R-base**]
 
-- Introdução ao R-base;
+- Conhecendo o R e o IDE Rstudio;
+- Estrutura de dados na linguagem R;
+- Indexação no R; e
+- Funções no R.
+]
+]
+
+.pull-right-4[
+.font80[
+**Módulo 2** - .orange[**Introdução ao Tidyverse**]
+
 - Importação de dados com pacote .green[**readr**];
 - Manipulação de dados com pacote .green[**dplyr**]; e
 - Visualização de dados com pacote .green[**ggplot2**] e extensões.
-]
-]
 
-.pull-right-4[
-
+.pull-right-15[
 .pull-left-4[
-
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://readr.tidyverse.org/logo.png")
-```
-
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ```
-
 ]
 
 .pull-right-4[
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
-```
-
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://patchwork.data-imaginist.com/reference/figures/logo.png")
 ```
+]
+]
 ]
 ]
 
 ---
 
+## Programação
 <br>
+A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 4 módulos:
+<br><br>
+
+.pull-left-4[
+.font80[
+**Módulo 3** - .orange[**Análise Exploratória de Dados**]
+
+- ....
+]
+]
+
+---
+
 ## Orientações e materias da disciplina
 <br>
 
