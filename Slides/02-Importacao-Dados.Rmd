@@ -134,7 +134,7 @@ CustomDT <- function(data){
 <!-- title-slide -->
 # .font120[Estatística Computacional <br> (PPGBC0030)]
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Importação de dados em R`r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Tidyverse: importação de dados`r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
 
 #### **Prof. Dr. Deivison Venicio Souza**
@@ -149,13 +149,13 @@ CustomDT <- function(data){
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 1 - Introdução à Linguagem R</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 2 - Introdução ao Tidyverse</div2> </div>
 
 ---
 
 ## Objetivos
-<br><br>
-Ao final desta segunda parte (.blue[Importação de Dados em R]) espera-se que os participantes possam alcançar conhecimentos para...
+<br>
+Esta aula (.blue[Tidyverse: importação de dados]) constitui a primeira parte do módulo 2 destinado ao aprendizado de alguns pacotes da coleção Tidyverse. Ao final desta aula espera-se que os participantes possam alcançar conhecimentos para...
 <br><br>
 
 * Importar e exportar dados no R usando funções do pacote **readr**.
@@ -219,7 +219,7 @@ background-size: cover
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 1 - Introdução à Linguagem R</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 2 - Introdução ao Tidyverse</div2> </div>
 
 ---
 name: import
