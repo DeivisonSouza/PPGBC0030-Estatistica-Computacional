@@ -239,6 +239,15 @@ name: import
 .center[**O pacote .blue[readr] será o nosso objeto de estudo!**]
 
 ---
+name: tidyverse
+## Tidyverse: coleção de pacotes R
+<br>
+
+```{r echo=FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://www.storybench.org/wp-content/uploads/2017/05/tidyverse.png")
+```
+.font70[Fonte: https://www.storybench.org/getting-started-with-tidyverse-in-r/]
+---
 name: fie
 ## Pacote readr (tidyverse)
 <br>
@@ -674,11 +683,6 @@ name: importdata
 - É possível também usar funções do R-base e de outros pacotes, como **readxl** (para ler arquivos .blue[.xlsx]).
 
 ]
-
-
----
-
-
 
 <!--Slide XX -->
 ---
