@@ -29,30 +29,20 @@ output:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/sciflor.png), url(fig/slide-title/ufes.png), url(fig/slide-title/img3.png)
-background-position: 90% 90%, 50% 10%, 10% 90%
-background-size: 250px, 300px, 100px, cover
+background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/ppgbc2.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 250px, 200px, cover
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-	error = FALSE,
-	fig.align = "center",
-	fig.showtext = TRUE,
-	message = FALSE,
-	warning = FALSE,
-	cache = FALSE,
-	collapse = TRUE,
-	dpi = 600
-)
-```
-
-```{r packages, include=FALSE}
-# remotes::install_github("dill/emoGG")
-library(ggplot2)
-library(dplyr)
-library(ggimage)
-library(kableExtra)
-library(readr)
+  fig.showtext = TRUE,
+  fig.align = "center", 
+  cache = FALSE,
+  error = FALSE,
+  message = FALSE, 
+  warning = FALSE, 
+  collapse = TRUE ,
+  dpi = 600)
 ```
 
 ```{css, echo=FALSE}
@@ -70,29 +60,50 @@ library(readr)
 .logo-ufpa::before {
 	background-image: url(fig/slide-title/ufpa.png);
 }
+
+.logo-dplyr::before {
+	background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/dplyr.png);
+}
+
+.logo-purrr::before {
+	background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/purrr.png);
+}
+
+.logo-plumber::before {
+	background-image: url(https://github.com/rstudio/hex-stickers/raw/master/PNG/plumber.png);
+}
+```
+
+
+```{r packages, include=FALSE}
+# remotes::install_github("dill/emoGG")
+library(tidyverse)
+library(ggimage)
+library(kableExtra)
 ```
 
 ```{r xaringan-logo, echo=FALSE}
 library(xaringanExtra)
 use_logo(
-  image_url = "fig/slide-title/sciflor.png",
+  image_url = "fig/slide-title/ppgbc1.jpeg",
   position = css_position(top = "1.5em", right = "0.6em"),
   width = "210px",
   height = "210px"
 )
 
-use_scribble()
+use_scribble() # para escrever nos slides
+use_share_again()
+use_progress_bar()
+#use_animate_all(style = c("slide_down"))
 
 use_extra_styles(
   hover_code_line = TRUE,         #<<
   mute_unhighlighted_code = TRUE  #<<
 )
-
 xaringanExtra::use_editable(expires = 1)
 #.can-edit[Você pode editar este título de slide]
 #.can-edit.key-firstSlideTitle[Change this title and then reload the page]
 use_clipboard()
-
 ```
 
 ```{r icon, echo=FALSE}
@@ -121,61 +132,54 @@ CustomDT <- function(data){
 
 
 <!-- title-slide -->
-# Minicurso: Introdução ao R para Análise de Dados
+# .font120[Estatística Computacional <br> (PPGBC0030)]
 
-## .font90[Parte 2 - Importação e Manipulação <br> de Dados: readr e dplyr] `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Importação de dados em R`r anicon::faa("pagelines", animate="horizontal", colour="green")`
+<br>
 
 #### **Prof. Dr. Deivison Venicio Souza**
 ##### Universidade Federal do Pará (UFPA) 
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 <br>
-##### 1ª versão: 22/setembro/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`)
+##### 1ª versão: 04/novembro/2022 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`)
 
 ---
 
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Introdução ao R para Análise de Dados</div3>/ <div2>Parte 2 - Importação e Manipulação de Dados: readr e dplyr</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 1 - Introdução à Linguagem R</div2> </div>
 
 ---
 
 ## Objetivos
 <br><br>
-Ao final desta segunda parte (.blue[Importação e Manipulação de Dados: readr e dplyr]) espera-se que os participantes possam alcançar conhecimentos para...
+Ao final desta segunda parte (.blue[Importação de Dados em R]) espera-se que os participantes possam alcançar conhecimentos para...
 <br><br>
 
-* Importar e exportar dados no R usando funções do pacote **readr**; e
-* Manipular dados no R usando funções do pacote **dplyr**.
+* Importar e exportar dados no R usando funções do pacote **readr**.
 <br><br>
 
 .pull-left-7[
-```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo.png")
 ```
 ]
 
 .pull-left-7[
-```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://readr.tidyverse.org/logo.png")
 ```
 ]
-
-.pull-left-7[
-```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
-```
-]
-
 
 ---
 
 ## Conteúdo
 
-.pull-left-10[
-.font70[
-**Parte 1 - Importação de dados com .orange[readr]**
+.pull-left-9[
+.font90[
+**Parte 1 - Importação e exportação de dados com .orange[readr]**
 
 [1 - Importação de dados no R](#import)
 
@@ -198,47 +202,6 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ]
 ]
 
-.pull-right-10[
-.pull-down[
-.font70[
-**Parte 2 - Manipulação de dados com .orange[dplyr]**
-
-[1 - Função select() e suas auxiliares](#select)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[1.1 - Função starts_with()](#startwith)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[1.2 - Função ends_with()](#endswith)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[1.3 - Função contains()](#contains)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[1.4 - Função matches()](#matches)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[1.5 - Função everything()](#everything)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[1.6 - Função where()](#where)
-
-[2 - Função arrange()](#arrange)
-
-[3 - Função filter()](#filter)
-
-[4 - Função mutate() e suas auxiliares](#mutate)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[4.1 - Função if_else()](#ifelse)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[4.2 - Função case_when()](#casewhen)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[4.3 - Função across()](#acrossmut)
-
-[5 - Função summarise()](#summarise)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[5.1 - Função across()](#across)
-
-[6 - Função group_by()](#groupby)
-
-]
-]
-]
-
 ---
 
 layout: false
@@ -256,7 +219,7 @@ background-size: cover
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Introdução ao R para Análise de Dados</div3>/ <div2>Parte 2 - Importação e Manipulação de Dados: readr e dplyr</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 1 - Introdução à Linguagem R</div2> </div>
 
 ---
 name: import
