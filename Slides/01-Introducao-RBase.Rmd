@@ -237,10 +237,16 @@ Ao final deste primeiro módulo (**Introdução ao R-base**) espera-se que os di
 layout: false
 name: conc
 class: inverse, top, right
-background-image: url(fig/part1/arara.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
-.font200[**.yellow[Parte 1] <br> .white[Conhecendo o R e <br> o IDE Rstudio]**]
+<br><br><br>
+
+.right[.font150[**.green[Módulo 1] <br> Introdução ao R-Base**]]
+
+<br><br>
+
+.right[.font150[**.green[Parte 1] - Conhecendo o R e o IDE Rstudio**]]
 
 ---
 
