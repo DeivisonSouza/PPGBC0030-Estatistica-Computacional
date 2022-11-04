@@ -3,9 +3,9 @@ title: "Estatística Computacional (PPGBC0030)"
 subtitle: "Programação e Orientações"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
-date: 
+date:
 encoding: "UTF-8"
-header-includes: 
+header-includes:
    - \usepackage{xcolor}
 output:
   xaringan::moon_reader:

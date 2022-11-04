@@ -3,7 +3,7 @@
  ***********/
 
 .remark-slide-content {
-  padding-top: 5px;
+  padding-top: 30px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -74,7 +74,7 @@ div2 {
 }
 
 div3 {
-  color: #339933;
+  color: #ff0000;
   font-weight: bold;
 }
 
