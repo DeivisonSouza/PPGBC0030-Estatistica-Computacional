@@ -184,7 +184,7 @@ Ao final deste primeiro módulo (**Introdução ao R-base**) espera-se que os di
 ## Conteúdo
 
 .pull-left-4[
-**Parte 3 - Indexação no R**
+**Parte 3 - Mecanismos de Indexação no R**
 
 [1 - Como fazer indexação no R?](#Ind)
 
@@ -473,13 +473,20 @@ knitr::include_graphics('fig/part1/RstudioIG.svg')
 **Packages**: Painel que mostra os pacotes instalados. É possível identificar os pacotes carregados na sessão corrente.
 
 ---
+
 layout: false
 name: conc
 class: inverse, top, right
-background-image: url(fig/part1/arara2.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
-.font200[**.yellow[Parte 2] <br> .white[Estrutura de dados <br> na linguagem R]**]
+<br><br><br>
+
+.right[.font150[**.green[Módulo 1] <br> Introdução ao R-Base**]]
+
+<br><br>
+
+.right[.font150[**.green[Parte 2] - Estrutura de dados na linguagem R**]]
 
 ---
 
@@ -1339,13 +1346,20 @@ as.data.frame(list4)
 ]
 
 ---
+
 layout: false
 name: conc
 class: inverse, top, right
-background-image: url(fig/part1/arara2.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
-.font200[**.yellow[Parte 3] <br> .white[Indexação no R]**]
+<br><br><br>
+
+.right[.font150[**.green[Módulo 1] <br> Introdução ao R-Base**]]
+
+<br><br>
+
+.right[.font150[**.green[Parte 3] - Mecanismos de Indexação no R**]]
 
 ---
 
@@ -2322,15 +2336,21 @@ CV(diametro)
 ]
 ]
 
-
 ---
+
 layout: false
 name: conc
 class: inverse, top, right
-background-image: url(fig/part1/arara.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
-.font200[**.yellow[Parte 5] <br> .white[Um pouco mais <br> sobre o R]**]
+<br><br><br>
+
+.right[.font150[**.green[Módulo 1] <br> Introdução ao R-Base**]]
+
+<br><br>
+
+.right[.font150[**.green[Parte 5] - Um pouco mais sobre o R**]]
 
 ---
 
