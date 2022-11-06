@@ -2906,16 +2906,6 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 ---
 layout: false
 class: inverse, top, right
-background-image: url(fig/part1/arara2.jpg)
+background-image: url(fig/slide-title/end.png)
 background-size: cover
 
-.font300[
-.yellow[Obrigado!]
-]
-<br><br>
-
-.white[**Email**:] <a href="mailto:deivisonvs@ufpa.br">.white[deivisonvs@ufpa.br]</a>
-
-.white[**Github**:] <a href="https://github.com/DeivisonSouza">.white[@DeivisonSouza]</a>
-
-.left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
