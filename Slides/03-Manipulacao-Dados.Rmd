@@ -1,6 +1,6 @@
 ---
 title: "Estatística Computacional (PPGBC0030)"
-subtitle: "Tidyverse: manipulação de dados"
+subtitle: "Introdução ao Tidyverse: .orange[dplyr]"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: 
@@ -134,7 +134,7 @@ CustomDT <- function(data){
 <!-- title-slide -->
 # .font120[Estatística Computacional <br> (PPGBC0030)]
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Tidyverse: manipulação de dados`r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Introdução ao Tidyverse: .orange[dplyr]`r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
 
 #### **Prof. Dr. Deivison Venicio Souza**
@@ -155,7 +155,7 @@ class: with-logo logo-ufpa
 
 ## Objetivos
 <br>
-Esta aula (.blue[Tidyverse: manipulação de dados]) constitui a segunda parte do módulo 2 destinado ao aprendizado de alguns pacotes da coleção Tidyverse. Ao final desta aula espera-se que os participantes possam alcançar conhecimentos para...
+Esta aula (.blue[Introdução ao Tidyverse: dplyr]) constitui a segunda parte do módulo 2 destinado ao aprendizado de alguns pacotes da coleção Tidyverse. Ao final desta aula espera-se que os participantes possam alcançar conhecimentos para...
 <br><br>
 
 * Manipular dados no R usando funções do pacote **dplyr**.
@@ -226,12 +226,20 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 layout: false
 name: conc
 class: inverse, top, right
-background-image: url(fig/part1/arara2.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
-.font200[**.yellow[Parte 3] <br> .white[Manipulação de dados <br> com dplyr]**]
+<br><br><br>
 
-.left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
+.right[.font150[**.green[Módulo 2] <br> Introdução ao Tidyverse**]]
+
+<br><br>
+
+.right[.font150[**.green[Parte 2] - Manipulação de dados: <br> Pacote .orange[dplyr]**]]
+
+```{r echo=FALSE, out.width='10%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
+```
 
 ---
 
@@ -242,17 +250,17 @@ class: with-logo logo-ufpa
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
-### Sobre o pacote **dplyr**...
+### Sobre o pacote .orange[**dplyr**]...
 
 .font90[
-- Um dos principais pacotes do .green[tidyverse].
-- O pacote dplyr é essencialmente um conjunto consistente de funções projetadas para resolver os desafios mais comuns de **manipulação de dados**.
+- Um dos principais pacotes do .orange[tidyverse].
+- O pacote .orange[**dplyr**] é essencialmente um conjunto consistente de funções projetadas para resolver os desafios mais comuns de **manipulação de dados**.
 - Foi projetado para ser simples, intuitivo, amigável e elegante.
 - O encadeamento de comandos é facilitado pelo emprego do operador **%>%** (pipe).
-- Códigos em R que fazem uso dos verbos dplyr são mais elegantes, compeeensíveis e intuitivos.
+- Códigos em R que fazem uso dos verbos .orange[**dplyr**] são mais elegantes, compeeensíveis e intuitivos.
 - **Cheatsheet do RStudio** (folhas de resumo): Help $\rightarrow$ Cheatsheets $\rightarrow$ Data Transformation with dplyr
 - No site da RStudio pode-se encontrar algumas Cheatsheet traduzidas: [cheatsheets-translations](https://www.rstudio.com/resources/cheatsheets/#translations)
 ]
@@ -263,13 +271,13 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
-### Verbos **dplyr**
+### Verbos .orange[**dplyr**]
 
 .pull-left-4[
-- O **dplyr** possui diversos verbos (funções). A seguir são listadas algumas das mais usuais:
+- O .orange[**dplyr**] possui diversos verbos (funções). A seguir são listadas algumas das mais usuais:
 
 .center[
 mutate()
@@ -288,7 +296,7 @@ group_by()
 ]
 
 .pull-right-4[
-Lista de funções do pacote **dplyr**:
+Lista de funções do pacote .orange[**dplyr**]:
 
 ```{r, echo=T, eval=F}
 ls("package:dplyr")
@@ -304,7 +312,7 @@ Atualmente são `r length(ls("package:dplyr"))` funções projetadas para manipu
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### Uma pequena amostra para praticar...
@@ -319,7 +327,7 @@ data %>% CustomDT # Apenas para customizar a tabela
 ```
 
 .font90[
-Para aprender a intuição de algumas funções **dplyr** usaremos uma pequena amostra de dados de IF100%.
+Para aprender a intuição de algumas funções .orange[**dplyr**] usaremos uma pequena amostra de dados de IF100%.
 <br><br>
 
 **A base completa pode ser acessada em**: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.csv)
@@ -336,15 +344,21 @@ Para aprender a intuição de algumas funções **dplyr** usaremos uma pequena a
 
 layout: false
 name: select
-class: inverse, bottom, right
-background-image: url(fig/part1/arara.jpg)
+class: inverse, top, right
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
+<br><br><br>
 
-.font200[**.white[Manipulação de dados <br> com dplyr]**]
+.right[.font150[**.green[Módulo 2] <br> Introdução ao Tidyverse**]]
+
 <br><br>
 
-.font150[**.yellow[Função select()]**]
+.right[.font150[**.green[Parte 2] - Manipulação de dados: <br> Pacote .orange[dplyr]**]]
+
+<br><br>
+
+.center[.font200[**Função .brown[select()]**]]
 
 ---
 
@@ -355,7 +369,7 @@ class: with-logo logo-ufpa
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -398,7 +412,7 @@ select(data, Nome_Especie) %>% CustomDT
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -451,7 +465,7 @@ select(data, CAP, HC, QF) %>% CustomDT
 
 ---
 name: startwith
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -499,7 +513,7 @@ select(data, starts_with("N")) %>% CustomDT
 
 ---
 name: endswith
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -546,7 +560,7 @@ select(data, ends_with("e")) %>% CustomDT
 
 ---
 name: contains
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -593,7 +607,7 @@ select(data, contains("e")) %>% CustomDT
 
 ---
 name: matches
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -640,7 +654,7 @@ select(data, matches('No|cao|F')) %>% CustomDT
 
 ---
 name: everything
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -693,7 +707,7 @@ data %>%
 
 ---
 name: where
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -741,7 +755,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -797,7 +811,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -847,7 +861,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
@@ -892,15 +906,21 @@ data %>%
 
 layout: false
 name: arrange
-class: inverse, bottom, right
-background-image: url(fig/part1/arara.jpg)
+class: inverse, top, right
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
+<br><br><br>
 
-.font200[**.white[Manipulação de dados <br> com dplyr]**]
+.right[.font150[**.green[Módulo 2] <br> Introdução ao Tidyverse**]]
+
 <br><br>
 
-.font150[**.yellow[Função arrange()]**]
+.right[.font150[**.green[Parte 2] - Manipulação de dados: <br> Pacote .orange[dplyr]**]]
+
+<br><br>
+
+.center[.font200[**Função .brown[arrange()]**]]
 
 ---
 
@@ -911,7 +931,7 @@ class: with-logo logo-ufpa
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **arrange()** - .black[Ordenar linhas]]
@@ -951,7 +971,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **arrange()** - .black[Ordenar linhas]]
@@ -993,7 +1013,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **arrange()** - .black[Ordenar linhas]]
@@ -1038,14 +1058,20 @@ data %>%
 layout: false
 name: filter
 class: inverse, top, right
-background-image: url(fig/part1/arara2.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
+<br><br><br>
 
-.font200[**.white[Manipulação de dados <br> com dplyr]**]
+.right[.font150[**.green[Módulo 2] <br> Introdução ao Tidyverse**]]
+
 <br><br>
 
-.font150[**.yellow[Função filter()]**]
+.right[.font150[**.green[Parte 2] - Manipulação de dados: <br> Pacote .orange[dplyr]**]]
+
+<br><br>
+
+.center[.font200[**Função .brown[filter()]**]]
 
 ---
 
@@ -1056,7 +1082,7 @@ class: with-logo logo-ufpa
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **filter()** - .black[Filtrar linhas]]
@@ -1097,7 +1123,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **filter()** - .black[Filtrar linhas]]
@@ -1138,7 +1164,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **filter()** - .black[Filtrar linhas]]
@@ -1179,7 +1205,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **filter()** - .black[Filtrar linhas]]
@@ -1221,7 +1247,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **filter()** - .black[Filtrar linhas]]
@@ -1267,17 +1293,23 @@ data %>%
 
 layout: false
 name: mutate
-class: inverse, bottom, right
-background-image: url(fig/part1/arara.jpg)
+class: inverse, top, right
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
+<br><br><br>
 
-.font200[**.white[Manipulação de dados <br> com dplyr]**]
+.right[.font150[**.green[Módulo 2] <br> Introdução ao Tidyverse**]]
+
 <br><br>
 
-.font150[**.yellow[Função mutate()]**]
+.right[.font150[**.green[Parte 2] - Manipulação de dados: <br> Pacote .orange[dplyr]**]]
 
-.white[Criar (ou modificar) variáveis e manter as existentes.]
+<br>
+
+.center[.font200[**Função .brown[mutate()]**]]
+
+.center[Criar (ou modificar) variáveis e manter as existentes.]
 
 ---
 
@@ -1288,7 +1320,7 @@ class: with-logo logo-ufpa
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
@@ -1338,7 +1370,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
@@ -1388,7 +1420,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
@@ -1445,7 +1477,7 @@ data %>%
 
 ---
 name: ifelse
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
@@ -1496,7 +1528,7 @@ data %>%
 
 ---
 name: casewhen
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
@@ -1558,7 +1590,7 @@ data %>%
 
 ---
 name: acrossmut
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
@@ -1613,22 +1645,27 @@ data %>%
 ]
 ]
 
-
 ---
 
 layout: false
-name: groupby
+name: summarise
 class: inverse, top, right
-background-image: url(fig/part1/arara2.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
+<br><br><br>
 
-.font200[**.white[Manipulação de dados <br> com dplyr]**]
+.right[.font150[**.green[Módulo 2] <br> Introdução ao Tidyverse**]]
+
 <br><br>
 
-.font150[**.yellow[Função summarise()]**]
+.right[.font150[**.green[Parte 2] - Manipulação de dados: <br> Pacote .orange[dplyr]**]]
 
-.white[Criar um novo quadro de dados<br> com estatísticas de resumo <br> de variáveis selecionadas]
+<br>
+
+.center[.font200[**Função .brown[summarise()]**]]
+
+.center[Criar um novo quadro de dados com estatísticas <br> resumo de variáveis selecionadas.]
 
 ---
 
@@ -1639,8 +1676,7 @@ class: with-logo logo-ufpa
 
 ---
 
-name: summarise
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **summarise()** - .black[Sumarizar dados]]
@@ -1705,7 +1741,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **summarise()** - .black[Sumarizar dados]]
@@ -1750,7 +1786,7 @@ CustomDT
 
 ---
 name: across
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **summarise()** - .black[Sumarizar dados]]
@@ -1809,7 +1845,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **summarise()** - .black[Sumarizar dados]]
@@ -1865,16 +1901,22 @@ data %>%
 layout: false
 name: groupby
 class: inverse, top, right
-background-image: url(fig/part1/arara2.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
+<br><br><br>
 
-.font200[**.white[Manipulação de dados <br> com dplyr]**]
+.right[.font150[**.green[Módulo 2] <br> Introdução ao Tidyverse**]]
+
 <br><br>
 
-.font150[**.yellow[Função group_by()]**]
+.right[.font150[**.green[Parte 2] - Manipulação de dados: <br> Pacote .orange[dplyr]**]]
 
-.white[Agrupar uma (ou mais) variáveis <br> para aplicar operações (funções) <br> a cada grupo/categoria]
+<br>
+
+.center[.font200[**Função .brown[group_by()]**]]
+
+.center[Agrupar uma (ou mais) variáveis para aplicar <br> operações (funções) a cada grupo/categoria]
 
 ---
 
@@ -1885,7 +1927,7 @@ class: with-logo logo-ufpa
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **group_by()** - .black[Agrupar]]
@@ -1929,7 +1971,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **group_by()** - .black[Agrupar]]
@@ -1972,7 +2014,7 @@ data %>%
 
 ---
 
-## Manipulação de dados com dplyr
+## Manipulação de dados com .orange[dplyr]
 <br>
 
 ### .font90[Função **group_by()** - .black[Agrupar]]
@@ -2029,16 +2071,5 @@ data %>%
 ---
 layout: false
 class: inverse, top, right
-background-image: url(fig/part1/arara2.jpg)
+background-image: url(fig/slide-title/end.png)
 background-size: cover
-
-.font300[
-.yellow[Obrigado!]
-]
-<br><br>
-
-.white[**Email**:] <a href="mailto:deivisonvs@ufpa.br">.white[deivisonvs@ufpa.br]</a>
-
-.white[**Github**:] <a href="https://github.com/DeivisonSouza">.white[@DeivisonSouza]</a>
-
-.left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
