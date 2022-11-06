@@ -17,7 +17,7 @@
     <script src="02-Importacao-Dados_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="02-Importacao-Dados_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="02-Importacao-Dados_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xc840a5e480a4a9da479e3efa97dd3fc","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a39cefc6b0414972924553536de57582","expires":1}</script>
     <script src="02-Importacao-Dados_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="02-Importacao-Dados_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="02-Importacao-Dados_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -145,7 +145,7 @@ top:1.5em;right:0.6em;
 &lt;!-- title-slide --&gt;
 # .font120[Estatística Computacional &lt;br&gt; (PPGBC0030)]
 
-## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Tidyverse: importação de dados<span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Introdução ao Tidyverse: .orange[readr]<span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
 &lt;br&gt;
 
 #### **Prof. Dr. Deivison Venicio Souza**
@@ -153,7 +153,7 @@ top:1.5em;right:0.6em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 04/novembro/2022 &lt;br&gt; (Atualizado em: 04/novembro/2022)
+##### 1ª versão: 04/novembro/2022 &lt;br&gt; (Atualizado em: 06/novembro/2022)
 
 ---
 
@@ -166,7 +166,7 @@ class: with-logo logo-ufpa
 
 ## Objetivos
 &lt;br&gt;
-Esta aula (.blue[Tidyverse: importação de dados]) constitui a primeira parte do módulo 2 destinado ao aprendizado de alguns pacotes da coleção Tidyverse. Ao final desta aula espera-se que os participantes possam alcançar conhecimentos para...
+Esta aula (.blue[Introdução ao Tidyverse: readr]) constitui a primeira parte do módulo 2 destinado ao aprendizado de alguns pacotes da coleção Tidyverse. Ao final desta aula espera-se que os participantes possam alcançar conhecimentos para...
 &lt;br&gt;&lt;br&gt;
 
 * Importar e exportar dados no R usando funções do pacote **readr**.
@@ -214,12 +214,18 @@ Esta aula (.blue[Tidyverse: importação de dados]) constitui a primeira parte d
 layout: false
 name: conc
 class: inverse, top, right
-background-image: url(fig/part1/arara.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
-.font200[**.yellow[Parte 1] &lt;br&gt; .white[Importação de dados &lt;br&gt; com readr]**]
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+.right[.font150[**.green[Módulo 2] &lt;br&gt; Introdução ao Tidyverse**]]
+
+&lt;br&gt;&lt;br&gt;
+
+.right[.font150[**.green[Parte 1] - Importação e exportação de dados: &lt;br&gt; Pacote .orange[readr]**]]
+
+&lt;img src="https://readr.tidyverse.org/logo.png" width="10%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -238,12 +244,12 @@ name: import
 - Os dados podem ser exportados: i) diretamente para a memória (RAM); ou ii) acessados remotamente.
 - O mecanismo de importação depende do formato dos dados.
 - Por exemplo, é possível exportar dados nos formatos: .txt, .csv, .xlsx, .ods, SAS, SPSS, etc.
-- O R-base possui funções para importação de dados: .green[**read.csv()**] e .green[**read.table()**] (Pacote .blue[**utils**]).
-- O tidyverse incorpora o pacote .blue[**readr**], que possui várias funções para importação de dados.
+- O R-base possui funções para importação de dados: .green[**read.csv()**] e .green[**read.table()**] (Pacote .orange[**utils**]).
+- O tidyverse incorpora o pacote .orange[**readr**], que possui várias funções para importação de dados.
 ]
 &lt;br&gt;&lt;br&gt;
 
-.center[**O pacote .blue[readr] será o nosso objeto de estudo!**]
+.center[**O pacote .orange[**readr**] será o nosso objeto de estudo!**]
 
 ---
 name: tidyverse
