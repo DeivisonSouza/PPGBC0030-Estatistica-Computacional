@@ -191,4 +191,9 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 <br><br><br>
 ]
 
-
+<!--Slide XX -->
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/slide-title/end.png)
+background-size: cover
