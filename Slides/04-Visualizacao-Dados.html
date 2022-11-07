@@ -17,7 +17,7 @@
     <script src="04-Visualizacao-Dados_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="04-Visualizacao-Dados_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="04-Visualizacao-Dados_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e3179e05a804474ebcdee8ee5dda2bbc","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xbd50598548648df9a99b2cac043a0f9","expires":1}</script>
     <script src="04-Visualizacao-Dados_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="04-Visualizacao-Dados_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="04-Visualizacao-Dados_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -386,6 +386,13 @@ name: ggplot2
 &lt;img src="https://ggplot2.tidyverse.org/logo.png" width="45%" style="display: block; margin: auto;" /&gt;
 ]
 
+---
+name: gramatica
+## .orange[ggplot2] e a gramática dos gráficos
+&lt;br&gt;
+
+&lt;img src="fig/part4/ggplot.png" width="55%" style="display: block; margin: auto;" /&gt;
+.center[.font70[**Fonte**: https://r.qcbs.ca/workshop03/pres-en/workshop03-pres-en.html#113]]
 
 ---
 name: data
@@ -520,7 +527,7 @@ data_sample %&gt;% ggplot()
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -553,7 +560,7 @@ ggplot(data = data_sample,
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -584,7 +591,7 @@ ggplot(data = data_sample,
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -617,7 +624,7 @@ ggplot(data = data_sample,
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -652,7 +659,7 @@ ggplot(data = data_sample,
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -690,7 +697,7 @@ x, y, alpha, .magenta[**colour**], fill, group, shape, size, stroke
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-14-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -722,7 +729,7 @@ ggplot(data = data_sample,
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -757,7 +764,7 @@ ggplot(data = data_sample %&gt;% filter(Nome_Especie == 'Maçaranduba'),
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -794,7 +801,7 @@ ggplot(data = data_sample %&gt;%
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -830,7 +837,7 @@ ggplot(data = data_sample %&gt;%
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -843,7 +850,7 @@ ggplot(data = data_sample %&gt;%
 ]
 &lt;br&gt;
 
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-19-1.png" width="35%" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-20-1.png" width="35%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -885,7 +892,7 @@ ggplot(data = data_sample %&gt;%
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -929,7 +936,7 @@ ggplot(data = data_sample %&gt;%
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -975,7 +982,7 @@ ggplot(data = data_sample %&gt;%
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1016,7 +1023,7 @@ data_sample %&gt;%
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1059,7 +1066,7 @@ data_sample %&gt;%
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1105,7 +1112,7 @@ mapeadas.
 
 .pull-right-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1190,7 +1197,7 @@ ggplot(data = data_sample2) +                # 1ª camada
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-28-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-29-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1235,7 +1242,7 @@ Você entenderá o motivo adiante!].
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-29-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-30-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1273,7 +1280,7 @@ ggplot(data = data_sample2) +               # 1ª camada
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-30-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-31-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1309,7 +1316,7 @@ ggplot(data = data_top) +                         # 1ª camada
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-31-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-32-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1348,7 +1355,7 @@ ggplot(data = data_top) +                           # 1ª camada
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-32-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-33-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1391,7 +1398,7 @@ data_top %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-33-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-34-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1439,7 +1446,7 @@ data_top %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-34-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-35-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1479,7 +1486,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-35-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-36-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1523,7 +1530,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-36-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-37-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1559,7 +1566,7 @@ data %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-37-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-38-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1596,7 +1603,7 @@ data %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-38-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-39-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1633,7 +1640,7 @@ data_sample2 %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-39-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-40-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1672,7 +1679,7 @@ data_sample2 %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-40-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-41-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1714,7 +1721,7 @@ data_sample2 %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-41-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1757,7 +1764,7 @@ data_sample2 %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1794,7 +1801,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1831,7 +1838,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-45-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1872,7 +1879,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-45-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-46-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1915,7 +1922,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-46-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-47-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1957,7 +1964,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-47-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-48-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -1998,7 +2005,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-48-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-49-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2039,7 +2046,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-49-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-50-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2084,7 +2091,7 @@ data_sample %&gt;%
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-50-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-51-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2212,7 +2219,7 @@ matemáticos para combinar gráficos, além de possuir funções específicas.
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-57-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-58-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2248,7 +2255,7 @@ matemáticos para combinar gráficos, além de possuir funções específicas.
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-58-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-59-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2283,7 +2290,7 @@ matemáticos para combinar gráficos, além de possuir funções específicas.
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-59-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-60-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2321,7 +2328,7 @@ matemáticos para combinar gráficos, além de possuir funções específicas.
 
 .pull-left-4[
 .font80[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-60-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-61-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2343,7 +2350,7 @@ library(patchwork)
 g1 + g2
 ```
 
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-61-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-62-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2360,7 +2367,7 @@ cujos subgráficos são dispostos na ordem das linhas.
 g1 + g2 + g3 + g4
 ```
 
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-62-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-63-1.png" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -2382,7 +2389,7 @@ g2/g4
 --
 
 .pull-left-2[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-63-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-64-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -2403,7 +2410,7 @@ g2/g4/g3
 --
 
 .pull-left-2[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-64-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-65-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -2424,7 +2431,7 @@ g2 | (g4/g3)
 --
 
 .pull-left-2[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-65-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-66-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -2445,7 +2452,7 @@ g2 | (g4/g3)
 --
 
 .pull-left-2[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-66-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-67-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -2466,7 +2473,7 @@ g2 | (g4/g3)
 --
 
 .pull-left-2[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-67-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-68-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -2486,7 +2493,7 @@ g2 | (g4/g3)
 --
 
 .pull-left-2[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-68-1.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-69-1.png" width="70%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -2513,7 +2520,7 @@ g1 + g2 + g3 + g4 + plot_layout(nrow = 3, byrow = F)
 --
 
 .pull-left-4[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-69-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-70-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -2542,7 +2549,7 @@ g2 + g1 + g3 + g4 + plot_layout(widths = c(1, 2))
 --
 
 .pull-left-4[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-70-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-71-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -2571,7 +2578,7 @@ g2 + g1 + g3 + g4 + plot_layout(heights = c(1, 2))
 --
 
 .pull-left-4[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-71-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-72-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -2599,7 +2606,7 @@ g1 + g2 + g3 + g4 +
 --
 
 .pull-left-4[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-72-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-73-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -2747,7 +2754,7 @@ g3 + inset_element(g2,
 --
 
 .pull-left-4[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-73-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-74-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 
@@ -2784,7 +2791,7 @@ g3 + g1 +
 --
 
 .pull-left-4[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-74-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-75-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -2820,7 +2827,7 @@ g3 + g1 +
 --
 
 .pull-left-4[
-&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-75-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="04-Visualizacao-Dados_files/figure-html/unnamed-chunk-76-1.png" style="display: block; margin: auto;" /&gt;
 ]
 
 ---

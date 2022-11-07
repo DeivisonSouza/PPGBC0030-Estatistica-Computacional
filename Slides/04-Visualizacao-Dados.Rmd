@@ -370,6 +370,15 @@ knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
 ```
 ]
 
+---
+name: gramatica
+## .orange[ggplot2] e a gramática dos gráficos
+<br>
+
+```{r echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/part4/ggplot.png")
+```
+.center[.font70[**Fonte**: https://r.qcbs.ca/workshop03/pres-en/workshop03-pres-en.html#113]]
 
 ---
 name: data
