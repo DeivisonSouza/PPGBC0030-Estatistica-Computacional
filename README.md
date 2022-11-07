@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file.. -->
+<!-- README.md is generated from README.Rmd. Please edit that file. -->
 <!-- badges: start -->
 <!-- badges: end -->
 <!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
@@ -52,6 +52,7 @@ detalhados a seguir.
 | Slides/02-Importacao-Dados.html   | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/02-Importacao-Dados.html>   |
 | Slides/03-Manipulacao-Dados.html  | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/03-Manipulacao-Dados.html>  |
 | Slides/04-Visualizacao-Dados.html | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/04-Visualizacao-Dados.html> |
+| Slides/05-AED.html                | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/05-AED.html>                |
 
 # Conjunto de dados
 
@@ -68,6 +69,7 @@ Manejo Florestal Sustentável na Amazônia brasileira.
 
 | Slide                    | Link                                                                                           |
 |:-------------------------|:-----------------------------------------------------------------------------------------------|
+| Slides/data/Cedrela.csv  | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/data/Cedrela.csv>  |
 | Slides/data/UPA07DVS.csv | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/data/UPA07DVS.csv> |
 | Slides/data/data.csv     | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/data/data.csv>     |
 
