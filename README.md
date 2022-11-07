@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file. -->
+<!-- README.md is generated from README.Rmd. Please edit that file.. -->
 <!-- badges: start -->
 <!-- badges: end -->
 <!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
@@ -45,12 +45,13 @@ Campus Universitário de Altamira-PA.
 Os slides da disciplina **Estatística Computacional (PPGBC0030)** estão
 detalhados a seguir.
 
-| Slide                            | Link                                                                                                   |
-|:---------------------------------|:-------------------------------------------------------------------------------------------------------|
-| Slides/00-Programacao.html       | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/00-Programacao.html>       |
-| Slides/01-Introducao-RBase.html  | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/01-Introducao-RBase.html>  |
-| Slides/02-Importacao-Dados.html  | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/02-Importacao-Dados.html>  |
-| Slides/03-Manipulacao-Dados.html | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/03-Manipulacao-Dados.html> |
+| Slide                             | Link                                                                                                    |
+|:----------------------------------|:--------------------------------------------------------------------------------------------------------|
+| Slides/00-Programacao.html        | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/00-Programacao.html>        |
+| Slides/01-Introducao-RBase.html   | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/01-Introducao-RBase.html>   |
+| Slides/02-Importacao-Dados.html   | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/02-Importacao-Dados.html>   |
+| Slides/03-Manipulacao-Dados.html  | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/03-Manipulacao-Dados.html>  |
+| Slides/04-Visualizacao-Dados.html | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/04-Visualizacao-Dados.html> |
 
 # Conjunto de dados
 
