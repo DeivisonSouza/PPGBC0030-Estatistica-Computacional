@@ -73,7 +73,6 @@ knitr::opts_chunk$set(
 }
 ```
 
-
 ```{r packages, include=FALSE}
 # remotes::install_github("dill/emoGG")
 library(tidyverse)
@@ -207,18 +206,26 @@ knitr::include_graphics('fig/part5/Livro-Bussab.jpeg')
 ```
 ]
 
-<!-- Slide XX -->
 ---
+
 layout: false
-name: conc
+name: term
 class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
-.font200[**Parte 1 <br> Terminologias e conceitos básicos**]
+<br><br><br>
 
-.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+.right[.font150[**.green[Módulo 3] <br> Análise Exploratória de Dados**]]
 
+<br><br>
+
+.right[.font150[**.green[Parte 1] - Terminologias e conceitos básicos**]]
+<br>
+
+.right[.brown[.font120[População, Amostra, Variável, etc.]]]
+
+<!-- Slide XX -->
 ---
 layout: true
 class: with-logo logo-ufpa
@@ -1430,22 +1437,31 @@ mean(df$V)
 ```
 ]
 
-<!-- Slide XX -->
 ---
+
 layout: false
-name: conc
+name: md
 class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+background-image: url(fig/slide-title/secao.png)
 background-size: cover
 
-.font200[**Parte 3 <br> Medidas de dispersão (ou variação)**]
+<br><br><br>
 
-.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+.right[.font150[**.green[Módulo 3] <br> Análise Exploratória de Dados**]]
 
+<br><br>
+
+.right[.font150[**.green[Parte 3] - Medidas de variabilidade (dispersão)**]]
+<br>
+
+.right[.brown[.font120[Variância, Desvio Padrão, Coeficiente de Variação]]]
+
+<!-- Slide XX -->
 ---
 layout: true
+class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 3 - Análise Exploratória de Dados</div2> </div>
 
 ---
 

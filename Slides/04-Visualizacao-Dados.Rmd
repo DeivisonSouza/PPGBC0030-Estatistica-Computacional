@@ -33,7 +33,6 @@ background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/ppgbc2.png
 background-position: 90% 90%, 10% 90%
 background-size: 250px, 200px, cover
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   fig.showtext = TRUE,
