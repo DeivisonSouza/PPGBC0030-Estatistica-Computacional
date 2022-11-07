@@ -165,8 +165,10 @@ Ao final desta aula (.blue[Análise Exploratória de Dados]) espera-se que o dis
 ]
 
 ---
+
 ## Conteúdo
 
+.pull-left-4[
 **Parte 3 - Medidas de dispersão (ou variabilidade)**
 
 [1 - Conceito e importância](#CId)
@@ -178,6 +180,20 @@ Ao final desta aula (.blue[Análise Exploratória de Dados]) espera-se que o dis
 [5 - Desvio Padrão](#Dp)
 
 [6 - Coeficiente de Variação](#CV)
+]
+
+.pull-right-2[
+.pull-down[
+**Parte 4 - Estudos de casos**
+
+[1 - Iris - Dados de flores](#iris)
+
+[2 - Pelguins - ](#penguins)
+
+]
+]
+
+
 
 ---
 
@@ -2209,34 +2225,29 @@ Coeficiente de Variação = 3,36%
 
 ---
 
-## Resumo da aula de hoje...
+layout: false
+name: md
+class: inverse, top, right
+background-image: url(fig/slide-title/secao.png)
+background-size: cover
 
-- O que é estatística? 
-- Terminologias e conceitos básicos
-- Medidas de tendência central (ou posição)
-  - Expressões matemáticas
-  - Cálculos manuais e usado linguagem R
-- Medidas de dispersão (ou variação)
-  - Expressões matemáticas
-  - Cálculos manuais e usado linguagem R
+<br><br><br>
 
+.right[.font150[**.green[Módulo 3] <br> Análise Exploratória de Dados**]]
+
+<br><br>
+
+.right[.font150[**.green[Parte 4] - Estudos de casos**]]
 <br>
 
-**Recomendação**: Recapitular sobre medidas de assimetria.
+.right[.brown[.font120[**Conjuntos de dados:** <br> Iris, Peguins, Vertebral Column, Wine]]]
 
+<!-- Slide XX -->
 ---
-
-## Atividade 1
-<br>
-
-Classroom: Realizar uma análise exploratória.
-<br><br>
-1) Faça os cálculos manuais.
-
-2) Faça um código em R.
-<br><br>
-
-Obs.: O conjunto de dados e os detalhes da atividade serão esclarecidos no Classroom.
+layout: true
+class: with-logo logo-ufpa
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 3 - Análise Exploratória de Dados</div2> </div>
 
 <!--Slide XX -->
 ---
