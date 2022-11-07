@@ -184,7 +184,7 @@ Ao final desta aula (.blue[Análise Exploratória de Dados]) espera-se que o dis
 
 .pull-right-2[
 .pull-down[
-**Parte 4 - Estudos de casos**
+**Parte 4 - AE de alguns conjuntos de dados**
 
 [1 - Iris - Dados de flores](#iris)
 
@@ -2237,7 +2237,7 @@ background-size: cover
 
 <br><br>
 
-.right[.font150[**.green[Parte 4] - Estudos de casos**]]
+.right[.font150[**.green[Parte 4] - Análise exploratória de alguns <br> conjuntos de dados**]]
 <br>
 
 .right[.brown[.font120[**Conjuntos de dados:** <br> Iris, Peguins, Vertebral Column, Wine]]]
