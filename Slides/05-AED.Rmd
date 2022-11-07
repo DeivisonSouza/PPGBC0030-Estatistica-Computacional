@@ -2242,6 +2242,30 @@ background-size: cover
 
 .right[.brown[.font120[**Conjuntos de dados:** <br> Iris, Peguins, Vertebral Column, Wine]]]
 
+---
+
+## Sobre os conjuntos de dados
+
+.shadow3[
+### Iris
+...
+]
+
+.shadow3[
+### Peguins
+...
+]
+
+.shadow3[
+### Vertebral Column
+...
+]
+
+.shadow3[
+### Wine
+...
+]
+
 <!-- Slide XX -->
 ---
 layout: true
