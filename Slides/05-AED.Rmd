@@ -2325,7 +2325,7 @@ tail(iris)
 .shadow3[
 ## .font70[.brown[**Uma sugestão de caminho...**]]
 <br>
-1) Carregue o conjunto de dados.
+1) Carregue o conjunto ".brown[Iris Flower]", a partir de um arquivo externo.
 
 2) Avalie a estrutura dos dados e a existência de valores ausentes.
 
@@ -2338,6 +2338,135 @@ tail(iris)
 - Gráfico de barras (ou colunas) para demonstrar 
 
 ]
+
+---
+
+## Iris Flower
+
+- Carregando o conjunto ".brown[Iris Flower]" e criando um objeto chamado "**data**"...
+
+```{r}
+library(readr)
+data <- read_csv(file = "data/open/Iris.csv", col_types = "ddddf")
+data
+```
+
+---
+
+## Iris Flower
+<br>
+**2 - Qual a estrutura do conjunto de dados?**
+
+- Usando a função .brown[str()] do .orange[R-base]:
+
+```{r}
+str(data)
+```
+
+---
+
+## Iris Flower
+<br>
+**2 - Qual a estrutura do conjunto de dados?**
+
+- Usando a função .brown[glimpse()] do .orange[dplyr]:
+
+```{r}
+glimpse(data)
+```
+
+---
+
+## Iris Flower
+<br>
+
+**3 - Obtenha um resumo estatístico do conjunto de dados?**
+
+- Usando a função .brown[summary()] do R-base:
+
+```{r}
+summary(data)
+```
+
+---
+
+## Iris Flower
+<br>
+
+**3 - Obtenha um resumo estatístico do conjunto de dados?**
+
+- Usando a função .brown[summary()] do R-base:
+
+```{r}
+summary(data)
+```
+
+---
+
+## Iris Flower
+<br>
+
+**3 - Obtenha um resumo estatístico do conjunto de dados?**
+
+- Usando a função .brown[summarise()] do Pacote **dplyr**:
+
+.font90[
+```{r}
+library(dplyr)
+ data |>
+  summarise(across(.cols = where(is.double),
+                   .fns = tibble::lst(mean, sd, max, min),
+                   na.rm = TRUE,
+                   .names = "{.col}.{.fn}"
+                   )
+            )
+```
+]
+---
+
+## Iris Flower
+<br>
+
+**3 - Obtenha um resumo estatístico do conjunto de dados?**
+
+- Usando a função .brown[skim()] do Pacote **skimr**: (consulte a [skimr_vignettes](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html))
+
+.font90[
+```{r}
+library(skimr)
+ data |>
+   skim() |>
+  yank("numeric")
+```
+]
+
+---
+
+## Iris Flower
+<br>
+
+**3 - Obtenha um resumo estatístico do conjunto de dados?**
+
+- Usando a função .brown[describe()] do pacote **psych**: (consulte a [Personality project](https://personality-project.org/r/))
+
+.font90[
+```{r}
+library(psych)
+ data |>
+   select(-Species) |>
+   describe(IQR = TRUE)
+```
+]
+
+---
+
+##
+
+```{r}
+data |>
+  group_by(Species) |>
+  summarise(across(where(is.double), tibble::lst(mean), .names = "{fn}_{col}"))
+```
 
 ---
 
