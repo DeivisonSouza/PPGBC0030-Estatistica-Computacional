@@ -2325,6 +2325,7 @@ tail(iris)
 .shadow3[
 ## .font70[.brown[**Uma sugestão de caminho...**]]
 <br>
+1) Carregue o conjunto de dados.
 
 2) Avalie a estrutura dos dados e a existência de valores ausentes.
 
