@@ -1632,7 +1632,7 @@ df %>%
 df %>%
   ggplot(aes(x=Tratamento, y=Altura, fill=Tratamento)) + 
     geom_dotplot(binaxis='y', stackdir='center') +
-  stat_summary(fun.y=mean, geom="point", shape=18,
+  stat_summary(fun=mean, geom="point", shape=18,
                  size=8, color="blue") +
   theme_bw(base_size = 24) +
   theme(panel.grid = element_blank(),
@@ -2244,6 +2244,13 @@ background-size: cover
 
 ---
 
+layout: true
+class: with-logo logo-ufpa
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 3 - Análise Exploratória de Dados</div2> </div>
+
+---
+
 ## Iris Flower
 <br>
 Os conjuntos de dados estão disponíveis no [UCI-Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php).
@@ -2305,6 +2312,25 @@ tail(iris)
 
 ```{r ref.label="iris2", echo=FALSE, eval=TRUE, collapse=T}
 ```
+.font90[Obs.: O conjunto de dados "Iris Flower" está disponível no R-base. **Basta carregá-lo**!]
+]
+
+---
+
+## Iris Flower
+<br>
+
+- Vamos realizar uma análise exploratória do conjunto ".brown[**Iris Flower**]". Inicialmente, prefira usar os pacote estudados (**readr**, **dplyr**, **ggplot2**).
+
+.shadow3[
+## .font70[.brown[**Uma sugestão de caminho...**]]
+<br>
+1) Crie um projeto (.Rproj).
+
+2) Realize uma estatística descritiva para as variáveis quantitativas. (geral e por espécie)
+
+3) Crie as seguintes visualizações:
+
 ]
 
 ---
