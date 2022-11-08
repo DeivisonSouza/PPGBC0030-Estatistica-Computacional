@@ -2320,16 +2320,21 @@ tail(iris)
 ## Iris Flower
 <br>
 
-- Vamos realizar uma análise exploratória do conjunto ".brown[**Iris Flower**]". Inicialmente, prefira usar os pacote estudados (**readr**, **dplyr**, **ggplot2**).
+- Vamos realizar uma análise exploratória do conjunto ".brown[**Iris Flower**]". Prefira usar os pacote estudados (**readr**, **dplyr**, **ggplot2**). Inicialmente, crie um projeto (.Rproj).
 
 .shadow3[
 ## .font70[.brown[**Uma sugestão de caminho...**]]
 <br>
-1) Crie um projeto (.Rproj).
 
-2) Realize uma estatística descritiva para as variáveis quantitativas. (geral e por espécie)
+2) Avalie a estrutura dos dados e a existência de valores ausentes.
 
-3) Crie as seguintes visualizações:
+3) Realize uma estatística descritiva para as variáveis quantitativas. (geral e por espécie).
+
+4) Crie uma tabela de contagem por categoria.
+
+5) Crie as seguintes visualizações:
+
+- Gráfico de barras (ou colunas) para demonstrar 
 
 ]
 
