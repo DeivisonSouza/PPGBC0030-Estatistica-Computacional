@@ -2240,16 +2240,76 @@ background-size: cover
 .right[.font150[**.green[Parte 4] - Análise exploratória de alguns <br> conjuntos de dados**]]
 <br>
 
-.right[.brown[.font120[**Conjuntos de dados:** <br> Iris, Peguins, Vertebral Column, Wine]]]
+.right[.brown[.font120[**Conjuntos de dados:** <br> Iris Flower, Peguins, Vertebral Column, Wine]]]
+
+---
+
+## Iris Flower
+<br>
+Os conjuntos de dados estão disponíveis no [UCI-Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php).
+
+.shadow3[
+## .center[.brown[Iris Flower]]
+- O estudo intitulado "*The Use of Multiple Measurements in Taxonomic Problems*" (Fisher, 1936) foi o primeiro a usar o conjunto de dados .green[**Iris**].
+- **Estrutura do conjunto de dados:** <br>
+a) 150 amostras <br>
+b) 3 espécies: Setosa, Versicolor e Virginica (50 amostras de cada) <br>
+c) 5 atributos (variáveis): (Sepal Length, Sepal Width, Petal Length, Petal Width, Species)
+]
+
+---
+
+## Iris Flower
+<br>
+
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/part5/Iris.png')
+```
+.center[.font70[**Fonte**: [pt.wikipedia.org](https://pt.wikipedia.org/wiki/Conjunto_de_dados_flor_Iris)]]
+
+---
+
+## Iris Flower
+<br>
+
+```{r, echo=FALSE, out.width='45%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/part5/atributos.png')
+```
+
+.center[.font70[**Fonte**: [https://www.integratedots.com](https://www.integratedots.com/determine-number-of-iris-species-with-k-means/)]]
+
+---
+
+## Iris Flower
+
+.pull-left-14[
+```{r iris, echo=T, eval=F}
+# Conjunto de dados
+data(iris)
+```
+
+```{r iris1, echo=T, eval=F}
+# Imprime 6 primeiras linhas
+head(iris)
+```
+
+```{r iris2, echo=T, eval=F}
+# Imprime 6 últimas linhas
+tail(iris)
+```
+]
+
+.pull-right-13[
+```{r ref.label="iris1", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+```{r ref.label="iris2", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
 
 ---
 
 ## Sobre os conjuntos de dados
-
-.shadow3[
-### Iris
-...
-]
 
 .shadow3[
 ### Peguins
@@ -2265,6 +2325,7 @@ background-size: cover
 ### Wine
 ...
 ]
+
 
 <!-- Slide XX -->
 ---
