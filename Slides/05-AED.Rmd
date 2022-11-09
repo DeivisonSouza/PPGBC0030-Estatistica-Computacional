@@ -184,14 +184,14 @@ Ao final desta aula (.blue[Análise Exploratória de Dados]) espera-se que o dis
 
 .pull-right-2[
 .pull-down[
-**Parte 4 - AE de alguns conjuntos de dados**
+**Parte 4 - AED - Iris Flower**
 
 [1 - AED: Iris Flower](#iris)
 
+[2 - Atividade prática](#ap)
+
 ]
 ]
-
-
 
 ---
 
@@ -2380,9 +2380,13 @@ data
 
 - Usando a função .brown[str()] do .orange[R-base]:
 
+.font90[
 ```{r}
 str(data)
 ```
+
+**Experimente:** `ncol()`, `nrow()`, `dim()`, `head()`, `tail()`
+]
 
 ---
 
@@ -2493,8 +2497,11 @@ data |>
 ```
 
 ---
+name: ap
+## Atividade Prática
 
-## Sobre os conjuntos de dados
+- Cada grupo (até 4 pessoas) deverá criar um Projeto (.Rproj) e desenvolver uma AED. Inicialmente, explore os pacotes estudados (**readr**, **dplyr**, **ggplot2**, etc.). Fique a vontade para explorar outras bibliotecas especializadas em AED, como 
+
 
 .shadow3[
 ### Peguins
@@ -2510,7 +2517,6 @@ data |>
 ### Wine
 ...
 ]
-
 
 <!-- Slide XX -->
 ---
