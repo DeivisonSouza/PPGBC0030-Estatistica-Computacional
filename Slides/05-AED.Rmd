@@ -186,9 +186,7 @@ Ao final desta aula (.blue[Análise Exploratória de Dados]) espera-se que o dis
 .pull-down[
 **Parte 4 - AE de alguns conjuntos de dados**
 
-[1 - Iris - Dados de flores](#iris)
-
-[2 - Pelguins - ](#penguins)
+[1 - AED: Iris Flower](#iris)
 
 ]
 ]
@@ -2237,10 +2235,7 @@ background-size: cover
 
 <br><br>
 
-.right[.font150[**.green[Parte 4] - Análise exploratória de alguns <br> conjuntos de dados**]]
-<br>
-
-.right[.brown[.font120[**Conjuntos de dados:** <br> Iris Flower, Peguins, Vertebral Column, Wine]]]
+.right[.font150[**.green[Parte 4] - AED: Iris Flower** (Fisher, 1936)]]
 
 ---
 
@@ -2320,23 +2315,49 @@ tail(iris)
 ## Iris Flower
 <br>
 
-- Vamos realizar uma análise exploratória do conjunto ".brown[**Iris Flower**]". Prefira usar os pacote estudados (**readr**, **dplyr**, **ggplot2**). Inicialmente, crie um projeto (.Rproj).
+- Vamos realizar uma análise exploratória do conjunto ".brown[**Iris Flower**]". Prefira usar os pacote estudados (**readr**, **dplyr**, **ggplot2**). Ainda sim, outros pacotes para AED serão apresentados.
 
 .shadow3[
 ## .font70[.brown[**Uma sugestão de caminho...**]]
 <br>
-1) Carregue o conjunto ".brown[Iris Flower]", a partir de um arquivo externo.
+**I - Estrutura do Projeto:**
 
-2) Avalie a estrutura dos dados e a existência de valores ausentes.
+.font90[
+1) Crie um projeto (.Rproj): **File** - **New Project** - **New Directory** - **New Project** - **Create Project**.
 
-3) Realize uma estatística descritiva para as variáveis quantitativas. (geral e por espécie).
+2) Crie os subdiretórios: .brown[Data],  .brown[Output] (Table, Figure, etc.)
 
-4) Crie uma tabela de contagem por categoria.
+3) Crie um R script (.R): **File** - **New File** - **R Script** (Ctrl+Shift+N). Atribua um nome adequado. <br><br>
+
+.center[.green[*Pronto! Podemos começar a desenvolver o Script!*]]
+]
+]
+
+---
+
+## Iris Flower
+<br>
+
+- Vamos realizar uma análise exploratória do conjunto ".brown[**Iris Flower**]". Prefira usar os pacote estudados (**readr**, **dplyr**, **ggplot2**).
+
+.shadow3[
+## .font70[.brown[**Uma sugestão de caminho...** (cont.)]]
+<br>
+**II - Desenvolvimento do R Script:**
+.font90[
+1) Carregue o conjunto ".brown[Iris Flower]", a partir de um arquivo externo. (Use o pacote **readr**!) e salve no objeto chamado '**data**'.
+
+2) Avalie a estrutura dos dados.
+
+3) Obtenha um resumo estatístico (geral).
+
+4) Obtenha um resumo estatístico por categoria de flor.
 
 5) Crie as seguintes visualizações:
 
 - Gráfico de barras (ou colunas) para demonstrar 
 
+]
 ]
 
 ---
@@ -2355,7 +2376,7 @@ data
 
 ## Iris Flower
 <br>
-**2 - Qual a estrutura do conjunto de dados?**
+**2 - Avalie a estrutura dos dados. (Existe alguma desconformidade?)**
 
 - Usando a função .brown[str()] do .orange[R-base]:
 
@@ -2380,11 +2401,11 @@ glimpse(data)
 ## Iris Flower
 <br>
 
-**3 - Obtenha um resumo estatístico do conjunto de dados?**
+**3 - Obtenha um resumo estatístico (geral).**
 
 - Usando a função .brown[summary()] do R-base:
 
-```{r}
+```{r, R.options = list(width = 130)}
 summary(data)
 ```
 
@@ -2393,20 +2414,7 @@ summary(data)
 ## Iris Flower
 <br>
 
-**3 - Obtenha um resumo estatístico do conjunto de dados?**
-
-- Usando a função .brown[summary()] do R-base:
-
-```{r}
-summary(data)
-```
-
----
-
-## Iris Flower
-<br>
-
-**3 - Obtenha um resumo estatístico do conjunto de dados?**
+**3 - Obtenha um resumo estatístico (geral).**
 
 - Usando a função .brown[summarise()] do Pacote **dplyr**:
 
@@ -2427,7 +2435,7 @@ library(dplyr)
 ## Iris Flower
 <br>
 
-**3 - Obtenha um resumo estatístico do conjunto de dados?**
+**3 - Obtenha um resumo estatístico (geral).**
 
 - Usando a função .brown[skim()] do Pacote **skimr**: (consulte a [skimr_vignettes](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html))
 
@@ -2445,16 +2453,32 @@ library(skimr)
 ## Iris Flower
 <br>
 
-**3 - Obtenha um resumo estatístico do conjunto de dados?**
+**3 - Obtenha um resumo estatístico (geral).**
 
 - Usando a função .brown[describe()] do pacote **psych**: (consulte a [Personality project](https://personality-project.org/r/))
 
 .font90[
-```{r}
+```{r, R.options = list(width = 130)}
 library(psych)
  data |>
    select(-Species) |>
    describe(IQR = TRUE)
+```
+]
+
+---
+
+## Iris Flower
+<br>
+
+**4 - Obtenha um resumo estatístico por categoria de Flor**
+
+- Usando a função .brown[describe()] do pacote **psych**:
+
+.font90[
+```{r, R.options = list(width = 130)}
+library(psych)
+describeBy(SepalLengthCm + SepalWidthCm ~ Species, data = data)
 ```
 ]
 
