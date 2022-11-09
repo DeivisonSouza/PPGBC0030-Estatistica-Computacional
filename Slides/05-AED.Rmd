@@ -2353,10 +2353,29 @@ tail(iris)
 
 4) Obtenha um resumo estatístico por categoria de flor.
 
-5) Crie as seguintes visualizações:
+]
+]
 
-- Gráfico de barras (ou colunas) para demonstrar 
+---
 
+## Iris Flower
+<br>
+
+- Vamos realizar uma análise exploratória do conjunto ".brown[**Iris Flower**]". Prefira usar os pacote estudados (**readr**, **dplyr**, **ggplot2**).
+
+.shadow3[
+## .font70[.brown[**Uma sugestão de caminho...** (cont.)]]
+<br>
+**II - Desenvolvimento do R Script:**
+.font90[
+
+5) Crie as seguintes visualizações: (Use **ggplot2**!)
+
+- .brown[Gráfico de Contagem] de amostras por classes.
+- .brown[Gráfico BoxPlot] por classe para as variáveis quantitativas.
+- .brown[Gráfico de Média e Desvio Padrão] por classe para as variáveis quantitativas.
+- .brown[Gráfico de Dispersão] para pares de variáveis (destaque os pontos de classes com cores diferentes!)
+ 
 ]
 ]
 
@@ -2366,7 +2385,7 @@ tail(iris)
 
 - Carregando o conjunto ".brown[Iris Flower]" e criando um objeto chamado "**data**"...
 
-```{r}
+```{r, collapse = FALSE}
 library(readr)
 data <- read_csv(file = "data/open/Iris.csv", col_types = "ddddf")
 data
@@ -2381,7 +2400,7 @@ data
 - Usando a função .brown[str()] do .orange[R-base]:
 
 .font90[
-```{r}
+```{r, collapse = FALSE}
 str(data)
 ```
 
@@ -2396,7 +2415,7 @@ str(data)
 
 - Usando a função .brown[glimpse()] do .orange[dplyr]:
 
-```{r}
+```{r, collapse = FALSE}
 glimpse(data)
 ```
 
@@ -2409,7 +2428,7 @@ glimpse(data)
 
 - Usando a função .brown[summary()] do R-base:
 
-```{r, R.options = list(width = 130)}
+```{r, R.options = list(width = 130), collapse = FALSE}
 summary(data)
 ```
 
@@ -2423,7 +2442,7 @@ summary(data)
 - Usando a função .brown[summarise()] do Pacote **dplyr**:
 
 .font90[
-```{r}
+```{r, collapse = FALSE}
 library(dplyr)
  data |>
   summarise(across(.cols = where(is.double),
@@ -2444,7 +2463,7 @@ library(dplyr)
 - Usando a função .brown[skim()] do Pacote **skimr**: (consulte a [skimr_vignettes](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html))
 
 .font90[
-```{r}
+```{r, collapse = FALSE}
 library(skimr)
  data |>
    skim() |>
@@ -2455,14 +2474,13 @@ library(skimr)
 ---
 
 ## Iris Flower
-<br>
 
 **3 - Obtenha um resumo estatístico (geral).**
 
 - Usando a função .brown[describe()] do pacote **psych**: (consulte a [Personality project](https://personality-project.org/r/))
 
 .font90[
-```{r, R.options = list(width = 130)}
+```{r, R.options = list(width = 130), collapse = FALSE}
 library(psych)
  data |>
    select(-Species) |>
@@ -2480,11 +2498,29 @@ library(psych)
 - Usando a função .brown[describe()] do pacote **psych**:
 
 .font90[
-```{r, R.options = list(width = 130)}
+```{r, R.options = list(width = 130), collapse = FALSE}
 library(psych)
 describeBy(SepalLengthCm + SepalWidthCm ~ Species, data = data)
 ```
 ]
+
+---
+
+## Iris Flower
+<br>
+
+**3 - Obtenha um resumo estatístico (geral).**
+
+- Usando a função .brown[descr()] do pacote **summarytools**: (consulte a vinheta [summarytools](https://cran.r-project.org/web/packages/summarytools/vignettes/introduction.html))
+
+.font80[
+```{r, R.options = list(width = 130), collapse = FALSE}
+library(summarytools)
+data |> 
+  descr(stats = "common", transpose = TRUE) # c("mean", "sd", "min", "max")
+```
+]
+
 
 ---
 
@@ -2500,7 +2536,7 @@ data |>
 name: ap
 ## Atividade Prática
 
-- Cada grupo (até 4 pessoas) deverá criar um Projeto (.Rproj) e desenvolver uma AED. Inicialmente, explore os pacotes estudados (**readr**, **dplyr**, **ggplot2**, etc.). Fique a vontade para explorar outras bibliotecas especializadas em AED, como 
+- Cada grupo (até 4 pessoas) deverá criar um Projeto (.Rproj) e desenvolver uma AED. Inicialmente, explore os pacotes estudados (**readr**, **dplyr**, **ggplot2**, etc.). Fique a vontade para explorar outras bibliotecas especializadas em AED, como os Pacotes **DataExplorer**, **GGally**, **SmartEDA**, **summarytools**.
 
 
 .shadow3[
