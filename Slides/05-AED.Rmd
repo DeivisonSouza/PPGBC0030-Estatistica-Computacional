@@ -2349,7 +2349,7 @@ tail(iris)
 
 2) Avalie a estrutura dos dados.
 
-3) Obtenha um resumo estatístico (geral).
+3) Obtenha uma tabela de frequência por categoria de flor.
 
 4) Obtenha um resumo estatístico por categoria de flor.
 
@@ -2387,25 +2387,8 @@ tail(iris)
 
 ```{r, collapse = FALSE}
 library(readr)
-data <- read_csv(file = "data/open/Iris.csv", col_types = "ddddf")
-data
+(data <- read_csv(file = "data/open/Iris.csv", col_types = "ddddf"))
 ```
-
----
-
-## Iris Flower
-<br>
-**2 - Avalie a estrutura dos dados. (Existe alguma desconformidade?)**
-
-- Usando a função .brown[str()] do .orange[R-base]:
-
-.font90[
-```{r, collapse = FALSE}
-str(data)
-```
-
-**Experimente:** `ncol()`, `nrow()`, `dim()`, `head()`, `tail()`
-]
 
 ---
 
@@ -2419,112 +2402,79 @@ str(data)
 glimpse(data)
 ```
 
----
-
-## Iris Flower
-<br>
-
-**3 - Obtenha um resumo estatístico (geral).**
-
-- Usando a função .brown[summary()] do R-base:
-
-```{r, R.options = list(width = 130), collapse = FALSE}
-summary(data)
-```
+**Experimente:** `str()`, `ncol()`, `nrow()`, `dim()`, `head()`, `tail()`, `is.na()`, ...
 
 ---
 
 ## Iris Flower
 <br>
 
-**3 - Obtenha um resumo estatístico (geral).**
+**3 - Obtenha uma tabela de frequências por .green[categoria de Flor].**
 
-- Usando a função .brown[summarise()] do Pacote **dplyr**:
+- Usando verbos (.brown[group_by, summarise]) do Pacote **dplyr**:
 
 .font90[
 ```{r, collapse = FALSE}
 library(dplyr)
- data |>
-  summarise(across(.cols = where(is.double),
-                   .fns = tibble::lst(mean, sd, max, min),
-                   na.rm = TRUE,
-                   .names = "{.col}.{.fn}"
-                   )
-            )
+
+(freq_table <- data |>
+  group_by(Species) |>
+  summarise(Freq = n()) |>
+  mutate(Prop = prop.table(Freq)*100))
+
+#writexl::write_xlsx(freq_table, "Output/Tables/freq_table.xlsx")
 ```
 ]
+
 ---
 
 ## Iris Flower
 <br>
 
-**3 - Obtenha um resumo estatístico (geral).**
+**3 - Obtenha uma tabela de frequências por .green[categoria de Flor].**
 
-- Usando a função .brown[skim()] do Pacote **skimr**: (consulte a [skimr_vignettes](https://cran.r-project.org/web/packages/skimr/vignettes/skimr.html))
+- Usando a função .brown[freq()] do Pacote **summarytools**:
 
 .font90[
 ```{r, collapse = FALSE}
-library(skimr)
- data |>
-   skim() |>
-  yank("numeric")
-```
-]
-
----
-
-## Iris Flower
-
-**3 - Obtenha um resumo estatístico (geral).**
-
-- Usando a função .brown[describe()] do pacote **psych**: (consulte a [Personality project](https://personality-project.org/r/))
-
-.font90[
-```{r, R.options = list(width = 130), collapse = FALSE}
-library(psych)
- data |>
-   select(-Species) |>
-   describe(IQR = TRUE)
-```
-]
-
----
-
-## Iris Flower
-<br>
-
-**4 - Obtenha um resumo estatístico por categoria de Flor**
-
-- Usando a função .brown[describe()] do pacote **psych**:
-
-.font90[
-```{r, R.options = list(width = 130), collapse = FALSE}
-library(psych)
-describeBy(SepalLengthCm + SepalWidthCm ~ Species, data = data)
-```
-]
-
----
-
-## Iris Flower
-<br>
-
-**3 - Obtenha um resumo estatístico (geral).**
-
-- Usando a função .brown[descr()] do pacote **summarytools**: (consulte a vinheta [summarytools](https://cran.r-project.org/web/packages/summarytools/vignettes/introduction.html))
-
-.font80[
-```{r, R.options = list(width = 130), collapse = FALSE}
 library(summarytools)
-data |> 
-  descr(stats = "common", transpose = TRUE) # c("mean", "sd", "min", "max")
+data |>
+  freq(var = Species, report.nas = FALSE, style = "rmarkdown")
 ```
 ]
 
+---
+
+## Iris Flower
+<br>
+
+**4 - Obtenha um resumo estatístico por .green[categoria de Flor]**
+
+- Usando a função .brown[stby()] do Pacote **summarytools**: (consulte a vinheta [summarytools](https://cran.r-project.org/web/packages/summarytools/vignettes/introduction.html))
+
+```{r, R.options = list(width = 130), collapse = F, results='hide'}
+library(summarytools)
+
+(stats_by_species <- 
+    data |>
+    stby(INDICES = data$Species, 
+         FUN = descr,
+         stats = "common", 
+         transpose = TRUE) |> 
+  tb(order = 2)
+)
+
+#writexl::write_xlsx(stats_by_species, "Output/Tables/stats_by_species.xlsx")
+```
 
 ---
 
-##
+## Iris Flower
+<br>
+
+**4 - Obtenha um resumo estatístico por .green[categoria de Flor]**
+
+- Usando verbos (.brown[group_by, summarise]) do Pacote **dplyr**:
 
 ```{r}
 data |>
@@ -2536,22 +2486,20 @@ data |>
 name: ap
 ## Atividade Prática
 
-- Cada grupo (até 4 pessoas) deverá criar um Projeto (.Rproj) e desenvolver uma AED. Inicialmente, explore os pacotes estudados (**readr**, **dplyr**, **ggplot2**, etc.). Fique a vontade para explorar outras bibliotecas especializadas em AED, como os Pacotes **DataExplorer**, **GGally**, **SmartEDA**, **summarytools**.
-
-
-.shadow3[
-### Peguins
-...
+.font90[
+- Cada grupo (até 4 pessoas) deverá criar um Projeto (.Rproj) e desenvolver uma AED. Inicialmente, explore os pacotes estudados (**readr**, **dplyr**, **ggplot2**, **summarytools**, etc.). Fique a vontade para explorar outras bibliotecas especializadas em AED, como os Pacotes **DataExplorer**, **GGally**, **SmartEDA**, **psych**.
 ]
 
-.shadow3[
-### Vertebral Column
-...
-]
+<br>
 
-.shadow3[
-### Wine
-...
+**As bases de dados são as seguintes:**
+
+.font90[
+- **Grupo 1**: [HCV Doador de Sangue](https://archive.ics.uci.edu/ml/datasets/HCV+data) - (contém valores laboratoriais de doadores de sangue e pacientes com hepatite C e valores demográficos como idade.)
+- **Grupo 2**: [Vertebral Column](https://archive-beta.ics.uci.edu/dataset/212/vertebral+column) - (6 características biomecânicas usadas para classificar pacientes ortopédicos em 3 classes (normal, hérnia de disco ou espondilolistese) ou 2 classes (normal ou anormal))
+- **Grupo 3**: [Wine](https://archive-beta.ics.uci.edu/dataset/109/wine) - (Usando a análise química determinar a origem dos vinhos)
+- **Grupo 4**: [Seeds](https://archive.ics.uci.edu/ml/datasets/seeds) - (Medidas de propriedades geométricas de grãos pertencentes a três diferentes variedades de trigo.)
+- **Grupo 5**: ???????
 ]
 
 <!-- Slide XX -->
