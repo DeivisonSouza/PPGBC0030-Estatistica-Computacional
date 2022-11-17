@@ -2579,16 +2579,31 @@ data2 |>
 - .brown[Gráfico de Média e Desvio Padrão] por classe para as variáveis quantitativas.
 
 .pull-left-10[
-
+```{r ref.label="barmean",fig.width=6, fig.height=5, echo=F, eval=T}
+```
 ]
 
 --
 
 .pull-right-10[
+```{r, barmean, echo=T, eval=F}
 
+data |>
+  ggplot(
+    mapping = aes(x = Species, 
+                  y = SepalWidthCm, 
+                  fill = Species)) +                # 1ª camada
+  geom_bar(
+    stat = "summary",
+    fun = "mean"
+    ) +                                             # 2ª camada
+  geom_errorbar(stat = "summary", 
+                fun.ymin = function(x) {mean(x)-sd(x)},
+                fun.ymax = function(x) {mean(x)+sd(x)},
+                width = .2
+                )                                  # 3ª camada
+```
 ]
-
-
 
 ---
 name: ap
