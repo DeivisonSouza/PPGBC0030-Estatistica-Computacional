@@ -1608,7 +1608,7 @@ df %>%
 df %>%
   ggplot(aes(Tratamento, Altura, fill = Tratamento)) +   
   geom_bar(position = "dodge", stat = "summary", 
-           fun = "mean", alpha = .5) +
+           fun = mean, alpha = .5) +
   theme_bw(base_size = 24) +
     theme(panel.grid = element_blank(),
           legend.position="none")
@@ -2595,7 +2595,7 @@ data |>
   geom_bar(
     mapping = aes(fill = Species),
     stat = "summary",
-    fun = "mean",
+    fun = mean,
     show.legend = F
     ) +                                   # 2ª camada
   geom_errorbar(stat = "summary", 
@@ -2638,7 +2638,7 @@ data2 |>
   geom_bar(
     mapping = aes(fill = Species),
     stat = "summary",
-    fun = "mean",
+    fun = mean,
     show.legend = F
     ) +                                   # 2ª camada
   geom_errorbar(stat = "summary", 
@@ -2658,6 +2658,52 @@ data2 |>
 **5 - Crie as seguintes visualizações: (Use .green[ggplot2]!)**
 
 - .brown[Gráfico de Dispersão] para pares de variáveis (destaque os pontos de classes com cores diferentes!)
+
+.pull-left-10[
+```{r ref.label="point",fig.width=6, fig.height=5, echo=F, eval=T}
+```
+]
+
+--
+
+.pull-right-10[
+.font90[
+```{r, point, echo=T, eval=F}
+data |>
+  ggplot(mapping = aes(
+    x = PetalLengthCm, y = PetalWidthCm)) +     # 1ª camada
+  geom_point(mapping = aes(colour = Species))   # 2ª camada
+```
+]
+]
+
+---
+
+## Iris Flower
+
+**5 - Crie as seguintes visualizações: (Use .green[ggplot2]!)**
+
+- .brown[Gráfico de Dispersão] para pares de variáveis (destaque os pontos de classes com cores diferentes!)
+
+.pull-left-9[
+```{r ref.label="point2",fig.width=5, fig.height=3.5, echo=F, eval=T}
+```
+]
+
+--
+
+.pull-right-9[
+.font90[
+```{r, point2, echo=T, eval=F}
+library(GGally)
+
+data |>
+  ggpairs(columns = 1:4,
+          aes(color = Species, alpha = 0.5),
+          upper = list(continuous = wrap("cor", size = 2)))
+```
+]
+]
 
 ---
 name: ap
