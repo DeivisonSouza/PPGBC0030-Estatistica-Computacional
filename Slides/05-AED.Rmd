@@ -2476,11 +2476,119 @@ library(summarytools)
 
 - Usando verbos (.brown[group_by, summarise]) do Pacote **dplyr**:
 
-```{r}
+```{r, R.options = list(width = 130), collapse = FALSE}
 data |>
   group_by(Species) |>
   summarise(across(where(is.double), tibble::lst(mean), .names = "{fn}_{col}"))
 ```
+
+---
+
+## Iris Flower
+
+**5 - Crie as seguintes visualizações: (Use .green[ggplot2]!)**
+
+- .brown[Gráfico de Contagem] de amostras por classes.
+
+.pull-left-10[
+```{r ref.label="barnc", fig.width=5, fig.height=4, echo=F, eval=T}
+```
+]
+
+--
+
+.pull-right-10[
+```{r barnc, echo=T, eval=F, R.options = list(width = 130)}
+ggplot(data = data) +                           # 1ª camada
+  geom_bar(aes(x = Species), stat = "count")    # 2ª camada
+```
+]
+
+---
+
+## Iris Flower
+
+**5 - Crie as seguintes visualizações: (Use .green[ggplot2]!)**
+
+- .brown[Gráfico BoxPlot] por classe para as variáveis quantitativas.
+
+.pull-left-10[
+```{r ref.label="box",fig.width=6, fig.height=5, echo=F, eval=T}
+```
+]
+
+--
+
+.pull-right-10[
+```{r box, echo=T, eval=F}
+data |>
+  ggplot(aes(x = Species, 
+             y = SepalWidthCm)) +     # 1ª camada    
+  geom_boxplot() +                    # 2ª camada
+  stat_summary(fun = mean, 
+               geom = "point", 
+               shape = 20, 
+               size = 4,
+               color = "red"
+               )                      # 3ª camada
+# geom_jitter(width = 0.1)
+```
+]
+
+---
+
+## Iris Flower
+
+**5 - Crie as seguintes visualizações: (Use .green[ggplot2]!)**
+
+- .brown[Gráfico BoxPlot] por classe para as variáveis quantitativas (Usando .brown[(Facet_wrap()]).
+
+.pull-left-10[
+```{r ref.label="box1",fig.width=6, fig.height=5, echo=F, eval=T}
+```
+]
+
+--
+
+.pull-right-10[
+```{r box1, echo=T, eval=F}
+library(tidyr)
+
+# Remodela os dados para o formato longo
+data2 <- data |> 
+  pivot_longer(cols = !Species, 
+               names_to = "Variables", 
+               values_to = "Value")
+
+# Visualização usando facet_
+data2 |>
+  ggplot(aes(x = Species, 
+             y = Value)) +       # 1ª camada   
+  geom_boxplot() +               # 2ª camada
+  facet_wrap(. ~ Variables, 
+             scales="free")      # 3ª camada
+```
+]
+
+---
+
+## Iris Flower
+
+**5 - Crie as seguintes visualizações: (Use .green[ggplot2]!)**
+
+- .brown[Gráfico de Média e Desvio Padrão] por classe para as variáveis quantitativas.
+
+.pull-left-10[
+
+]
+
+--
+
+.pull-right-10[
+
+]
+
+
 
 ---
 name: ap
