@@ -120,6 +120,160 @@ class: with-logo logo-ufpa
 
 ---
 
+## 👋 Olá, sejam bem vindos!
+<br>
+
+### **Sobre o facilitador**
+.pull-left[
+.font90[
+1. .green[Graduação (Titulação: ano 2008)]
+    - Universidade Federal Rural da Amazônia (UFRA); e
+    - Título: Bacharel em Engenharia Florestal.
+
+2. .green[Mestrado (Titulação: ano 2011)]
+    - Universidade Federal Rural da Amazônia (UFRA);
+    - Programa de Pós-graduação em Ciências Florestais (PPGCF); e
+    - Área de Concentração: Manejo de ecossistemas florestais.
+]
+]
+
+.pull-right[
+```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/slide-title/img.jpeg")
+```
+]
+
+---
+
+## 👋 Olá, sejam bem vindos!
+<br>
+
+### **Sobre o facilitador**
+
+.pull-left[
+.font90[
+3. .green[Doutorado (Titulação: ano 2020)]
+    - Universidade Federal do Paraná (UFPR);
+    - Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
+    - Área de Concentração: Manejo Florestal.
+    
+4. .green[Especialização (Defesa: ano 2019)]
+    - Universidade Federal do Paraná (UFPR);
+    - Área: Big Data e Data Science
+]
+]
+
+.pull-right[
+```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/slide-title/img.jpeg")
+```
+]
+
+
+---
+
+## 👋 Olá, sejam bem vindos!
+
+.pull-left[
+.font90[
+### **Interesses atuais**
+1. .green[Linguagem de programação]
+    - R
+    - Python
+
+2. .green[Modelagem preditiva aplicada à ciência florestal]
+    - Aprendizado de máquina
+    
+3. .green[Visão computacional]
+    - reconhecimento de espécies baseado em imagens
+    
+4. .green[Criação de Dashboard - Shiny]
+]
+]
+
+.pull-right[
+.font90[
+### **Websites e contatos**
+
+`r icons::simple_icons("github")` GitHub: https://github.com/DeivisonSouza
+
+<span class="iconify" data-icon="fa-brands:orcid" data-inline="false"></span>
+
+
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:1.5em;margin-right:1em;" alt="ORCID iD icon">https://orcid.org/0000-0002-2975-0927</a></div>
+
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/slide-title/ORCID.png')
+```
+]
+]
+
+---
+
+## 👋 Olá, sejam bem vindos!
+<br>
+
+### **Projetos de Pesquisa/Extensão atuais** (com fomento)
+
+- 1) Sistema de Visão Computacional para Reconhecer Espécies no Manejo Florestal Madeireiro na Amazônia Brasileira. (**Financiador**: Centro de Indústrias Produtoras e Exportadoras de Madeira do Estado de Mato Grosso - CIPEM) - ([https://cipem.org.br/](https://cipem.org.br/)) <br><br>
+- 2) Projeto Ipa’wã (Copaíba): Etnomapeamento e inventário de copaibais nativos na TI Xipaya (Aldeias Tukamã, Tukayá e Kaarimã). (**Financiador**: Fundo Brasileiro para a Biodiversidade - FUNBIO) - ([https://www.funbio.org.br/](https://www.funbio.org.br/)) (Parceria entre Associação Indígena Pyjahyry Xipaia – AIPHX e UFPA)
+<br>
+
+**Siga o Instagram**: [@pyjahyryxipaia](https://www.instagram.com/pyjahyryxipaia/)
+
+<!-- Slide 2 -->
+---
+
+## Cronograma .black[.font70[(**Horário: 07h30min - 12h30min / 14h30min - 19h30min**)]]
+
+```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
+library(calendR)
+library(ggplot2)
+
+dates <- seq(as.Date("2022-11-01"), as.Date("2022-11-30"), by = "1 day")
+events <- ifelse(format(dates, "%w") %in% c(6,7), "Final de semana", NA)
+events[c(24)] <- "Brasil x Sérvia (16h)"
+events[c(28)] <- "Brasil x Suíça (13h)"
+
+p <- calendR::calendR(year = 2022,
+        month = 11,
+        start = "M",
+        title = "Novembro (Ano 2022)",
+        title.size = 50, 
+        subtitle.size = 20, 
+        title.col = 2,  
+        subtitle = "",   
+        subtitle.col = 3,
+        weeknames.size = 15,
+        special.days = events,
+        legend.pos = "right",
+        special.col = c("yellow", "yellow", rgb(0, 0, 1, 0.15)),
+        col = "black",                  
+        lwd = 1,
+        lty = 1,
+        font.family = "mono",       
+        font.style = "bold",
+        weeknames.col = "black",
+        months.col = "gray30",
+        days.col = 2, 
+        day.size = 18,
+        bg.img = "https://user-images.githubusercontent.com/67192157/100520175-b4a05e00-319c-11eb-8733-af9f20b674c8.png",
+        text = c(
+          "Introdução ao \n R-base",
+          "Introdução ao \n Tidyverse",
+          "Análise \n Exploratória \n de Dados"
+          ),
+        text.pos = c(28:30), 
+        text.size = 12,
+        text.col = 1.)
+
+p + theme(legend.key.size = unit(2, 'cm'),
+          legend.text = element_text(size=60))
+```
+
+<!-- Slide 2 -->
+---
+
 ## Programação
 <br>
 A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 4 módulos:
@@ -173,7 +327,11 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 .font80[
 **Módulo 3** - .orange[**Análise Exploratória de Dados**]
 
-- ....
+- Terminologias e conceitos básicos
+- Medidas de tendência central (ou posição)
+- Medidas de dispersão (ou variabilidade)
+- AED - Iris Flower
+- Atividade Prática (AED em Dados Reais)
 ]
 ]
 
