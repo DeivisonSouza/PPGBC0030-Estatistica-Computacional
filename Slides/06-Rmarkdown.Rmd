@@ -246,6 +246,7 @@ Transformar análises de dados em documentos, relatórios, apresentações e das
 - 5) **Livros**: R Markdown + bookdown para criar livros; ([Análises Ecológicas no R](https://analises-ecologicas.com/); [Bookdown](https://bookdown.org/yihui/bookdown/))
 - 6) **Websites**: O R Markdown facilita a criação de páginas web diretamente de arquivos .Rmd; (Páginas pessoais, blogs, projetos,...) ([Site rmarkdown](https://rmarkdown.rstudio.com/))
 ]
+
 <!-- Slide XX -->
 ---
 layout: true
