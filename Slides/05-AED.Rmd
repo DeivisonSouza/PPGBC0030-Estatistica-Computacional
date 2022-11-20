@@ -2713,8 +2713,6 @@ name: ap
 - Cada grupo (até 4 pessoas) deverá criar um Projeto (.Rproj) e desenvolver uma AED. Inicialmente, explore os pacotes estudados (**readr**, **dplyr**, **ggplot2**, **summarytools**, etc.). Fique a vontade para explorar outras bibliotecas especializadas em AED, como os Pacotes **DataExplorer**, **GGally**, **SmartEDA**, **psych**.
 ]
 
-<br>
-
 **As bases de dados são as seguintes:**
 
 .font90[
@@ -2723,6 +2721,7 @@ name: ap
 - **Grupo 3**: [Wine](https://archive-beta.ics.uci.edu/dataset/109/wine) - (Usando a análise química determinar a origem dos vinhos)
 - **Grupo 4**: [Seeds](https://archive.ics.uci.edu/ml/datasets/seeds) - (Medidas de propriedades geométricas de grãos pertencentes a três diferentes variedades de trigo.)
 - **Grupo 5**: [Car Evaluation](https://archive.ics.uci.edu/ml/datasets/Car+Evaluation) - (Dados de avaliação de carros baseado em 6 atributos)
+- **Grupo 6**: [Pinguins]() - (Medidas de pinguins adultos perto da Estação Palmer, Antártida (Palmer Station)) (`dados::pinguins`)
 ]
 
 
