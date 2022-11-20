@@ -17,7 +17,7 @@
     <script src="06-Rmarkdown_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="06-Rmarkdown_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="06-Rmarkdown_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x799c73f02e04f67b86e0e960de53959","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ceb2aa37608a40829755a9b5d173f1d0","expires":1}</script>
     <script src="06-Rmarkdown_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="06-Rmarkdown_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="06-Rmarkdown_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -139,7 +139,7 @@ top:1.5em;right:0.6em;
 &lt;!-- title-slide --&gt;
 # .font120[Estatística Computacional &lt;br&gt; (PPGBC0030)]
 
-## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> R markdown: Relatórios Dinâmicos <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> .font90[R markdown: Relatórios Reproduzíveis] <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
 &lt;br&gt;
 
 #### **Prof. Dr. Deivison Venicio Souza**
@@ -147,39 +147,48 @@ top:1.5em;right:0.6em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 19/novembro/2022 &lt;br&gt; (Atualizado em: 19/novembro/2022)
+##### 1ª versão: 19/novembro/2022 &lt;br&gt; (Atualizado em: 20/novembro/2022)
 
 ---
 layout: true
 class: with-logo logo-ufpa
 &lt;div class="my-header"&gt;&lt;/div&gt;
-&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 3 - Análise Exploratória de Dados&lt;/div2&gt; &lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Reproduzíveis&lt;/div2&gt; &lt;/div&gt;
 
 ---
 
 ## Objetivos
 &lt;br&gt;&lt;br&gt;
-Ao final desta aula (.blue[R markdown: Relatórios Dinâmicos]) espera-se que o discente seja capaz de...
+Ao final desta aula (.blue[R markdown: Relatórios Reproduzíveis]) espera-se que o discente seja capaz de...
 
-* --
-* --
+* Entender a sintaxe básica do pacote .green[rmarkdown].
+* Aprender a construir um relatório estatístico usando o pacote .green[rmarkdown].
+
+&lt;img src="https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png" width="25%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## Conteúdo
 
 .pull-left-4[
-**Parte 1 - Terminologias e conceitos básicos**
+**Parte 1 - R Markdown**
 
-[1 - O que é estatística?](#Est)
+[1 - Motivação](#mot)
+
+[2 - Estrutura](#est)
+
+[3 - Sintaxe](#sin)
+
+[4 - Chunk](#chun)
+
+[5 - Formatos de saída](#fs)
 
 ]
 
 .pull-right-2[
 .pull-down[
-**Parte 2 - Medidas de tendência central (ou posição)**
+**Parte 2 - Criando um R Markdown (AED Íris Flower)**
 
-[1 - Conceito e importância](#CI)
 ]
 ]
 
@@ -217,9 +226,6 @@ Yihui Xie, Christophe Dervieux, Emily Riederer. [R Markdown Cookbook](https://bo
 &lt;img src="https://bookdown.org/yihui/rmarkdown-cookbook/images/cover.png" width="60%" style="display: block; margin: auto;" /&gt;
 ]
 
-
-
-
 ---
 
 layout: false
@@ -230,33 +236,49 @@ background-size: cover
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-.right[.font150[**.green[Módulo 3] &lt;br&gt; Análise Exploratória de Dados**]]
+.right[.font150[**.green[Módulo 4] &lt;br&gt; R markdown: Relatórios Reproduzíveis**]]
 
 &lt;br&gt;&lt;br&gt;
 
-.right[.font150[**.green[Parte 1] - Terminologias e conceitos básicos**]]
+.right[.font150[**.green[Parte 1] - R markdown**]]
 &lt;br&gt;
 
-.right[.brown[.font120[População, Amostra, Variável, etc.]]]
+.right[.brown[.font120[Motivação, Estrutura, Sintaxe, etc.]]]
 
 &lt;!-- Slide XX --&gt;
 ---
 layout: true
 class: with-logo logo-ufpa
 &lt;div class="my-header"&gt;&lt;/div&gt;
-&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 3 - Análise Exploratória de Dados&lt;/div2&gt; &lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Reproduzíveis &lt;/div2&gt; &lt;/div&gt;
 
 ---
+name: mot
+## R markdown
 
-## ...
+.shadow3[
+### **Motivação**
 
+Transformar análises de dados em documentos, relatórios, apresentações e dashboards de alta qualidade (estático ou dinâmico). Também permite criar websites, construir livros, vignettes, etc.
+]
+
+&lt;br&gt;**Algumas da possibilidade:**
+
+.font80[
+- 1) **Documentos**: Um único arquivo R Markdown (.Rmd) pode ser renderizado para diversos formatos (html, pdf, word, etc.);
+- 2) **Documentos interativos**: É possível combinar o R Markdown com htmlwidgets ou Shiny para criar documentos interativos;
+- 3) **Dashboards**: R Markdown + flexdashboard para construção de dashboards;
+- 4) **Apresentações**: Construa apresentações elegantes com auxílio do R markdown;
+- 5) **Livros**: R Markdown + bookdown para criar livros;
+- 6) **Websites**: O R Markdown facilita a criação de páginas web diretamente de arquivos .Rmd; (Páginas pessoais, blogs, projetos,...)
+]
 
 &lt;!-- Slide XX --&gt;
 ---
 layout: true
 class: with-logo logo-ufpa
 &lt;div class="my-header"&gt;&lt;/div&gt;
-&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 3 - Análise Exploratória de Dados&lt;/div2&gt; &lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Reproduzíveis&lt;/div2&gt; &lt;/div&gt;
 
 &lt;!--Slide XX --&gt;
 ---
