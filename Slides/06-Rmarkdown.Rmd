@@ -243,10 +243,9 @@ Transformar análises de dados em documentos, relatórios, apresentações e das
 - 2) **Documentos interativos**: É possível combinar o R Markdown com htmlwidgets ou Shiny para criar documentos interativos;
 - 3) **Dashboards**: R Markdown + flexdashboard para construção de dashboards;
 - 4) **Apresentações**: Construa apresentações elegantes com auxílio do R markdown;
-- 5) **Livros**: R Markdown + bookdown para criar livros;
-- 6) **Websites**: O R Markdown facilita a criação de páginas web diretamente de arquivos .Rmd; (Páginas pessoais, blogs, projetos,...)
+- 5) **Livros**: R Markdown + bookdown para criar livros; ([Análises Ecológicas no R](https://analises-ecologicas.com/); [Bookdown](https://bookdown.org/yihui/bookdown/))
+- 6) **Websites**: O R Markdown facilita a criação de páginas web diretamente de arquivos .Rmd; (Páginas pessoais, blogs, projetos,...) ([Site rmarkdown](https://rmarkdown.rstudio.com/))
 ]
-
 <!-- Slide XX -->
 ---
 layout: true
