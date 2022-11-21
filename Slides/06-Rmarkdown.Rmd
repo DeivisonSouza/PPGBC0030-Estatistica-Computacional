@@ -1,6 +1,6 @@
 ---
 title: "Estatística Computacional (PPGBC0030)"
-subtitle: "R markdown: Relatórios Reproduzíveis"
+subtitle: "R markdown: Relatórios Dinâmicos"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: 
@@ -107,7 +107,7 @@ use_clipboard()
 <!-- title-slide -->
 # .font120[Estatística Computacional <br> (PPGBC0030)]
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` .font90[R markdown: Relatórios Reproduzíveis] `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` .font90[R markdown: Relatórios Dinâmicos] `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
 
 #### **Prof. Dr. Deivison Venicio Souza**
@@ -121,13 +121,13 @@ use_clipboard()
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 4 - R markdown: Relatórios Reproduzíveis</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 4 - R markdown: Relatórios Dinâmicos</div2> </div>
 
 ---
 
 ## Objetivos
 <br><br>
-Ao final desta aula (.blue[R markdown: Relatórios Reproduzíveis]) espera-se que o discente seja capaz de...
+Ao final desta aula (.blue[R markdown: Relatórios Dinâmicos]) espera-se que o discente seja capaz de...
 
 * Entender a sintaxe básica do pacote .green[rmarkdown].
 * Aprender a construir um relatório estatístico usando o pacote .green[rmarkdown].
@@ -210,7 +210,7 @@ background-size: cover
 
 <br><br><br>
 
-.right[.font150[**.green[Módulo 4] <br> R markdown: Relatórios Reproduzíveis**]]
+.right[.font150[**.green[Módulo 4] <br> R markdown: Relatórios Dinâmicos**]]
 
 <br><br>
 
@@ -224,7 +224,7 @@ background-size: cover
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 4 - R markdown: Relatórios Reproduzíveis </div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 4 - R markdown: Relatórios Dinâmicos </div2> </div>
 
 ---
 name: mot
@@ -239,20 +239,59 @@ Transformar análises de dados em documentos, relatórios, apresentações e das
 <br>**Algumas da possibilidade:**
 
 .font80[
-- 1) **Documentos**: Um único arquivo R Markdown (.Rmd) pode ser renderizado para diversos formatos (html, pdf, word, etc.);
-- 2) **Documentos interativos**: É possível combinar o R Markdown com htmlwidgets ou Shiny para criar documentos interativos;
-- 3) **Dashboards**: R Markdown + flexdashboard para construção de dashboards;
-- 4) **Apresentações**: Construa apresentações elegantes com auxílio do R markdown;
-- 5) **Livros**: R Markdown + bookdown para criar livros; ([Análises Ecológicas no R](https://analises-ecologicas.com/); [Bookdown](https://bookdown.org/yihui/bookdown/))
-- 6) **Websites**: O R Markdown facilita a criação de páginas web diretamente de arquivos .Rmd; (Páginas pessoais, blogs, projetos,...) ([Site rmarkdown](https://rmarkdown.rstudio.com/))
+- 1) **Documentos**: Um único arquivo .magenta[R Markdown] (.Rmd) pode ser renderizado para diversos formatos (html, pdf, word, etc.);
+- 2) **Documentos interativos**: É possível combinar o .magenta[R Markdown] com htmlwidgets ou Shiny para criar documentos interativos;
+- 3) **Dashboards**: .magenta[R Markdown] + flexdashboard para construção de dashboards;
+- 4) **Apresentações**: Construa apresentações elegantes com auxílio do .magenta[R Markdown];
+- 5) **Livros**: .magenta[R Markdown] + bookdown para criar livros; ([Análises Ecológicas no R](https://analises-ecologicas.com/); [Bookdown](https://bookdown.org/yihui/bookdown/))
+- 6) **Websites**: O .magenta[R Markdown] facilita a criação de páginas web diretamente de arquivos .Rmd; (Páginas pessoais, blogs, projetos,...) ([Site rmarkdown](https://rmarkdown.rstudio.com/))
 ]
+
+---
+
+name: rmark
+## R markdown
+<br>
+
+.shadow3[
+### **O que é R Markdown?**
+.font90[
+- É um pacote/biblioteca disponível na linguagem R; (`install.packages("rmarkdown")`)
+- Na essência, o .magenta[R Markdown] é a junção da linguagem de marcação .brown[Markdown] com o poder de códigos em R ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html)).
+]
+]
+
+.shadow3[
+### **Markdown?**
+.font90[
+- É uma **linguagem de marcação** simples para formatação de textos.
+- É usada como ferramenta de **conversão de texto para HTML**, linguagem usada para criar páginas da web.
+- A sintaxe baseia-se, na maioria dos casos, em caracteres não-alfabéticos (`#, ![](), *`), usados para a configuração de títulos, listas, negrito, inserção de imagens e links, e entre outros.
+]
+]
+
+---
+name: sint
+## Sintaxe do Markdown
+
+
+
+---
+
+name: est
+## Estrutura do R Markdown
+
+---
+
+
+
 
 <!-- Slide XX -->
 ---
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 4 - R markdown: Relatórios Reproduzíveis</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 4 - R markdown: Relatórios Dinâmicos</div2> </div>
 
 <!--Slide XX -->
 ---

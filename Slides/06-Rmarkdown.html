@@ -17,7 +17,7 @@
     <script src="06-Rmarkdown_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="06-Rmarkdown_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="06-Rmarkdown_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f026785183c74617b426279b50a31f85","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ebaf07c82105437ab752c192316e5e2f","expires":1}</script>
     <script src="06-Rmarkdown_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="06-Rmarkdown_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="06-Rmarkdown_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -139,7 +139,7 @@ top:1.5em;right:0.6em;
 &lt;!-- title-slide --&gt;
 # .font120[Estatística Computacional &lt;br&gt; (PPGBC0030)]
 
-## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> .font90[R markdown: Relatórios Reproduzíveis] <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> .font90[R markdown: Relatórios Dinâmicos] <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
 &lt;br&gt;
 
 #### **Prof. Dr. Deivison Venicio Souza**
@@ -147,19 +147,19 @@ top:1.5em;right:0.6em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 19/novembro/2022 &lt;br&gt; (Atualizado em: 20/novembro/2022)
+##### 1ª versão: 19/novembro/2022 &lt;br&gt; (Atualizado em: 21/novembro/2022)
 
 ---
 layout: true
 class: with-logo logo-ufpa
 &lt;div class="my-header"&gt;&lt;/div&gt;
-&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Reproduzíveis&lt;/div2&gt; &lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Dinâmicos&lt;/div2&gt; &lt;/div&gt;
 
 ---
 
 ## Objetivos
 &lt;br&gt;&lt;br&gt;
-Ao final desta aula (.blue[R markdown: Relatórios Reproduzíveis]) espera-se que o discente seja capaz de...
+Ao final desta aula (.blue[R markdown: Relatórios Dinâmicos]) espera-se que o discente seja capaz de...
 
 * Entender a sintaxe básica do pacote .green[rmarkdown].
 * Aprender a construir um relatório estatístico usando o pacote .green[rmarkdown].
@@ -236,7 +236,7 @@ background-size: cover
 
 &lt;br&gt;&lt;br&gt;&lt;br&gt;
 
-.right[.font150[**.green[Módulo 4] &lt;br&gt; R markdown: Relatórios Reproduzíveis**]]
+.right[.font150[**.green[Módulo 4] &lt;br&gt; R markdown: Relatórios Dinâmicos**]]
 
 &lt;br&gt;&lt;br&gt;
 
@@ -250,7 +250,7 @@ background-size: cover
 layout: true
 class: with-logo logo-ufpa
 &lt;div class="my-header"&gt;&lt;/div&gt;
-&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Reproduzíveis &lt;/div2&gt; &lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Dinâmicos &lt;/div2&gt; &lt;/div&gt;
 
 ---
 name: mot
@@ -265,19 +265,59 @@ Transformar análises de dados em documentos, relatórios, apresentações e das
 &lt;br&gt;**Algumas da possibilidade:**
 
 .font80[
-- 1) **Documentos**: Um único arquivo R Markdown (.Rmd) pode ser renderizado para diversos formatos (html, pdf, word, etc.);
-- 2) **Documentos interativos**: É possível combinar o R Markdown com htmlwidgets ou Shiny para criar documentos interativos;
-- 3) **Dashboards**: R Markdown + flexdashboard para construção de dashboards;
-- 4) **Apresentações**: Construa apresentações elegantes com auxílio do R markdown;
-- 5) **Livros**: R Markdown + bookdown para criar livros; ([Análises Ecológicas no R](https://analises-ecologicas.com/); [Bookdown](https://bookdown.org/yihui/bookdown/))
-- 6) **Websites**: O R Markdown facilita a criação de páginas web diretamente de arquivos .Rmd; (Páginas pessoais, blogs, projetos,...) ([Site rmarkdown](https://rmarkdown.rstudio.com/))
+- 1) **Documentos**: Um único arquivo .magenta[R Markdown] (.Rmd) pode ser renderizado para diversos formatos (html, pdf, word, etc.);
+- 2) **Documentos interativos**: É possível combinar o .magenta[R Markdown] com htmlwidgets ou Shiny para criar documentos interativos;
+- 3) **Dashboards**: .magenta[R Markdown] + flexdashboard para construção de dashboards;
+- 4) **Apresentações**: Construa apresentações elegantes com auxílio do .magenta[R Markdown];
+- 5) **Livros**: .magenta[R Markdown] + bookdown para criar livros; ([Análises Ecológicas no R](https://analises-ecologicas.com/); [Bookdown](https://bookdown.org/yihui/bookdown/))
+- 6) **Websites**: O .magenta[R Markdown] facilita a criação de páginas web diretamente de arquivos .Rmd; (Páginas pessoais, blogs, projetos,...) ([Site rmarkdown](https://rmarkdown.rstudio.com/))
 ]
+
+---
+
+name: rmark
+## R markdown
+&lt;br&gt;
+
+.shadow3[
+### **O que é R Markdown?**
+.font90[
+- É um pacote/biblioteca disponível na linguagem R; (`install.packages("rmarkdown")`)
+- Na essência, o .magenta[R Markdown] é a junção da linguagem de marcação .brown[Markdown] com o poder de códigos em R ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html)).
+]
+]
+
+.shadow3[
+### **Markdown?**
+.font90[
+- É uma **linguagem de marcação** simples para formatação de textos.
+- É usada como ferramenta de **conversão de texto para HTML**, linguagem usada para criar páginas da web.
+- A sintaxe baseia-se, na maioria dos casos, em caracteres não-alfabéticos (`#, ![](), *`), usados para a configuração de títulos, listas, negrito, inserção de imagens e links, e entre outros.
+]
+]
+
+---
+name: sint
+## Sintaxe do Markdown
+
+
+
+---
+
+name: est
+## Estrutura do R Markdown
+
+---
+
+
+
+
 &lt;!-- Slide XX --&gt;
 ---
 layout: true
 class: with-logo logo-ufpa
 &lt;div class="my-header"&gt;&lt;/div&gt;
-&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Reproduzíveis&lt;/div2&gt; &lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Módulo 4 - R markdown: Relatórios Dinâmicos&lt;/div2&gt; &lt;/div&gt;
 
 &lt;!--Slide XX --&gt;
 ---
