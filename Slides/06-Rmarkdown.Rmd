@@ -149,6 +149,11 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.1 - Níveis de Título](#nt)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[2.2 - Parágrafos](#p)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.3 - Quebras de linha](#ql)
+
+
 [3 - Estrutura](#est)
 
 [4 - Sintaxe](#sin)
@@ -305,11 +310,11 @@ name: sb
 name: nt
 ## Markdown: Sintaxe básica
 
-.font80[
+.font90[
 ### **1 - Níveis de Título**:
 
-- Para criar um título use .red[\#] na frente da palavra ou frase. 
-- A quantidade de .red[\#] corresponde ao nível do título.
+- Para criar um título use .red[`#`] na frente da palavra ou frase. 
+- A quantidade de .red[`#`] corresponde ao nível do título.
 
 |     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
 |:---------------------:|:-------------------------:|:---------------------:|
@@ -322,14 +327,26 @@ name: nt
 
 ## Markdown: Sintaxe básica
 <br>
-### - **2 - Parágrafos**:
+### **2 - Parágrafos**:
 
 - Para criar parágrafos use uma **linha em branco** para separar o texto.
+- Não indente os parágrafos com espaços ou tabulações. <br />
 
 |     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
 |:---------------------:|:-------------------------:|:---------------------:|
-|    Viva a Amazônia. <br /><br /> Majestosa flora... |  `<p>Viva a Amazônia.</p>` <br /><br /> `<p>Majestosa flora...</p>` |     <p>Viva a Amazônia.</p>   <p>Majestosa flora...</p>|
+|    Viva a Amazônia. <br /><br /> Majestosa floresta... |  `<p>Viva a Amazônia.</p>` <br /><br /> `<p>Majestosa floresta...</p>` |     <p>Viva a Amazônia.</p>   <p>Majestosa floresta...</p>|
 
+---
+
+## Markdown: Sintaxe básica
+<br>
+### **3 - Quebras de linha**:
+
+- Para criar uma quebra de linha use .red[`<br>`] (tag html), ou finalize uma linha com **dois ou mais espaços em branco à direita**.
+
+|     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
+|:---------------------:|:-------------------------:|:---------------------:|
+|    Viva a Amazônia.`<br>` <br>  Majestosa floresta... |  `<p>Viva a Amazônia. <br>`<br> `Majestosa floresta...</p>` |     <p>Viva a Amazônia.<br> Majestosa floresta...</p>|
 
 ---
 
