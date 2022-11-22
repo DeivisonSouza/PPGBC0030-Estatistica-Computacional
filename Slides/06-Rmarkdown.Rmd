@@ -274,12 +274,25 @@ name: rmark
 name: sint
 ## Sintaxe do Markdown
 
+- **Adicionando: Títulos, subtítulos, ...**
 
+\# Título
+
+\## Título
+
+\### Título
+
+\#### Título
 
 ---
 
 name: est
-## Estrutura do R Markdown
+## Estrutura do arquivo R Markdown
+
+1) YAML
+2) Chunks
+3) Markdown
+
 
 ---
 
