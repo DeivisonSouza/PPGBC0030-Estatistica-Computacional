@@ -157,6 +157,8 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.5 - Listas](#lo)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[2.6 - Links](#lin)
+
 [3 - Estrutura](#est)
 
 [4 - Sintaxe](#sin)
@@ -399,8 +401,7 @@ name: lo
 
 | **Markdown** | **HTML** | **Saída Renderizada** |
 |:---:|:---|:---:|
-| 1. Primeiro item  <br> 2. Segundo item<br>   3. Terceiro item | `<ol>`<br> &nbsp;&nbsp;   `<li>Primeiro item</li>`<br> &nbsp;&nbsp;   `<li>Segundo item</li>`<br>  &nbsp;&nbsp;  `<li>Terceiro item`<br>  &nbsp;&nbsp;&nbsp;&nbsp; `<ol>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<li>Item recuado</li>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `<li>Item recuado</li>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</ol>` <br> &nbsp;&nbsp;&nbsp;&nbsp;`</li>` <br> `</ol>`| 1. Primeiro item<br> 2. Segundo item<br> 3. Terceiro item |
-
+| 1. Primeiro item  <br> 2. Segundo item<br>  3. Terceiro item<br> &nbsp;&nbsp;&nbsp; 1.  Item recuado<br> &nbsp;&nbsp;&nbsp; 2. Item recuado | `<ol>`<br> &nbsp;&nbsp;   `<li>Primeiro item</li>`<br> &nbsp;&nbsp;   `<li>Segundo item</li>`<br>  &nbsp;&nbsp;  `<li>Terceiro item`<br>  &nbsp;&nbsp;&nbsp;&nbsp; `<ol>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<li>Item recuado</li>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `<li>Item recuado</li>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</ol>` <br> &nbsp;&nbsp;&nbsp;&nbsp;`</li>` <br> `</ol>`| 1. Primeiro item<br> 2. Segundo item<br> 3. Terceiro item <br> &nbsp;&nbsp;&nbsp; 1.  Item recuado<br> &nbsp;&nbsp;&nbsp; 2. Item recuado|
 ]
 
 ---
@@ -409,7 +410,32 @@ name: lo
 <br>
 ### **5 - Listas Não Ordenadas**:
 
+.font90[
+- Use traços (.red[-]), asteriscos (.red[*]) ou sinal de mais (.red[+]) na frente dos itens da lista.
+- Recue um ou mais itens para criar uma lista aninhada.
 
+| **Markdown** | **HTML** | **Saída Renderizada** |
+|:---:|:---|:---:|
+| - Primeiro item  <br> - Segundo item<br>  - Terceiro item<br> &nbsp;&nbsp;&nbsp; -  Item recuado<br> &nbsp;&nbsp;&nbsp; - Item recuado | `<ul>`<br> &nbsp;&nbsp;   `<li>Primeiro item</li>`<br> &nbsp;&nbsp;   `<li>Segundo item</li>`<br>  &nbsp;&nbsp;  `<li>Terceiro item`<br>  &nbsp;&nbsp;&nbsp;&nbsp; `<ul>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<li>Item recuado</li>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `<li>Item recuado</li>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</ul>` <br> &nbsp;&nbsp;&nbsp;&nbsp;`</li>` <br> `</ul>`| <ul>    <li>Primeiro item</li>    <li>Segundo item</li>    <li>Terceiro item      <ul>        <li>Item recuado</li>        <li>Item recuado</li>      </ul>    </li>  </ul>|
+
+]
+
+---
+name: lin
+## Markdown: Sintaxe básica
+<br>
+### **6 - Inserção de Links**:
+
+- Use o comando: .magenta[`[Nome do link]`]`(URL)` para inserir um link.
+<br>
+
+**Exemplo:**
+
+.shadow3[
+**Entrada**: .magenta[`[Análises Ecológicas no R]`]`(https://analises-ecologicas.com/)`
+
+**Saída**: [Análises Ecológicas no R](https://analises-ecologicas.com/)
+]
 
 ---
 

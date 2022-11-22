@@ -27,3 +27,23 @@ knitr::opts_chunk$set(echo = TRUE)
 #### Título
 ##### Título
 ###### Título
+
+
+1. Primeiro item 
+2. Segundo item
+3. Terceiro item
+    1. Item recuado
+    2. Item recuado
+
+- Primeiro item 
+- Segundo item
+- Terceiro item
+    - Item recuado
+    - Item recuado
+    
+* This is the first list item.
+* Here's the second list item.
+
+    I need to add another paragraph below the second list item.
+
+* And here's the third list item.
