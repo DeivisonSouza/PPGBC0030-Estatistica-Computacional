@@ -155,6 +155,8 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.4 - Ênfase](#enf)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[2.5 - Listas](#lo)
+
 [3 - Estrutura](#est)
 
 [4 - Sintaxe](#sin)
@@ -402,6 +404,10 @@ name: lo
 ]
 
 ---
+
+## Markdown: Sintaxe básica
+<br>
+### **5 - Listas Não Ordenadas**:
 
 
 
