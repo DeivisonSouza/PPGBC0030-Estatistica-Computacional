@@ -275,28 +275,61 @@ install.packages("rmarkdown")
 ---
 name: mark
 ## Markdown: Linguagem de marcação
+<br>
 
 .shadow3[
 ### **Markdown**
-.font90[
-- É uma **linguagem de marcação** simples para formatação de textos.
-- É usada como ferramenta de **conversão de texto para HTML**, linguagem usada para criar páginas da web.
-- A sintaxe baseia-se, na maioria dos casos, em caracteres não-alfabéticos (`#, ![](), *`), usados para a configuração de títulos, listas, negrito, inserção de imagens e links, e entre outros.
+- **Linguagem de marcação:** Criado por John Gruber em 2004;
+- **Aplicação:** É usada como ferramenta de **conversão de texto para html** (páginas da web).
+- **Editores:** [Dillinger](https://dillinger.io/) (online)
+- **Consulte:** [Markdown Guide](https://www.markdownguide.org/getting-started/)
 ]
+
+<br>
+
+.center[**A melhor maneira de aprender é praticando!**]
+
+---
+name: sb
+## Markdown: Sintaxe básica
+<br>
+
+.shadow3[
+### **Markdown: .black[Sintaxe]**
+- Possui uma sintaxe simples, legível e discreta;
+- A sintaxe baseia-se, na maioria dos casos, em caracteres não-alfabéticos. Por exemplo, `#, ![](), *`.
+- Esses caracteres são usados para formatar textos: níveis de título, negrito, inserção de imagens e links, e entre outros.
 ]
 
 ---
-name: sint
+name: nt
 ## Markdown: Sintaxe básica
-<br>
-### **Níveis de Título**
+
+.font80[
+### **1 - Níveis de Título**:
+
+- Para criar um título use .red[\#] na frente da palavra ou frase. 
+- A quantidade de .red[\#] corresponde ao nível do título.
 
 |     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
 |:---------------------:|:-------------------------:|:---------------------:|
 |    # Título nível 1   |  `<h1>Título nível 1</h1>` |     <h1>Título nível 1</h1>   |
 |   ## Título nível 2   |  `<h2>Título nível 2</h2>` |     <h2>Título nível 2</h2>    |
 |   ### Título nível 3  |  `<h3>Título nível 3</h3>` |     <h3>Título nível 3</h3>    |
-|  #### Título nível 4  | `<h4>Título nível 4</h4>` |     <h4>Título nível 4</h4>    |
+]
+
+---
+
+## Markdown: Sintaxe básica
+<br>
+### - **2 - Parágrafos**:
+
+- Para criar parágrafos use uma **linha em branco** para separar o texto.
+
+|     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
+|:---------------------:|:-------------------------:|:---------------------:|
+|    Viva a Amazônia. <br /><br /> Majestosa flora... |  `<p>Viva a Amazônia.</p>` <br /><br /> `<p>Majestosa flora...</p>` |     <p>Viva a Amazônia.</p>   <p>Majestosa flora...</p>|
+
 
 ---
 
