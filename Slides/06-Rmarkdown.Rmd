@@ -145,13 +145,17 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 [1 - Motivação](#mot)
 
-[2 - Estrutura](#est)
+[2 - Markdown](#mark)
 
-[3 - Sintaxe](#sin)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.1 - Níveis de Título](#nt)
 
-[4 - Chunk](#chun)
+[3 - Estrutura](#est)
 
-[5 - Formatos de saída](#fs)
+[4 - Sintaxe](#sin)
+
+[5 - Chunk](#chun)
+
+[6 - Formatos de saída](#fs)
 
 ]
 
@@ -248,21 +252,32 @@ Transformar análises de dados em documentos, relatórios, apresentações e das
 ]
 
 ---
-
 name: rmark
 ## R markdown
 <br>
 
 .shadow3[
 ### **O que é R Markdown?**
-.font90[
-- É um pacote/biblioteca disponível na linguagem R; (`install.packages("rmarkdown")`)
-- Na essência, o .magenta[R Markdown] é a junção da linguagem de marcação .brown[Markdown] com o poder de códigos em R ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html)).
-]
+- É um pacote/biblioteca disponível na linguagem R, que permite o uso da linguagem de marcação .brown[Markdown] e Códigos (R, Python, ...). ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html))
+
+```r
+install.packages("rmarkdown")
+```
+<br>
+
+.shadow2[
+.center[**.magenta[R markdown] = .brown[Markdown] + Código (R, Python, ...) + Texto**]
 ]
 
+<br>
+]
+
+---
+name: mark
+## Markdown: Linguagem de marcação
+
 .shadow3[
-### **Markdown?**
+### **Markdown**
 .font90[
 - É uma **linguagem de marcação** simples para formatação de textos.
 - É usada como ferramenta de **conversão de texto para HTML**, linguagem usada para criar páginas da web.
@@ -272,17 +287,16 @@ name: rmark
 
 ---
 name: sint
-## Sintaxe do Markdown
+## Markdown: Sintaxe básica
+<br>
+### **Níveis de Título**
 
-- **Adicionando: Títulos, subtítulos, ...**
-
-\# Título
-
-\## Título
-
-\### Título
-
-\#### Título
+|     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
+|:---------------------:|:-------------------------:|:---------------------:|
+|    # Título nível 1   |  `<h1>Título nível 1</h1>` |     <h1>Título nível 1</h1>   |
+|   ## Título nível 2   |  `<h2>Título nível 2</h2>` |     <h2>Título nível 2</h2>    |
+|   ### Título nível 3  |  `<h3>Título nível 3</h3>` |     <h3>Título nível 3</h3>    |
+|  #### Título nível 4  | `<h4>Título nível 4</h4>` |     <h4>Título nível 4</h4>    |
 
 ---
 
@@ -295,9 +309,6 @@ name: est
 
 
 ---
-
-
-
 
 <!-- Slide XX -->
 ---

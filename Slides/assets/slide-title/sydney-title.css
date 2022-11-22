@@ -675,10 +675,10 @@ slides > slide {
 h1 {
   font-weight: normal;
   text-shadow: none;
-  margin-top: 20px;
-  margin-left: 120px;
-  color: #990000;
-  padding-top: -30px;
+  margin-top: 0px;
+  margin-left: 0px;
+  color: black;
+  padding-top: 0px;
 }
 
 h3, h4 {

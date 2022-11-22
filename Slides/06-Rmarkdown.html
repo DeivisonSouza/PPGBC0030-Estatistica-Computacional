@@ -17,7 +17,7 @@
     <script src="06-Rmarkdown_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="06-Rmarkdown_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="06-Rmarkdown_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d5b406aef80c46e9a51c876b7f45c3c5","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x8c4b2d45d054874b0ccff9257f60b24","expires":1}</script>
     <script src="06-Rmarkdown_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="06-Rmarkdown_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="06-Rmarkdown_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -175,13 +175,17 @@ Ao final desta aula (.blue[R markdown: Relatórios Dinâmicos]) espera-se que o 
 
 [1 - Motivação](#mot)
 
-[2 - Estrutura](#est)
+[2 - Markdown](#mark)
 
-[3 - Sintaxe](#sin)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.1 - Níveis de Título](#nt)
 
-[4 - Chunk](#chun)
+[3 - Estrutura](#est)
 
-[5 - Formatos de saída](#fs)
+[4 - Sintaxe](#sin)
+
+[5 - Chunk](#chun)
+
+[6 - Formatos de saída](#fs)
 
 ]
 
@@ -274,21 +278,32 @@ Transformar análises de dados em documentos, relatórios, apresentações e das
 ]
 
 ---
-
 name: rmark
 ## R markdown
 &lt;br&gt;
 
 .shadow3[
 ### **O que é R Markdown?**
-.font90[
-- É um pacote/biblioteca disponível na linguagem R; (`install.packages("rmarkdown")`)
-- Na essência, o .magenta[R Markdown] é a junção da linguagem de marcação .brown[Markdown] com o poder de códigos em R ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html)).
-]
+- É um pacote/biblioteca disponível na linguagem R, que permite o uso da linguagem de marcação .brown[Markdown] e Códigos (R, Python, ...). ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html))
+
+```r
+install.packages("rmarkdown")
+```
+&lt;br&gt;
+
+.shadow2[
+.center[**.magenta[R markdown] = .brown[Markdown] + Código (R, Python, ...) + Texto**]
 ]
 
+&lt;br&gt;
+]
+
+---
+name: mark
+## Markdown: Linguagem de marcação
+
 .shadow3[
-### **Markdown?**
+### **Markdown**
 .font90[
 - É uma **linguagem de marcação** simples para formatação de textos.
 - É usada como ferramenta de **conversão de texto para HTML**, linguagem usada para criar páginas da web.
@@ -298,17 +313,16 @@ name: rmark
 
 ---
 name: sint
-## Sintaxe do Markdown
+## Markdown: Sintaxe básica
+&lt;br&gt;
+### **Níveis de Título**
 
-- **Adicionando: Títulos, subtítulos, ...**
-
-\# Título
-
-\## Título
-
-\### Título
-
-\#### Título
+|     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
+|:---------------------:|:-------------------------:|:---------------------:|
+|    # Título nível 1   |  `&lt;h1&gt;Título nível 1&lt;/h1&gt;` |     &lt;h1&gt;Título nível 1&lt;/h1&gt;   |
+|   ## Título nível 2   |  `&lt;h2&gt;Título nível 2&lt;/h2&gt;` |     &lt;h2&gt;Título nível 2&lt;/h2&gt;    |
+|   ### Título nível 3  |  `&lt;h3&gt;Título nível 3&lt;/h3&gt;` |     &lt;h3&gt;Título nível 3&lt;/h3&gt;    |
+|  #### Título nível 4  | `&lt;h4&gt;Título nível 4&lt;/h4&gt;` |     &lt;h4&gt;Título nível 4&lt;/h4&gt;    |
 
 ---
 
@@ -321,9 +335,6 @@ name: est
 
 
 ---
-
-
-
 
 &lt;!-- Slide XX --&gt;
 ---
