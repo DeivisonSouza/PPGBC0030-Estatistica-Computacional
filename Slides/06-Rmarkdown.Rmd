@@ -149,10 +149,11 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.1 - Níveis de Título](#nt)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.2 - Parágrafos](#p)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.2 - Parágrafos](#par)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.3 - Quebras de linha](#ql)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[2.4 - Ênfase](#enf)
 
 [3 - Estrutura](#est)
 
@@ -316,7 +317,7 @@ name: nt
 - Para criar um título use .red[`#`] na frente da palavra ou frase. 
 - A quantidade de .red[`#`] corresponde ao nível do título.
 
-|     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
+|     **Markdown**    |          **HTML**         | **Saída Renderizada** |
 |:---------------------:|:-------------------------:|:---------------------:|
 |    # Título nível 1   |  `<h1>Título nível 1</h1>` |     <h1>Título nível 1</h1>   |
 |   ## Título nível 2   |  `<h2>Título nível 2</h2>` |     <h2>Título nível 2</h2>    |
@@ -324,7 +325,7 @@ name: nt
 ]
 
 ---
-
+name: par
 ## Markdown: Sintaxe básica
 <br>
 ### **2 - Parágrafos**:
@@ -332,21 +333,39 @@ name: nt
 - Para criar parágrafos use uma **linha em branco** para separar o texto.
 - Não indente os parágrafos com espaços ou tabulações. <br />
 
-|     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
+|     **Markdown**    |          **HTML**         | **Saída Renderizada** |
 |:---------------------:|:-------------------------:|:---------------------:|
 |    Viva a Amazônia. <br /><br /> Majestosa floresta... |  `<p>Viva a Amazônia.</p>` <br /><br /> `<p>Majestosa floresta...</p>` |     <p>Viva a Amazônia.</p>   <p>Majestosa floresta...</p>|
 
 ---
-
+name: ql
 ## Markdown: Sintaxe básica
 <br>
 ### **3 - Quebras de linha**:
 
 - Para criar uma quebra de linha use .red[`<br>`] (tag html), ou finalize uma linha com **dois ou mais espaços em branco à direita**.
 
-|     **Remarcação**    |          **HTML**         | **Saída Renderizada** |
+|     **Markdown**    |          **HTML**         | **Saída Renderizada** |
 |:---------------------:|:-------------------------:|:---------------------:|
 |    Viva a Amazônia.`<br>` <br>  Majestosa floresta... |  `<p>Viva a Amazônia. <br>`<br> `Majestosa floresta...</p>` |     <p>Viva a Amazônia.<br> Majestosa floresta...</p>|
+
+---
+name: enf
+## Markdown: Sintaxe básica
+<br>
+### **4 - Ênfase**:
+
+.font90[
+- **Itálico**: Use .orange[1 asterisco] (.red[*]) ou sublinhado (.red[_]) antes e depois de uma palavra ou frase.
+- **Negrito**: Use .orange[2 asterisco] (.red[**]) ou sublinhado (.red[__]) antes e depois de uma palavra ou frase.
+- **Negrito-Itálico**: Use .orange[3 asterisco] ou sublinhado antes e depois de uma palavra ou frase.
+
+|              **Markdown**              |                          **HTML**                         |          **Saída Renderizada**         |
+|:--------------------------------------:|:---------------------------------------------------------:|:--------------------------------------:|
+| Esse é um texto `*Itálico*`.             | Esse é um texto `<em>Itálico</em>.`                         | Esse é um texto *Itálico*.               |
+| Esse é um texto `**Negrito**`.           | Esse é um texto `<strong>Negrito</strong>.`                 | Esse é um texto **Negrito**.           |
+| Esse é um texto `***Negrito-Itálico***`. | Esse é um texto `<em><strong>Negrito-Itálico</strong></em>.` | Esse é um texto ***Negrito-Itálico***. |
+]
 
 ---
 
