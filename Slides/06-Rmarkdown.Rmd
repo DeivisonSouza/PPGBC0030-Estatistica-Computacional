@@ -368,6 +368,44 @@ name: enf
 ]
 
 ---
+name: lo
+## Markdown: Sintaxe básica
+<br>
+### **4 - Listas Ordenadas**:
+
+.font90[
+- Use **números seguidos de pontos**. 
+- A lista deve começar no **número 1**.
+- Os números não precisam estar em ordem numérica.<br><br>
+
+| **Markdown** | **HTML** | **Saída Renderizada** |
+|:---:|:---|:---:|
+| 1. Primeiro item  <br> 2. Segundo item<br>   3. Terceiro item | `<ol>`<br> &nbsp;&nbsp;   `<li>Primeiro item</li>`<br> &nbsp;&nbsp;   `<li>Segundo item</li>`<br>  &nbsp;&nbsp;  `<li>Terceiro item</li>`<br>  `</ol>` | 1. Primeiro item<br> 2. Segundo item<br> 3. Terceiro item |
+
+]
+
+---
+
+## Markdown: Sintaxe básica
+<br>
+### **4 - Listas Ordenadas** (cont.):
+
+.font80[
+- Use **números seguidos de pontos**. 
+- A lista deve começar no **número 1**.
+- Os números não precisam estar em ordem numérica.<br><br>
+
+| **Markdown** | **HTML** | **Saída Renderizada** |
+|:---:|:---|:---:|
+| 1. Primeiro item  <br> 2. Segundo item<br>   3. Terceiro item | `<ol>`<br> &nbsp;&nbsp;   `<li>Primeiro item</li>`<br> &nbsp;&nbsp;   `<li>Segundo item</li>`<br>  &nbsp;&nbsp;  `<li>Terceiro item`<br>  &nbsp;&nbsp;&nbsp;&nbsp; `<ol>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<li>Item recuado</li>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `<li>Item recuado</li>`<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</ol>` <br> &nbsp;&nbsp;&nbsp;&nbsp;`</li>` <br> `</ol>`| 1. Primeiro item<br> 2. Segundo item<br> 3. Terceiro item |
+
+]
+
+---
+
+
+
+---
 
 name: est
 ## Estrutura do arquivo R Markdown
