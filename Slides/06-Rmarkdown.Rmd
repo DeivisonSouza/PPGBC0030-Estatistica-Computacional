@@ -141,7 +141,7 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 ## Conteúdo
 
 .pull-left-4[
-**Parte 1 - R Markdown**
+**Parte 1 - Markdown: Linguagem de Marcação**
 
 [1 - Motivação](#mot)
 
@@ -153,26 +153,28 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.3 - Quebras de linha](#ql)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.4 - Ênfase](#enf)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.4 - Ênfases](#enf)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.5 - Listas](#lo)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.6 - Links](#lin)
 
-[3 - Estrutura](#est)
-
-[4 - Sintaxe](#sin)
-
-[5 - Chunk](#chun)
-
-[6 - Formatos de saída](#fs)
-
+&nbsp;&nbsp;&nbsp;&nbsp;[2.7 - Imagens](#img)
 ]
 
 .pull-right-2[
 .pull-down[
-**Parte 2 - Criando um R Markdown (AED Íris Flower)**
+**Parte 2 - R Markdown**
 
+[1 - Estrutura](#est)
+
+[2 - Sintaxe](#sin)
+
+[3 - Chunk](#chun)
+
+[4 - Formatos de saída](#fs)
+
+[5 - Construindo um relatório estatístico - Iris Flower](#cre)
 ]
 ]
 
