@@ -471,6 +471,30 @@ name: tab
 <br>
 ### **8 - Inserção de Tabelas**:
 
+- Use a **barra vertical** (.red[|]) para definir colunas e linhas.
+- Use **hifens** (.red[-]) para criar o cabeçalho de cada coluna.
+
+.pull-left-10[
+.center[**Entrada**:]
+```
+| Espécie  | diâmetro | altura |
+| -------- | ---------| -------|
+| Mogno    | 50       | 20     |
+| Ipê      | 70       | 25     |
+```
+]
+
+.pull-right-10[
+.center[**Saída**:]
+
+| Espécie  | diâmetro | altura |
+| -------- | ---------| -------|
+| Mogno    | 50       | 20     |
+| Ipê      | 70       | 25     |
+]
+
+
+
 ---
 name: est
 ## Estrutura do arquivo R Markdown
