@@ -383,6 +383,18 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 ]
 ]
 
+
+.pull-right-4[
+.font80[
+**Módulo 4** - .orange[**R markdown: Relatórios Dinâmicos**]
+
+- Sintaxe da linguagem de marcação Markdown.
+- Estrutura do R markdown.
+- Formatos de saída (html, pdf, word,...)
+- Construindo um relatório estatístico para Iris Flower.
+]
+]
+
 ---
 
 ## Orientações e materias da disciplina
