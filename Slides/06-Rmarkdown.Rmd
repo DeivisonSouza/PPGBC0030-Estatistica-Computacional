@@ -160,6 +160,8 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 &nbsp;&nbsp;&nbsp;&nbsp;[2.6 - Links](#lin)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.7 - Imagens](#img)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.8 - Tabelas](#tab)
 ]
 
 .pull-right-2[
@@ -462,6 +464,12 @@ name: img
 **Saída**: ![Girassol](https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg)
 ]
 ]
+
+---
+name: tab
+## Markdown: Sintaxe básica
+<br>
+### **8 - Inserção de Tabelas**:
 
 ---
 name: est
