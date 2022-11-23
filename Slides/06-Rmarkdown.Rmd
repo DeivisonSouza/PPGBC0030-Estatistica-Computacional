@@ -429,18 +429,41 @@ name: lin
 ### **6 - Inserção de Links**:
 
 - Use o comando: .magenta[`[Nome do link]`]`(URL)` para inserir um link.
-<br>
-
-**Exemplo:**
+- Use o comando < .magenta[link] > para converter um URL ou endereço de e-mail rapidamente.
+<br><br>
 
 .shadow3[
 **Entrada**: .magenta[`[Análises Ecológicas no R]`]`(https://analises-ecologicas.com/)`
 
 **Saída**: [Análises Ecológicas no R](https://analises-ecologicas.com/)
+
+*****************
+
+**Entrada**: < .magenta[`https://analises-ecologicas.com/`] >
+
+**Saída**: <https://analises-ecologicas.com/>
+]
+
+
+---
+name: img
+## Markdown: Sintaxe básica
+<br>
+### **7 - Inserção de Imagens**:
+
+.pull-left-5[
+- Use o comando: !.magenta[[`Nome do link`]]`(URL)` para inserir uma imagem.
+- A sintaxe Markdown para imagens não permite a especificação de largura e altura.
+]
+
+.pull-right-5[
+.font80[
+**Entrada**: !.magenta[[`Girassol`]]`(https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg)` <br>
+**Saída**: ![Girassol](https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg)
+]
 ]
 
 ---
-
 name: est
 ## Estrutura do arquivo R Markdown
 
