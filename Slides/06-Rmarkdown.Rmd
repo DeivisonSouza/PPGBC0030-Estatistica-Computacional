@@ -129,8 +129,8 @@ class: with-logo logo-ufpa
 <br><br>
 Ao final desta aula (.blue[R markdown: Relatórios Dinâmicos]) espera-se que o discente seja capaz de...
 
-* Entender a sintaxe básica do pacote .green[rmarkdown].
-* Aprender a construir um relatório estatístico usando o pacote .green[rmarkdown].
+* Empregar a sintaxe básica da linguagem de marcação .green[Markdown].
+* Construir um relatório estatístico usando o pacote .green[rmarkdown].
 
 ```{r, echo=FALSE, out.width='25%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png")
@@ -162,6 +162,9 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 &nbsp;&nbsp;&nbsp;&nbsp;[2.7 - Imagens](#img)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.8 - Tabelas](#tab)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.9 - Emoji](#emj)
+
 ]
 
 .pull-right-2[
@@ -232,7 +235,7 @@ background-size: cover
 
 <br><br>
 
-.right[.font150[**.green[Parte 1] - R markdown**]]
+.right[.font150[**.green[Parte 1] - Markdown: Linguagem de Marcação**]]
 <br>
 
 .right[.brown[.font120[Motivação, Estrutura, Sintaxe, etc.]]]
@@ -478,25 +481,33 @@ name: tab
 .pull-left-10[
 .center[**Entrada**:]
 ```
-| Espécie    | diâmetro  | altura  |
+| Espécie🌳  | diâmetro  | altura  |
 | :--------: | :---------| -------:|
 | Mogno      | 50        | 20      |
 | Ipê        | 70        | 25      |
 ```
 
 .font90[
-**Use aplicações web**: [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables)
+**💡Use aplicações web**: [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables)
 ]
 ]
 
 .pull-right-10[
 .center[**Saída**:]
 
-| Espécie    | diâmetro  | altura  |
+| Espécie🌳  | diâmetro  | altura  |
 | :--------: | :---------| -------:|
 | Mogno      | 50        | 20      |
 | Ipê        | 70        | 25      |
 ]
+
+---
+name: emj
+## Markdown: Sintaxe básica
+<br>
+### **9 - Inserção de Emoji**:
+
+
 
 ---
 name: est
