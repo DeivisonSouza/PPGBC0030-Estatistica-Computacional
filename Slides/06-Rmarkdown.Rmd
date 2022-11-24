@@ -541,7 +541,7 @@ class: with-logo logo-ufpa
 
 ---
 name: rmark
-## R markdown
+## R Markdown
 <br>
 
 .shadow3[
@@ -554,19 +554,28 @@ install.packages("rmarkdown")
 <br>
 
 .shadow2[
-.center[**.magenta[R markdown] = .brown[Markdown] + Código (R, Python, ...) + Texto**]
+.center[**.magenta[R Markdown] = .brown[Markdown] + Código (R, Python, ...) + Texto**]
 ]
 
 <br>
 ]
 
 ---
+name: rmd
+## R Markdown
+
+
+---
 name: est
 ## Estrutura do arquivo R Markdown
 
 1) YAML
-2) Chunks
-3) Markdown
+
+2) Markdown
+
+3) Chunks
+
+
 
 
 ---
