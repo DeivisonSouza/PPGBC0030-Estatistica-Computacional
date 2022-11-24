@@ -463,7 +463,7 @@ name: img
 .pull-right-5[
 .font80[
 **Entrada**: !.magenta[[`Girassol`]]`(https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg)` <br>
-**Saída**: ![Girassol](https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg)
+**Saída**: ![Girassol](https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg){width=100px}
 ]
 ]
 
@@ -542,11 +542,11 @@ class: with-logo logo-ufpa
 ---
 name: rmark
 ## R Markdown
-<br>
 
 .shadow3[
 ### **O que é R Markdown?**
-- É um pacote/biblioteca disponível na linguagem R, que permite o uso da linguagem de marcação .brown[Markdown] e Códigos (R, Python, ...), além de textos. ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html))
+- É um pacote/biblioteca disponível na linguagem R, que permite o uso da linguagem de marcação .brown[Markdown] e Códigos (R, Python, ...), além de textos. ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html)).
+- É ideal para criar documentos reprodutíveis.
 
 ```r
 install.packages("rmarkdown")
@@ -563,18 +563,24 @@ install.packages("rmarkdown")
 ---
 name: rmd
 ## R Markdown
+<br>
 
+**Criando um novo documento R Markdown:** 
+
+> **No Rstudio acesse**: File > New File > R Markdown (Extensão: `.Rmd`)
 
 ---
 name: est
-## Estrutura do arquivo R Markdown
+## R Markdown: Componentes básicos
+<br>
 
-1) YAML
+**1) YAML**: responsável pelas configurações dos documentos.
 
-2) Markdown
+**2) Markdown**
 
-3) Chunks
+**3) Chunks**
 
+---
 
 
 
