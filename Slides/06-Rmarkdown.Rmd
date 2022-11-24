@@ -142,7 +142,7 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 .pull-left-4[
 **Parte 1 - Markdown: Linguagem de Marcação**
-
+.font90[
 [1 - Motivação](#mot)
 
 [2 - Markdown](#mark)
@@ -155,22 +155,25 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.4 - Ênfases](#enf)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.5 - Listas](#lo)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.5 - Subscrito e sobrescrito](#sub)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.6 - Links](#lin)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.6 - Listas](#lo)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.7 - Imagens](#img)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.7 - Links](#lin)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.8 - Tabelas](#tab)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.8 - Imagens](#img)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.9 - Emoji](#emj)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.9 - Tabelas](#tab)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[2.10 - Emoji](#emj)
+]
 ]
 
 .pull-right-2[
 .pull-down[
 **Parte 2 - R Markdown**
 
+.font90[
 [1 - Estrutura](#est)
 
 [2 - Sintaxe](#sin)
@@ -180,6 +183,7 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 [4 - Formatos de saída](#fs)
 
 [5 - Construindo um relatório estatístico - Iris Flower](#cre)
+]
 ]
 ]
 
@@ -379,10 +383,26 @@ name: enf
 ]
 
 ---
+name: sub
+## Markdown: Sintaxe básica
+<br>
+### **5 - Subscrito e sobrescrito**:
+
+.font90[
+- **Subscrito**: Use til (.red[~]) antes e depois dos caracteres.
+- **Sobrescrito**: Use circunflexo (.red[^]) antes e depois dos caracteres.
+
+| **Markdown** | **HTML** | **Saída Renderizada** |
+|:---:|:---:|:---:|
+| `H~2~O` | `H<sub>2</sub>O` | H<sub>2</sub>O |
+| `X^2^` | `X<sup>2</sup>` | X<sup>2</sup> |
+]
+
+---
 name: lo
 ## Markdown: Sintaxe básica
 <br>
-### **4 - Listas Ordenadas**:
+### **6 - Listas Ordenadas**:
 
 .font90[
 - Use **números seguidos de pontos**. 
@@ -399,7 +419,7 @@ name: lo
 
 ## Markdown: Sintaxe básica
 <br>
-### **4 - Listas Ordenadas** (cont.):
+### **6 - Listas Ordenadas** (cont.):
 
 .font80[
 - Use **números seguidos de pontos**. 
@@ -415,7 +435,7 @@ name: lo
 
 ## Markdown: Sintaxe básica
 <br>
-### **5 - Listas Não Ordenadas**:
+### **6 - Listas Não Ordenadas**:
 
 .font90[
 - Use traços (.red[-]), asteriscos (.red[*]) ou sinal de mais (.red[+]) na frente dos itens da lista.
@@ -431,7 +451,7 @@ name: lo
 name: lin
 ## Markdown: Sintaxe básica
 <br>
-### **6 - Inserção de Links**:
+### **7 - Inserção de Links**:
 
 - Use o comando: .magenta[`[Nome do link]`]`(URL)` para inserir um link.
 - Use o comando < .magenta[link] > para converter um URL ou endereço de e-mail rapidamente.
@@ -454,7 +474,7 @@ name: lin
 name: img
 ## Markdown: Sintaxe básica
 <br>
-### **7 - Inserção de Imagens**:
+### **8 - Inserção de Imagens**:
 
 .pull-left-5[
 - Use o comando: !.magenta[[`Nome do link`]]`(URL)` para inserir uma imagem.
@@ -472,7 +492,7 @@ name: img
 name: tab
 ## Markdown: Sintaxe básica
 <br>
-### **8 - Inserção de Tabelas**:
+### **9 - Inserção de Tabelas**:
 
 - Use a **barra vertical** (.red[|]) para definir colunas e linhas.
 - Use três ou mais **hifens** (.red[`---`]) para criar o cabeçalho de cada coluna.
@@ -505,7 +525,16 @@ name: tab
 name: emj
 ## Markdown: Sintaxe básica
 <br>
-### **9 - Inserção de Emoji**:
+### **10 - Inserção de Emoji**:
+
+- **Existem duas possibilidades:**
+
+> 1) Copiar e colar o emoji:
+[emojipedia](https://emojipedia.org/) 😎
+
+> 2) Usar códigos de acesso de emoji: [rxaviers](https://gist.github.com/rxaviers/7360908) :sunglasses:
+
+---
 
 
 

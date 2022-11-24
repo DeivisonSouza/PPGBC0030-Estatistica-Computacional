@@ -17,7 +17,7 @@
     <script src="06-Rmarkdown_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="06-Rmarkdown_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="06-Rmarkdown_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xc3b8b1ce8434f7899ac7a7dffaa2540","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x10399cb068b4345b04a7cc192a354d5","expires":1}</script>
     <script src="06-Rmarkdown_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="06-Rmarkdown_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="06-Rmarkdown_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -172,7 +172,7 @@ Ao final desta aula (.blue[R markdown: Relatórios Dinâmicos]) espera-se que o 
 
 .pull-left-4[
 **Parte 1 - Markdown: Linguagem de Marcação**
-
+.font90[
 [1 - Motivação](#mot)
 
 [2 - Markdown](#mark)
@@ -185,22 +185,25 @@ Ao final desta aula (.blue[R markdown: Relatórios Dinâmicos]) espera-se que o 
 
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.4 - Ênfases](#enf)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.5 - Listas](#lo)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.5 - Subscrito e sobrescrito](#sub)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.6 - Links](#lin)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.6 - Listas](#lo)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.7 - Imagens](#img)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.7 - Links](#lin)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.8 - Tabelas](#tab)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.8 - Imagens](#img)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.9 - Emoji](#emj)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.9 - Tabelas](#tab)
 
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.10 - Emoji](#emj)
+]
 ]
 
 .pull-right-2[
 .pull-down[
 **Parte 2 - R Markdown**
 
+.font90[
 [1 - Estrutura](#est)
 
 [2 - Sintaxe](#sin)
@@ -210,6 +213,7 @@ Ao final desta aula (.blue[R markdown: Relatórios Dinâmicos]) espera-se que o 
 [4 - Formatos de saída](#fs)
 
 [5 - Construindo um relatório estatístico - Iris Flower](#cre)
+]
 ]
 ]
 
@@ -405,10 +409,26 @@ name: enf
 ]
 
 ---
+name: sub
+## Markdown: Sintaxe básica
+&lt;br&gt;
+### **5 - Subscrito e sobrescrito**:
+
+.font90[
+- **Subscrito**: Use til (.red[~]) antes e depois dos caracteres.
+- **Sobrescrito**: Use circunflexo (.red[^]) antes e depois dos caracteres.
+
+| **Markdown** | **HTML** | **Saída Renderizada** |
+|:---:|:---:|:---:|
+| `H~2~O` | `H&lt;sub&gt;2&lt;/sub&gt;O` | H&lt;sub&gt;2&lt;/sub&gt;O |
+| `X^2^` | `X&lt;sup&gt;2&lt;/sup&gt;` | X&lt;sup&gt;2&lt;/sup&gt; |
+]
+
+---
 name: lo
 ## Markdown: Sintaxe básica
 &lt;br&gt;
-### **4 - Listas Ordenadas**:
+### **6 - Listas Ordenadas**:
 
 .font90[
 - Use **números seguidos de pontos**. 
@@ -425,7 +445,7 @@ name: lo
 
 ## Markdown: Sintaxe básica
 &lt;br&gt;
-### **4 - Listas Ordenadas** (cont.):
+### **6 - Listas Ordenadas** (cont.):
 
 .font80[
 - Use **números seguidos de pontos**. 
@@ -441,7 +461,7 @@ name: lo
 
 ## Markdown: Sintaxe básica
 &lt;br&gt;
-### **5 - Listas Não Ordenadas**:
+### **6 - Listas Não Ordenadas**:
 
 .font90[
 - Use traços (.red[-]), asteriscos (.red[*]) ou sinal de mais (.red[+]) na frente dos itens da lista.
@@ -457,7 +477,7 @@ name: lo
 name: lin
 ## Markdown: Sintaxe básica
 &lt;br&gt;
-### **6 - Inserção de Links**:
+### **7 - Inserção de Links**:
 
 - Use o comando: .magenta[`[Nome do link]`]`(URL)` para inserir um link.
 - Use o comando &lt; .magenta[link] &gt; para converter um URL ou endereço de e-mail rapidamente.
@@ -480,7 +500,7 @@ name: lin
 name: img
 ## Markdown: Sintaxe básica
 &lt;br&gt;
-### **7 - Inserção de Imagens**:
+### **8 - Inserção de Imagens**:
 
 .pull-left-5[
 - Use o comando: !.magenta[[`Nome do link`]]`(URL)` para inserir uma imagem.
@@ -498,7 +518,7 @@ name: img
 name: tab
 ## Markdown: Sintaxe básica
 &lt;br&gt;
-### **8 - Inserção de Tabelas**:
+### **9 - Inserção de Tabelas**:
 
 - Use a **barra vertical** (.red[|]) para definir colunas e linhas.
 - Use três ou mais **hifens** (.red[`---`]) para criar o cabeçalho de cada coluna.
@@ -531,7 +551,16 @@ name: tab
 name: emj
 ## Markdown: Sintaxe básica
 &lt;br&gt;
-### **9 - Inserção de Emoji**:
+### **10 - Inserção de Emoji**:
+
+- **Existem duas possibilidades:**
+
+&gt; 1) Copiar e colar o emoji:
+[emojipedia](https://emojipedia.org/) 😎
+
+&gt; 2) Usar códigos de acesso de emoji: [rxaviers](https://gist.github.com/rxaviers/7360908) :sunglasses:
+
+---
 
 
 
