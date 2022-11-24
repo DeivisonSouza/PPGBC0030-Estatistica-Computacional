@@ -546,7 +546,7 @@ name: rmark
 
 .shadow3[
 ### **O que é R Markdown?**
-- É um pacote/biblioteca disponível na linguagem R, que permite o uso da linguagem de marcação .brown[Markdown] e Códigos (R, Python, ...). ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html))
+- É um pacote/biblioteca disponível na linguagem R, que permite o uso da linguagem de marcação .brown[Markdown] e Códigos (R, Python, ...), além de textos. ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html))
 
 ```r
 install.packages("rmarkdown")
