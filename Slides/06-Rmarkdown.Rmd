@@ -472,28 +472,31 @@ name: tab
 ### **8 - Inserção de Tabelas**:
 
 - Use a **barra vertical** (.red[|]) para definir colunas e linhas.
-- Use **hifens** (.red[-]) para criar o cabeçalho de cada coluna.
+- Use três ou mais **hifens** (.red[`---`]) para criar o cabeçalho de cada coluna.
+- Use **dois pontos** (.red[:]) o lado dos hífens na linha do cabeçalho para alinhar texto.
 
 .pull-left-10[
 .center[**Entrada**:]
 ```
-| Espécie  | diâmetro | altura |
-| -------- | ---------| -------|
-| Mogno    | 50       | 20     |
-| Ipê      | 70       | 25     |
+| Espécie    | diâmetro  | altura  |
+| :--------: | :---------| -------:|
+| Mogno      | 50        | 20      |
+| Ipê        | 70        | 25      |
 ```
+
+.font90[
+**Use aplicações web**: [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables)
+]
 ]
 
 .pull-right-10[
 .center[**Saída**:]
 
-| Espécie  | diâmetro | altura |
-| -------- | ---------| -------|
-| Mogno    | 50       | 20     |
-| Ipê      | 70       | 25     |
+| Espécie    | diâmetro  | altura  |
+| :--------: | :---------| -------:|
+| Mogno      | 50        | 20      |
+| Ipê        | 70        | 25      |
 ]
-
-
 
 ---
 name: est

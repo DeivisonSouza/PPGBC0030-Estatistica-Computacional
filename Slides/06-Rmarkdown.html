@@ -17,7 +17,7 @@
     <script src="06-Rmarkdown_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="06-Rmarkdown_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="06-Rmarkdown_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x4837f3a282249e3b64d9b5bf4f53da1","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e09e13ebcd4e47699a7d293b1c7507af","expires":1}</script>
     <script src="06-Rmarkdown_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="06-Rmarkdown_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="06-Rmarkdown_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -498,28 +498,31 @@ name: tab
 ### **8 - Inserção de Tabelas**:
 
 - Use a **barra vertical** (.red[|]) para definir colunas e linhas.
-- Use **hifens** (.red[-]) para criar o cabeçalho de cada coluna.
+- Use três ou mais **hifens** (.red[`---`]) para criar o cabeçalho de cada coluna.
+- Use **dois pontos** (.red[:]) o lado dos hífens na linha do cabeçalho para alinhar texto.
 
 .pull-left-10[
 .center[**Entrada**:]
 ```
-| Espécie  | diâmetro | altura |
-| -------- | ---------| -------|
-| Mogno    | 50       | 20     |
-| Ipê      | 70       | 25     |
+| Espécie    | diâmetro  | altura  |
+| :--------: | :---------| -------:|
+| Mogno      | 50        | 20      |
+| Ipê        | 70        | 25      |
 ```
+
+.font90[
+**Use aplicações web**: [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables)
+]
 ]
 
 .pull-right-10[
 .center[**Saída**:]
 
-| Espécie  | diâmetro | altura |
-| -------- | ---------| -------|
-| Mogno    | 50       | 20     |
-| Ipê      | 70       | 25     |
+| Espécie    | diâmetro  | altura  |
+| :--------: | :---------| -------:|
+| Mogno      | 50        | 20      |
+| Ipê        | 70        | 25      |
 ]
-
-
 
 ---
 name: est
