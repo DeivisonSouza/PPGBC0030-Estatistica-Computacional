@@ -588,8 +588,10 @@ name: est
 
 - **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
 
+.shadow3[
 .font90[
 **1) YAML**: .blue[Metadados do documento], introduzidos usando a sintaxe da linguagem [YAML](https://pt.wikipedia.org/wiki/YAML). Em geral, as informações são inseridas no cabeçalho do arquivo .red[`.Rmd`] entre o par de três traços (`---`). Em geral, várias configurações podem ser realizadas, as básicas são: .blue[título, subtítulo, autor(res), data, formato de saída].
+]
 ]
 
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
@@ -599,11 +601,23 @@ knitr::include_graphics("fig/part6/YAML.png")
 ---
 name: chunk
 ## R Markdown: Componentes básicos
-<br>
 
 - **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
 
-**2) Chunk**
+.shadow3[
+.font90[
+**2) Chunks**: São .blue[blocos de código] em R (ou outra linguagem).
+
+- Os chunks são delimitados por .blue[três crases].
+- A linguagem e as opções de renderização devem ser especificadas entre .blue[chaves \{ \}].
+- **Inserção**: Insert a new code chunk ou (**atalho**: Ctrl + Alt + I)
+]
+]
+<br>
+
+```{r echo=FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/part6/chunk.png")
+```
 
 ---
 name: markdown

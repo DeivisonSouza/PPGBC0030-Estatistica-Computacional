@@ -17,7 +17,7 @@
     <script src="06-Rmarkdown_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="06-Rmarkdown_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="06-Rmarkdown_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x07baafb78184bbc9ffae19bb07e34a2","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9712652c27741e4ac2f967780131c8c","expires":1}</script>
     <script src="06-Rmarkdown_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="06-Rmarkdown_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="06-Rmarkdown_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -612,8 +612,10 @@ name: est
 
 - **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
 
+.shadow3[
 .font90[
 **1) YAML**: .blue[Metadados do documento], introduzidos usando a sintaxe da linguagem [YAML](https://pt.wikipedia.org/wiki/YAML). Em geral, as informações são inseridas no cabeçalho do arquivo .red[`.Rmd`] entre o par de três traços (`---`). Em geral, várias configurações podem ser realizadas, as básicas são: .blue[título, subtítulo, autor(res), data, formato de saída].
+]
 ]
 
 &lt;img src="fig/part6/YAML.png" width="80%" style="display: block; margin: auto;" /&gt;
@@ -621,11 +623,21 @@ name: est
 ---
 name: chunk
 ## R Markdown: Componentes básicos
-&lt;br&gt;
 
 - **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
 
-**2) Chunk**
+.shadow3[
+.font90[
+**2) Chunks**: São .blue[blocos de código] em R (ou outra linguagem).
+
+- Os chunks são delimitados por .blue[três crases].
+- A linguagem e as opções de renderização devem ser especificadas entre .blue[chaves \{ \}].
+- **Inserção**: Insert a new code chunk ou (**atalho**: Ctrl + Alt + I)
+]
+]
+&lt;br&gt;
+
+&lt;img src="fig/part6/chunk.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 ---
 name: markdown
