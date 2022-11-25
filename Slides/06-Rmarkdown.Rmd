@@ -527,10 +527,10 @@ background-size: cover
 
 <br><br>
 
-.right[.font120[**.green[Parte 2] - R Markdown = .brown[Markdown] + Código + Texto**]]
+.right[.font120[**.green[Parte 2] - R Markdown = .brown[Markdown] + Código**]]
 <br>
 
-.right[.brown[.font120[Estrutura, Sintaxe, Chunk ...]]]
+.right[.brown[.font120[Estrutura, Sintaxe ...]]]
 
 <!-- Slide XX -->
 ---
@@ -545,7 +545,7 @@ name: rmark
 
 .shadow3[
 ### **O que é R Markdown?**
-- É um pacote/biblioteca disponível na linguagem R, que permite o uso da linguagem de marcação .brown[Markdown] e Códigos (R, Python, ...), além de textos. ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html)).
+- É um pacote/biblioteca disponível na linguagem R, que permite o uso da linguagem de marcação .brown[Markdown] e Códigos (R, Python, ...). ([Ciência de Dados em R](https://livro.curso-r.com/9-2-r-markdown.html)).
 - É ideal para criar documentos reprodutíveis.
 
 ```r
@@ -554,7 +554,7 @@ install.packages("rmarkdown")
 <br>
 
 .shadow2[
-.center[**.magenta[R Markdown] = .brown[Markdown] + Código (R, Python, ...) + Texto**]
+.center[**.magenta[R Markdown] = .brown[Markdown] + Código (R, Python, ...)**]
 ]
 
 <br>
