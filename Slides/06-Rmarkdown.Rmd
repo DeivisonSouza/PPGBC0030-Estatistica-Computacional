@@ -563,25 +563,50 @@ install.packages("rmarkdown")
 ---
 name: rmd
 ## R Markdown
-<br>
 
-**Criando um novo documento R Markdown:** 
+.pull-left-1[
+.font90[
+> **Criando um novo documento R Markdown:** <br><br>
 
-> **No Rstudio acesse**: File > New File > R Markdown (Extensão: `.Rmd`)
+> **No Rstudio acesse**: <br> 
+File > New File > R Markdown (Extensão: .red[`.Rmd`])
 
+> - **Escolha a modalidade:** <br> (Document, Presentation, Shiny, From Template) <br><br>
+> - **Escolha o formato de saída:** <br> (HTML, PDF ou Word)
+]
+]
+
+.pull-right-2[
+```{r echo=FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/part6/rmark.png")
+```
+]
 ---
 name: est
 ## R Markdown: Componentes básicos
 <br>
 
-**1) YAML**: responsável pelas configurações dos documentos.
+- **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
 
-**2) Markdown**
+.font90[
+**1) YAML**: .blue[Metadados do documento], introduzidos usando a sintaxe da linguagem [YAML](https://pt.wikipedia.org/wiki/YAML). Em geral, as informações são inseridas no cabeçalho do arquivo .red[`.Rmd`] entre o par de três traços (`---`). Em geral, várias configurações podem ser realizadas, as básicas são: .blue[título, subtítulo, autor(res), data, formato de saída].
+]
 
-**3) Chunks**
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/part6/YAML.png")
+```
 
 ---
 
+name: est
+## R Markdown: Componentes básicos
+<br>
+
+- **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
+
+**2) Chunk**
+
+**3) Markdown**
 
 
 ---
