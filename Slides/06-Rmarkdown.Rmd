@@ -597,8 +597,7 @@ knitr::include_graphics("fig/part6/YAML.png")
 ```
 
 ---
-
-name: est
+name: chunk
 ## R Markdown: Componentes básicos
 <br>
 
@@ -606,7 +605,15 @@ name: est
 
 **2) Chunk**
 
+---
+name: markdown
+## R Markdown: Componentes básicos
+<br>
+
+- **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
+
 **3) Markdown**
+
 
 
 ---
