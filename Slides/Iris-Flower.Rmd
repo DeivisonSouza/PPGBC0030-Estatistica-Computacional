@@ -1,53 +1,22 @@
 ---
 title: "Análise Exploratória de Dados - Iris Flower"
 author: "Deivison Venicio Souza"
-date: "2022-11-21"
-output: html_document
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: leonids   # cayman, tactile, architect, leonids, hpstr
+    highlight: github
+    toc: true
+    toc_depth: 2
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# Descrição
 
-## R Markdown
-
----
-```{r}
-# Título
-## Título
-### Título
-#### Título
-##### Título
-###### Título
-```
-
-# Título
-## Título
-### Título
-#### Título
-##### Título
-###### Título
+É um famoso conjunto de dados de medidas de flores íris. O conjunto de dados fornece as medidas, em centímetros, da largura e comprimento de sápalas e pétalas de flores de 3 três espécies de íris (setosa, versicolor e virginica). Foram medidas 50 flores de cada espécies. ([**iris dataset**](https://archive-beta.ics.uci.edu/))
 
 
-1. Primeiro item 
-2. Segundo item
-3. Terceiro item
-    1. Item recuado
-    2. Item recuado
+## Teste
 
-- Primeiro item 
-- Segundo item
-- Terceiro item
-    - Item recuado
-    - Item recuado
-    
-* This is the first list item.
-* Here's the second list item.
+### TTTTT
 
-    I need to add another paragraph below the second list item.
-
-* And here's the third list item.
-
-![Girassol](https://cdn.britannica.com/84/73184-004-E5A450B5/Sunflower-field-Fargo-North-Dakota.jpg)
-
-![legenda da imagem](https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdown.png){width=100px}
+##### YYYYYY

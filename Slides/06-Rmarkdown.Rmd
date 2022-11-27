@@ -171,18 +171,27 @@ knitr::include_graphics("https://bookdown.org/yihui/rmarkdown/images/hex-rmarkdo
 
 .pull-right-2[
 .pull-down[
-**Parte 2 - R Markdown: Markdown + Código + Texto**
+**Parte 2 - R Markdown: Markdown + Código**
 
 .font90[
-[1 - Estrutura](#est)
+[1 - O que é?](#oq)
 
-[2 - Sintaxe](#sin)
+[2 - Componentes básicos](#cb)
 
-[3 - Chunk](#chun)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.1 - YAML](#yaml)
 
-[4 - Formatos de saída](#fs)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.2 - Chunk](#chunk)
 
-[5 - Construindo um relatório estatístico - Iris Flower](#cre)
+&nbsp;&nbsp;&nbsp;&nbsp;[2.3 - Markdown](#mark)
+
+[3 - Formatos de saída](#fs)
+
+[4 - R Markdown: Iris Flower](#iris)
+
+[5 - Pacote prettydoc](#prettydoc)
+
+[6 - Pacote rmdformats](#rmdformats)
+
 ]
 ]
 ]
@@ -540,7 +549,7 @@ class: with-logo logo-ufpa
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 4 - R markdown: Relatórios Dinâmicos </div2> </div>
 
 ---
-name: rmark
+name: oq
 ## R Markdown
 
 .shadow3[
@@ -561,7 +570,7 @@ install.packages("rmarkdown")
 ]
 
 ---
-name: rmd
+
 ## R Markdown
 
 .pull-left-1[
@@ -582,27 +591,99 @@ knitr::include_graphics("fig/part6/rmark.png")
 ```
 ]
 ---
-name: est
+name: cb
 ## R Markdown: Componentes básicos
 <br>
 
-- **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
+- **Um arquivo .red[`.Rmd`] (R Markdown) possui 3 componentes básicos:**
+<br><br>
+
+.shadow3[
+.font200[
+.center[**YAML + CHUNK + MARKDOWN**]
+]
+]
+
+---
+name: yaml
+## R Markdown: Componentes básicos
+<br>
 
 .shadow3[
 .font90[
-**1) YAML**: .blue[Metadados do documento], introduzidos usando a sintaxe da linguagem [YAML](https://pt.wikipedia.org/wiki/YAML). Em geral, as informações são inseridas no cabeçalho do arquivo .red[`.Rmd`] entre o par de três traços (`---`). Em geral, várias configurações podem ser realizadas, as básicas são: .blue[título, subtítulo, autor(res), data, formato de saída].
+**1) YAML**
+
+- .blue[Metadados do documento], introduzidos usando a sintaxe da linguagem [YAML](https://pt.wikipedia.org/wiki/YAML). Em geral, as informações são inseridas no cabeçalho do arquivo .red[`.Rmd`] entre o par de três traços (`---`). Em geral, várias configurações podem ser realizadas, as básicas são: .blue[título, subtítulo, autor(res), data, formato de saída].
 ]
 ]
 
-```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/part6/YAML.png")
+```yaml
+---
+title: "Análise Exploratória de Dados"
+subtitle: "Iris Flower Dataset"
+author: 
+- name: "Deivison Venicio Souza"
+- name: "Anne Kerci Zahluth Shimon Celestino"
+date: "`r Sys.Date()`"
+output: html_document
+---
 ```
+
+---
+
+## R Markdown: Componentes básicos
+<br>
+
+.shadow3[
+.font90[
+**1) YAML**
+
+- É possível especificar diversos outros parâmetros no **YAML** para tornar o documento HTML mais elegante e sofisticado, por exemplo:
+
+**1) theme**: especificar temas Bootstrap (**opções:** .green[bootstrap, cerulean, cosmo, darkly, flatly, journal, lumen, paper, readable, sandstone, simplex, spacelab, united, and yeti])
+
+**2) highlight**: especifica o estilo de destaque da sintaxe (**opções:** .green[tango, pygments, kate, monochrome, espresso, zenburn, haddock, breezedark, and textmate])
+
+**3) toc**: adicione um sumário usando `toc: true`.
+
+**4) toc_depth**: especifica a profundidade do sumário usando `toc_depth: valor`. Por exemplo, se `toc_depth: 2`, um sumário será construído usando cabeçalhos de até nível 2 (default = 3).
+
+]
+]
+
+---
+
+## R Markdown: Componentes básicos
+<br>
+
+**Um exemplo de cabeçalho YAML com mais metadados...**
+<br>
+
+```yaml
+---
+title: "Análise Exploratória de Dados"
+subtitle: "Iris Flower Dataset"
+author: 
+- name: "Deivison Venicio Souza"
+- name: "Anne Kerci Zahluth Shimon Celestino"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: united
+    highlight: tango
+    toc: true
+    toc_depth: 2
+---
+```
+
+.font90[
+**💡Consulte**: [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+]
 
 ---
 name: chunk
 ## R Markdown: Componentes básicos
-
-- **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
+<br>
 
 .shadow3[
 .font90[
@@ -620,11 +701,33 @@ knitr::include_graphics("fig/part6/chunk.png")
 ```
 
 ---
-name: markdown
+
+## R Markdown: Componentes básicos
+
+**Opções de Chunk...**
+
+.font80[
+- Os chunks de códigos (`{r, ...}`) possuem uma série de opções que configuram o comportamento do bloco de código.
+
+| **Opção** | **Padrão** | **Descrição** |
+|---|---|---|
+| eval | TRUE | O código deve ser executado? |
+| include | TRUE | O código deve ser exibido no documento final? Os resultados não serão apresentados. |
+| collapse | FALSE | O código e os resultados do chunk devem ser colapsados em um bloco único? |
+| echo | FALSE | O código deve ser exibido no documento final? Os resultados serão apresentados. |
+| results | markup | - **hide**: os resultados não serão exibidos. <br> - **hold**: os resultados serão exibidos ao final do chunk. <br> - **asis**: os resultados não serão formatados, sendo mostrados os resultados “brutos” (código html, tex, …). |
+| warning | TRUE | Os avisos gerados pelo código devem ser exibidos? |
+| fig.cap | NULL | Use para atribuir um título de figura referente ao chunk. |
+| fig.height | 7 | Altura para gráficos criados pelo código (em polegadas). |
+| fig.width | 7 | Largura para gráficos criados pelo código (em polegadas). |
+
+**💡Consulte**: [knitr options](https://yihui.org/knitr/options/#plots)
+]
+
+---
+name: mark
 ## R Markdown: Componentes básicos
 <br>
-
-- **Um arquivo .red[`.Rmd`] possui 3 componentes básicos:**
 
 **3) Markdown**: São adicionados ao longo do .red[`.Rmd`], em regiões fora das demarcações .blue[YAMl] e .blue[Chunks].
 
@@ -634,14 +737,83 @@ name: markdown
 > **Exibe alterações em tempo real e fornece suporte para redação técnica.**
 
 ---
-name: markdown
+name: iris
 ## R Markdown: Iris Flower
 <br>
 
-- Vamos desenvolver um R Markdown com os resultados da AED dos dados de **Iris Flower**.
+- Vamos .blue[**brincar**] de desenvolver um R Markdown com os resultados da AED dos dados de **Iris Flower**.
+
+```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media2.giphy.com/media/scZPhLqaVOM1qG4lT9/giphy.gif")
+```
+
+---
+name: prettydoc
+## Pacote .orange[prettydoc]: Belos templates para HTML
+<br>
+
+.shadow3[
+- O pacote .orange[[**prettydoc**](https://github.com/yixuan/prettydoc/)] é uma excelente alternativa para produzir documentos R Markdown elegantes e sofisticados.
+
+```r
+install.packages("prettydoc")
+```
+]
+
+<br>
+
+.font90[
+> **No Rstudio acesse**: <br>
+File > New File > R Markdown > From Template > Lightweight and Pretty Document (HTML)
+]
 
 ---
 
+## Pacote .orange[prettydoc]: Belos templates para HTML
+<br>
+
+- Em **output** (formato de saída) do cabeçalho **YAML** deve-se  especificar o uso de .blue[`prettydoc::html_pretty`] ao invés de .blue[`rmarkdown::html_document`].
+- As novas opções para `theme` são: .green[cayman, tactile, architect, leonids, hpstr].
+<br>
+
+```yaml
+---
+title: "Análise Exploratória de Dados - Iris Flower"
+author: "Deivison Venicio Souza"
+date: "`r Sys.Date()`"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+---
+```
+
+.font90[
+**💡Experimente cada um dos temas**!
+]
+
+---
+
+## Pacote .orange[rmdformats]: mais opções de temas...
+<br>
+
+- O pacote .orange[rmdformats] também possui opcões de temas elegantes.
+- Os temas disponíveis são: .green[material, readthedown, html_clean, html_docco].
+- Use o seguinte comando no YAML: `output: rmdformats::<nome do template>`
+
+```yaml
+---
+title: "Análise Exploratória de Dados - Iris Flower"
+author: "Deivison Venicio Souza"
+date: "`r Sys.Date()`"
+output: rmdformats::readthedown
+---
+```
+
+.font90[
+**💡Experimente cada um dos temas**!]
+
+---
 name: ap
 ## .font80[Atividade Prática 2 (Transforme seu script .R em .Rmd)]
 
