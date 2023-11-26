@@ -4,7 +4,7 @@
     <title>Estatística Computacional (PPGBC0030)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
-    <script src="01-Introducao-RBase_files/header-attrs-2.14/header-attrs.js"></script>
+    <script src="01-Introducao-RBase_files/header-attrs-2.24/header-attrs.js"></script>
     <link href="01-Introducao-RBase_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <script src="01-Introducao-RBase_files/fabric-4.3.1/fabric.min.js"></script>
     <link href="01-Introducao-RBase_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <script src="01-Introducao-RBase_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="01-Introducao-RBase_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="01-Introducao-RBase_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a60f4f940c1c40a684ffaf48f58d67b8","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ffe030fb89d048a3931ead23f748536e","expires":1}</script>
     <script src="01-Introducao-RBase_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="01-Introducao-RBase_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="01-Introducao-RBase_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -27,15 +27,15 @@
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="01-Introducao-RBase_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="01-Introducao-RBase_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
-    <script src="01-Introducao-RBase_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-    <script src="01-Introducao-RBase_files/jquery-3.5.1/jquery.min.js"></script>
+    <script src="01-Introducao-RBase_files/htmlwidgets-1.6.2/htmlwidgets.js"></script>
     <link href="01-Introducao-RBase_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="01-Introducao-RBase_files/datatables-binding-0.17/datatables.js"></script>
-    <link href="01-Introducao-RBase_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="01-Introducao-RBase_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="01-Introducao-RBase_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-    <link href="01-Introducao-RBase_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-    <script src="01-Introducao-RBase_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+    <script src="01-Introducao-RBase_files/datatables-binding-0.29/datatables.js"></script>
+    <script src="01-Introducao-RBase_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="01-Introducao-RBase_files/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="01-Introducao-RBase_files/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="01-Introducao-RBase_files/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
+    <link href="01-Introducao-RBase_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="01-Introducao-RBase_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -55,9 +55,9 @@
     <textarea id="source">
 
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/ppgbc2.png), url(fig/slide-title/capa.png)
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ppgbc3.png), url(fig/slide-title/capa.png)
 background-position: 90% 90%, 10% 90%
-background-size: 250px, 200px, cover
+background-size: 150px, 300px, cover
 
 
 
@@ -68,7 +68,7 @@ background-size: 250px, 200px, cover
 	height: 120px;
 	position: absolute;
 	bottom: 1.3em;
-	right: -0.3em;
+	right: -0.5em;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -94,14 +94,14 @@ background-size: 250px, 200px, cover
 
 <div>
 <style type="text/css">.xaringan-extra-logo {
-width: 210px;
-height: 210px;
+width: 130px;
+height: 130px;
 z-index: 0;
-background-image: url(fig/slide-title/ppgbc1.jpeg);
+background-image: url(fig/slide-title/LMFTCA.png);
 background-size: contain;
 background-repeat: no-repeat;
 position: absolute;
-top:1.5em;right:0.6em;
+top:1em;right:.5em;
 }
 </style>
 <script>(function () {
@@ -158,7 +158,7 @@ top:1.5em;right:0.6em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 14/outubro/2022 &lt;br&gt; (Atualizado em: 06/novembro/2022)
+##### 1ª versão: 14/outubro/2022 &lt;br&gt; (Atualizado em: 26/novembro/2023)
 
 ---
 
@@ -358,8 +358,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-66f3de2c23e22f547609" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-66f3de2c23e22f547609">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-709f88daefe5b52f5ff9" style="width:750px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-709f88daefe5b52f5ff9">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -3330,8 +3330,8 @@ name: log
 ]
 
 .pull-right-5[
-<div id="htmlwidget-01800eb3e9569e1269e7" style="width:1000px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-01800eb3e9569e1269e7">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-241ab4a521b842ccfc0d" style="width:1000px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-241ab4a521b842ccfc0d">{"x":{"filter":"none","vertical":false,"caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,4],"date":[]},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.699999999999999],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
