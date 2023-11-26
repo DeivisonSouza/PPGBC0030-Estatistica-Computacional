@@ -33,7 +33,8 @@
 Este repositório guarda os slides em .html, códigos R, arquivos .Rmd,
 figuras, conjunto de dados (e outros) utilizados na disciplina de
 **Estatística Computacional (PPGBC0030)** ministrada pelo
-**Prof. Deivison Venicio Souza** no **Programa de Pós-Graduação em
+**Prof. Deivison Venicio Souza** (Laboratório de Manejo Floretal,
+Tecnologias e Comunidades Amazônicas) no **Programa de Pós-Graduação em
 Biodiversidade e Conservação (PPGBC)** da Universidade Federal do Pará
 (UFPA). O curso será ofertado na modalidade de Ensino Presencial no
 Campus Universitário de Altamira-PA.
