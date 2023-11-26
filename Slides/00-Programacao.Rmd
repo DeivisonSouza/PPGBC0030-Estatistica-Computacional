@@ -295,6 +295,26 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 - Medidas de dispersão (ou variabilidade)
 - AED - Iris Flower
 - Atividade Prática (AED em Dados Reais)
+
+.pull-right-15[
+.pull-left-4[
+```{r echo=FALSE, out.width='100%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://github.com/dcomtois/summarytools/raw/master/img/st-banner-fuzzy.png")
+```
+]
+
+.pull-right-4[
+```{r echo=FALSE, out.width='35%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
+```
+]
+
+.pull-left-4[
+```{r echo=FALSE, out.width='35%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
+```
+]
+]
 ]
 ]
 
@@ -312,13 +332,13 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 
 .pull-right-15[
 .pull-left-4[
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='35%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://raw.githubusercontent.com/cran/AgroR/master/man/figures/logo.png")
 ```
 ]
 
 .pull-right-4[
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='35%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://indrajeetpatil.github.io/ggstatsplot/reference/figures/logo.png")
 ```
 ]
@@ -341,8 +361,13 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 - Formatos de saída (html, pdf, word,...)
 - Construindo um relatório estatístico para Iris Flower.
 ]
-]
 
+.pull-left-4[
+```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png")
+```
+]
+]
 
 ---
 
