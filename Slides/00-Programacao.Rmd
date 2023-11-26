@@ -139,7 +139,7 @@ class: with-logo logo-ufpa
 
 .pull-right[
 ```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/slide-title/img.jpeg")
+knitr::include_graphics("fig/slide-title/Foto.jpeg")
 ```
 ]
 
@@ -165,7 +165,7 @@ knitr::include_graphics("fig/slide-title/img.jpeg")
 
 .pull-right[
 ```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/slide-title/img.jpeg")
+knitr::include_graphics("fig/slide-title/Foto.jpeg")
 ```
 ]
 
@@ -219,112 +219,27 @@ knitr::include_graphics('fig/slide-title/ORCID.png')
 - 2) Projeto Ipa’wã (Copaíba): Etnomapeamento e inventário de copaibais nativos na TI Xipaya (Aldeias Tukamã, Tukayá e Kaarimã). (**Financiador**: Fundo Brasileiro para a Biodiversidade - FUNBIO) - ([https://www.funbio.org.br/](https://www.funbio.org.br/)) (Parceria entre Associação Indígena Pyjahyry Xipaia – AIPHX e UFPA)
 <br>
 
-**Siga o Instagram**: [@pyjahyryxipaia](https://www.instagram.com/pyjahyryxipaia/)
+----------------------------------------
+
+**Siga o Instagram**: [@pyjahyryxipaia](https://www.instagram.com/pyjahyryxipaia/) (Associação Indígena Pyjahyry Xipaya)
+
+**Siga o Instagram**: [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/) (Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas)
 
 <!-- Slide 2 -->
 ---
 
-## Cronograma .black[.font70[(**Horário: 07h30min - 12h30min / 14h30min - 19h30min**)]]
+## Cronograma .black[.font70[(**Horário: 08h00min - 12h30min / 14h30min - 18h00min**)]]
 
-```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
-library(calendR)
-library(ggplot2)
-
-dates <- seq(as.Date("2022-11-01"), as.Date("2022-11-30"), by = "1 day")
-events <- ifelse(format(dates, "%w") %in% c(6,7), "Final de semana", NA)
-events[c(24)] <- "Brasil x Sérvia (16h)"
-events[c(28)] <- "Brasil x Suíça (13h)"
-
-p <- calendR::calendR(year = 2022,
-        month = 11,
-        start = "M",
-        title = "Novembro (Ano 2022)",
-        title.size = 50, 
-        subtitle.size = 20, 
-        title.col = 2,  
-        subtitle = "",   
-        subtitle.col = 3,
-        weeknames.size = 15,
-        special.days = events,
-        legend.pos = "right",
-        special.col = c("yellow", "yellow", rgb(0, 0, 1, 0.15)),
-        col = "black",                  
-        lwd = 1,
-        lty = 1,
-        font.family = "mono",       
-        font.style = "bold",
-        weeknames.col = "black",
-        months.col = "gray30",
-        days.col = 2, 
-        day.size = 18,
-        bg.img = "",
-        text = c(
-          "Introdução \n ao \n R-base",
-          "Introdução \n ao \n Tidyverse",
-          "Análise \n Exploratória \n de Dados"
-          ),
-        text.pos = c(28:30), 
-        text.size = 12,
-        text.col = 1)
-
-p + theme(legend.key.size = unit(2, 'cm'),
-          legend.text = element_text(size=30))
+```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/part0/Novembro.jpg")
 ```
 
-<!-- Slide 2 -->
----
-
-## Cronograma .black[.font70[(**Horário: 07h30min - 12h30min / 14h30min - 19h30min**)]]
-
-```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
-library(calendR)
-library(ggplot2)
-
-dates <- seq(as.Date("2022-12-01"), as.Date("2022-12-31"), by = "1 day")
-events <- ifelse(format(dates, "%w") %in% c(6,7), "Final de semana", NA)
-events[c(2)] <- "Brasil x Camarões (16h)"
-
-p <- calendR::calendR(year = 2022,
-        month = 12,
-        start = "M",
-        title = "Dezembro (Ano 2022)",
-        title.size = 50, 
-        subtitle.size = 20, 
-        title.col = 2,  
-        subtitle = "",   
-        subtitle.col = 3,
-        weeknames.size = 15,
-        special.days = events,
-        legend.pos = "right",
-        special.col = c("yellow", rgb(0, 0, 1, 0.15)),
-        col = "black",                  
-        lwd = 1,
-        lty = 1,
-        font.family = "mono",       
-        font.style = "bold",
-        weeknames.col = "black",
-        months.col = "gray30",
-        days.col = 2, 
-        day.size = 18,
-        bg.img = "",
-        text = c(
-          "Projeto AED \n (Grupo)",
-          "Seminário \n (Grupo)"
-          ),
-        text.pos = c(1:2), 
-        text.size = 12,
-        text.col = 1)
-
-p + theme(legend.key.size = unit(2, 'cm'),
-          legend.text = element_text(size=30))
-```
-
-<!-- Slide 2 -->
+<!-- Slide 3 -->
 ---
 
 ## Programação
 <br>
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 4 módulos:
+A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
 <br><br>
 
 .pull-left-4[
@@ -368,7 +283,7 @@ knitr::include_graphics("https://patchwork.data-imaginist.com/reference/figures/
 
 ## Programação
 <br>
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 4 módulos:
+A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
 <br><br>
 
 .pull-left-4[
@@ -386,7 +301,40 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 
 .pull-right-4[
 .font80[
-**Módulo 4** - .orange[**R markdown: Relatórios Dinâmicos**]
+**Módulo 4** - .orange[**Análise de Experimentos com R**]
+
+- Análise de Variância (ANOVA) de dados experimentais
+- Pós-testes de comparações de médias (Paramétricos)
+- Avaliação de pressupostos da ANOVA Paramétrica
+- Uso de pacotes R na análise de experimentos (AgroR; agricolae, etc.)
+]
+
+
+.pull-right-15[
+.pull-left-4[
+```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://raw.githubusercontent.com/cran/AgroR/master/man/figures/logo.png")
+```
+]
+
+.pull-right-4[
+```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://indrajeetpatil.github.io/ggstatsplot/reference/figures/logo.png")
+```
+]
+]
+]
+
+---
+
+## Programação
+<br>
+A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
+<br><br>
+
+.pull-left-4[
+.font80[
+**Módulo 5** - .orange[**R markdown: Relatórios Dinâmicos**]
 
 - Sintaxe da linguagem de marcação Markdown.
 - Estrutura do R markdown.
@@ -394,6 +342,7 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 - Construindo um relatório estatístico para Iris Flower.
 ]
 ]
+
 
 ---
 
@@ -405,7 +354,7 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 <br><br>
 - Link para acesso ao repositório: https://github.com/DeivisonSouza/PPGBC0030-Estatistica-Computacional
 <br><br>
-- Esta é a primeira versão deste material. Mas, a ideia é continuar melhorando continuamente...
+- Esta é apenas a segunda versão deste material. Mas, a ideia é continuar melhorando. Portanto, toda sugestão é bem vinda!
 <br><br><br>
 ]
 
