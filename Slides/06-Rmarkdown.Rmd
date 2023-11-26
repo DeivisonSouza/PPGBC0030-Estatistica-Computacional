@@ -28,9 +28,9 @@ output:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/ppgbc2.png), url(fig/slide-title/capa.png)
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ppgbc3.png), url(fig/slide-title/capa.png)
 background-position: 90% 90%, 10% 90%
-background-size: 250px, 200px, cover
+background-size: 150px, 300px, cover
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -51,7 +51,7 @@ knitr::opts_chunk$set(
 	height: 120px;
 	position: absolute;
 	bottom: 1.3em;
-	right: -0.3em;
+	right: -0.5em;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
@@ -83,11 +83,10 @@ library(kableExtra)
 ```{r xaringan-logo, echo=FALSE}
 library(xaringanExtra)
 use_logo(
-  image_url = "fig/slide-title/ppgbc1.jpeg",
-  position = css_position(top = "1.5em", right = "0.6em"),
-  width = "210px",
-  height = "210px"
-)
+  image_url = "fig/slide-title/LMFTCA.png",
+  position = css_position(top = "1em", right = ".5em"),
+  width = "130px",
+  height = "130px")
 
 use_scribble() # para escrever nos slides
 use_share_again()
