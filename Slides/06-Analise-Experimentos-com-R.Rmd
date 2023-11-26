@@ -40,7 +40,7 @@ knitr::opts_chunk$set(
 	fig.showtext = TRUE,
 	message = FALSE,
 	warning = FALSE,
-	cache = FALSE,
+	cache = TRUE,
 	collapse = TRUE,
 	dpi = 600
 )
