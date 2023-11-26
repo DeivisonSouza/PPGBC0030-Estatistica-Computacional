@@ -6,19 +6,15 @@
 
 # Seja bem vindo(a)! :deciduous_tree: :smiley: :grin:
 
+:calendar: 27/11 a 01/12/2023
+
+:alarm_clock: **08h00min - 12h30min** (Manhã) e **14h30min a 18h00min**
+(Tarde)
+
 <div>
-<img src="Slides/fig/slide-title/ufpa2.png" width="150" align="middle" class="center">
-    
-<img src="Slides/fig/slide-title/ppgbc.png" width="150" align="middle" class="center">
+<img src="Slides/fig/slide-title/ufpa.png" width="150" align="middle" class="center">
+<img src="Slides/fig/slide-title/LMFTCA.png" width="150" align="middle" class="center">
 <div>
-
-<br>
-
-:calendar: 28, 29 e 30 de Novembro 2022
-
-:calendar: 01 e 02 de Dezembro 2022
-
-:alarm_clock: **08h00min - 13h00min**
 
 <div itemscope="" itemtype="https://schema.org/Person">
 
@@ -29,6 +25,8 @@
 **Lattes**: <http://lattes.cnpq.br/9063094443073532>
 
 **Researchgate**: <https://www.researchgate.net/profile/Deivison-Souza>
+
+------------------------------------------------------------------------
 
 # Estatística Computacional (PPGBC0030)
 
@@ -54,19 +52,18 @@ detalhados a seguir.
 | Slides/04-Visualizacao-Dados.html | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/04-Visualizacao-Dados.html> |
 | Slides/05-AED.html                | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/05-AED.html>                |
 | Slides/06-Rmarkdown.html          | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/06-Rmarkdown.html>          |
+| Slides/Iris-Flower.html           | <https://deivisonsouza.github.io/PPGBC0030-Estatistica-Computacional/Slides/Iris-Flower.html>           |
 
 # Conjunto de dados
 
 Serão usados os seguintes conjuntos na disciplina:
 
-1 - **UPA07DVS.csv**
-![\rightarrow](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crightarrow "\rightarrow")
-São dados de Inventário Florestal 100% (IF100%) realizado em Área de
-Manejo Florestal Sustentável na Amazônia brasileira.
+1 - **UPA07DVS.csv** $\rightarrow$ São dados de Inventário Florestal
+100% (IF100%) realizado em Área de Manejo Florestal Sustentável na
+Amazônia brasileira.
 
-2 - **data.csv**
-![\rightarrow](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crightarrow "\rightarrow")
-É simplesmente uma pequena amostra aleatória de IF100%.
+2 - **data.csv** $\rightarrow$ É simplesmente uma pequena amostra
+aleatória de IF100%.
 
 | Slide                     | Link                                                                                            |
 |:--------------------------|:------------------------------------------------------------------------------------------------|
@@ -91,30 +88,29 @@ as aplicações em bases de dados.
 # Facilitador :deciduous_tree:
 
 <div>
-<img src="Slides/fig/slide-title/img.jpeg" width="150" align="middle" class="center">
+<img src="Slides/fig/slide-title/Foto.jpeg" width="150" align="middle" class="center">
 <div>
 
 <br>
 
-**Deivison Venicio Souza** possui graduação em :deciduous_tree:
-**Engenharia Florestal** :deciduous_tree: pela Universidade Federal
-Rural da Amazônia (2008), Mestrado em Ciências Florestais pela
-Universidade Federal Rural da Amazônia (2011) e Doutorado em Engenharia
+Graduado em :deciduous_tree: **Engenharia Florestal** pela Universidade
+Federal Rural da Amazônia (2008), Mestre em Ciências Florestais pela
+Universidade Federal Rural da Amazônia (2011) e Doutor em Engenharia
 Florestal pela Universidade Federal do Paraná (2020). No período de 2009
-a 2011 exerceu o cargo de Analista Ambiental da Secretaria Estadual de
-Meio Ambiente do Pará, na Gerência de Projetos Agrossilvipastoris
-(GEPAF), com atuação direta na etapa de análise técnica, para fins de
-licenciamento ambiental, de Planos de Manejo Florestal Sustentável
-(PMFS), Projetos de Desbastes e Reflorestamento e Supressão Florestal.
-Desde 2011 é professor da Faculdade de Engenharia Florestal da
-Universidade Federal do Pará, Campus Universitário de Altamira, Pará. É
-responsável por ministrar as disciplinas Estatística Básica,
-Dendrometria, Experimentação Florestal e Inventário Florestal,
-integrantes do desenho curricular do Curso de Graduação em Engenharia
-Florestal. Tem experiência na área de Gestão e Manejo dos Recursos
-Florestais, com ênfase em Silvicultura de Florestas Naturais, Inventário
-Florestal e Mensuração Florestal. Atualmente, seus interesses
-científicos incluem o uso da inteligência artificial na conservação da
-biodiversidade (com ênfase no uso de visão computacional) e emprego de
-técnicas de aprendizado de máquina na modelagem preditiva de variáveis
-biométricas, com uso das Linguagens R e Python.
+a 2011, exerceu o cargo de Analista Ambiental da Secretaria Estadual de
+Meio Ambiente do Pará, na Gerência de Projetos Agrossilvipastoris.
+Atualmente, é docente adjunto IV na Universidade Federal do Pará,
+atuando no curso de graduação em Engenharia Florestal e Programa de
+Pós-Graduação em Biodiversidade e Conservação. Coordena projetos de
+pesquisas orientados ao manejo e conservação da biodiversidade, com
+ênfase no desenvolvimento de tecnologias baseadas em inteligência
+artificial e visão computacional para o reconhecimento automático de
+espécies da flora Amazônica. Também tem contribuído em projetos
+socioambientais junto aos povos originários, em parceria com a
+Associação Indígena Pyjahyry Xipaya, com ênfase na estruturação e
+fortalecimento de cadeias de produtos da sociobiodiversidade e gestão
+territorial e ambiental.
+
+------------------------------------------------------------------------
+
+**Este repositório está licenciado nos termos da licença MIT.**
