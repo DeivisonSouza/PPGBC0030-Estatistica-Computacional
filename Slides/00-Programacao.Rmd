@@ -1,5 +1,5 @@
 ---
-title: "Estatística Computacional (PPGBC0030)"
+title: "Estatística Computacional com R (PPGBC0030)"
 subtitle: "Programação e Orientações"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
@@ -100,7 +100,7 @@ use_clipboard()
 ```
 
 <!-- title-slide -->
-# .font120[Estatística Computacional <br> (PPGBC0030)]
+# .font120[Estatística Computacional com R<br> (PPGBC0030)]
 
 ## `r anicon::faa("pagelines", animate="horizontal", colour="green")` .font90[Programação e Orientações] `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
@@ -117,7 +117,7 @@ use_clipboard()
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Programação e Orientações</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional com R (PPGBC0030)</div3>/ <div2>Programação e Orientações</div2> </div>
 
 ---
 
@@ -229,10 +229,10 @@ knitr::include_graphics('fig/slide-title/ORCID.png')
 <!-- Slide 2 -->
 ---
 
-## Cronograma .black[.font70[(**Horário: 08h00min - 12h30min / 14h30min - 18h00min**)]]
+## Cronograma .black[.font70[(**Horário: 14h00min - 19h00min**)]]
 
 ```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/part0/Novembro.jpg")
+knitr::include_graphics("fig/part0/Agosto.png")
 ```
 
 <!-- Slide 3 -->
@@ -240,8 +240,10 @@ knitr::include_graphics("fig/part0/Novembro.jpg")
 
 ## Programação
 <br>
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
+A disciplina .blue["Estatística Computacional com R (PPGBC0030)"] está organizada em 2 partes:
 <br><br>
+
+**Parte 1** - .green[**Introdução à Linguagem de Programação R**]
 
 .pull-left-4[
 .font80[
@@ -264,14 +266,14 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 
 .pull-right-15[
 .pull-left-4[
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://readr.tidyverse.org/logo.png")
 knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ```
 ]
 
 .pull-right-4[
-```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
 knitr::include_graphics("https://patchwork.data-imaginist.com/reference/figures/logo.png")
 ```
@@ -284,8 +286,10 @@ knitr::include_graphics("https://patchwork.data-imaginist.com/reference/figures/
 
 ## Programação
 <br>
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
+A disciplina .blue["Estatística Computacional com R (PPGBC0030)"] está organizada em 2 partes:
 <br><br>
+
+**Parte 2** - .green[**Estatística Básica com R**]
 
 .pull-left-4[
 .font80[
@@ -304,12 +308,6 @@ knitr::include_graphics("https://github.com/dcomtois/summarytools/raw/master/img
 ```
 ]
 
-.pull-right-4[
-```{r echo=FALSE, out.width='35%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
-```
-]
-
 .pull-left-4[
 ```{r echo=FALSE, out.width='35%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
@@ -322,19 +320,19 @@ knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
 
 .pull-right-4[
 .font80[
-**Módulo 4** - .orange[**Análise de Experimentos com R**]
+**Módulo 4** - .orange[**R markdown: Relatórios Dinâmicos**]
 
-- Análise de Variância (ANOVA) de dados experimentais
-- Pós-testes de comparações de médias (Paramétricos)
-- Avaliação de pressupostos da ANOVA Paramétrica
-- Uso de pacotes R na análise de experimentos (AgroR; agricolae, etc.)
+- Sintaxe da linguagem de marcação Markdown.
+- Estrutura do R markdown.
+- Formatos de saída (html, pdf, word,...)
+- Construindo um relatório estatístico para Iris Flower.
 ]
 
 
 .pull-right-15[
 .pull-left-4[
 ```{r echo=FALSE, out.width='35%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://raw.githubusercontent.com/cran/AgroR/master/man/figures/logo.png")
+knitr::include_graphics("https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png")
 ```
 ]
 
@@ -343,30 +341,6 @@ knitr::include_graphics("https://raw.githubusercontent.com/cran/AgroR/master/man
 knitr::include_graphics("https://indrajeetpatil.github.io/ggstatsplot/reference/figures/logo.png")
 ```
 ]
-]
-]
-
----
-
-## Programação
-<br>
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
-<br><br>
-
-.pull-left-4[
-.font80[
-**Módulo 5** - .orange[**R markdown: Relatórios Dinâmicos**]
-
-- Sintaxe da linguagem de marcação Markdown.
-- Estrutura do R markdown.
-- Formatos de saída (html, pdf, word,...)
-- Construindo um relatório estatístico para Iris Flower.
-]
-
-.pull-left-4[
-```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png")
-```
 ]
 ]
 

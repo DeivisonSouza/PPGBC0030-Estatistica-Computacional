@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Estatística Computacional (PPGBC0030)</title>
+    <title>Estatística Computacional com R (PPGBC0030)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
     <script src="00-Programacao_files/header-attrs-2.24/header-attrs.js"></script>
@@ -17,7 +17,7 @@
     <script src="00-Programacao_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="00-Programacao_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="00-Programacao_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xcb1c347ce7744afabc4c43d9384602a","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x45f694b92c34503be3eb07c58c43b76","expires":1}</script>
     <script src="00-Programacao_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="00-Programacao_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="00-Programacao_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -125,7 +125,7 @@ top:1em;right:.5em;
 }</style>
 
 &lt;!-- title-slide --&gt;
-# .font120[Estatística Computacional &lt;br&gt; (PPGBC0030)]
+# .font120[Estatística Computacional com R&lt;br&gt; (PPGBC0030)]
 
 ## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> .font90[Programação e Orientações] <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
 &lt;br&gt;
@@ -135,14 +135,14 @@ top:1em;right:.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 12/outubro/2022 &lt;br&gt; (Atualizado em: 27/novembro/2023)
+##### 1ª versão: 12/outubro/2022 &lt;br&gt; (Atualizado em: 18/agosto/2024)
 
 ---
 
 layout: true
 class: with-logo logo-ufpa
 &lt;div class="my-header"&gt;&lt;/div&gt;
-&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Programação e Orientações&lt;/div2&gt; &lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Estatística Computacional com R (PPGBC0030)&lt;/div3&gt;/ &lt;div2&gt;Programação e Orientações&lt;/div2&gt; &lt;/div&gt;
 
 ---
 
@@ -248,17 +248,19 @@ class: with-logo logo-ufpa
 &lt;!-- Slide 2 --&gt;
 ---
 
-## Cronograma .black[.font70[(**Horário: 08h00min - 12h30min / 14h30min - 18h00min**)]]
+## Cronograma .black[.font70[(**Horário: 14h00min - 19h00min**)]]
 
-&lt;img src="fig/part0/Novembro.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="fig/part0/Agosto.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 &lt;!-- Slide 3 --&gt;
 ---
 
 ## Programação
 &lt;br&gt;
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
+A disciplina .blue["Estatística Computacional com R (PPGBC0030)"] está organizada em 2 partes:
 &lt;br&gt;&lt;br&gt;
+
+**Parte 1** - .green[**Introdução à Linguagem de Programação R**]
 
 .pull-left-4[
 .font80[
@@ -281,11 +283,11 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 
 .pull-right-15[
 .pull-left-4[
-&lt;img src="https://readr.tidyverse.org/logo.png" width="40%" style="display: block; margin: auto;" /&gt;&lt;img src="https://dplyr.tidyverse.org/logo.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://readr.tidyverse.org/logo.png" width="30%" style="display: block; margin: auto;" /&gt;&lt;img src="https://dplyr.tidyverse.org/logo.png" width="30%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-right-4[
-&lt;img src="https://ggplot2.tidyverse.org/logo.png" width="40%" style="display: block; margin: auto;" /&gt;&lt;img src="https://patchwork.data-imaginist.com/reference/figures/logo.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://ggplot2.tidyverse.org/logo.png" width="30%" style="display: block; margin: auto;" /&gt;&lt;img src="https://patchwork.data-imaginist.com/reference/figures/logo.png" width="30%" style="display: block; margin: auto;" /&gt;
 ]
 ]
 ]
@@ -295,8 +297,10 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 
 ## Programação
 &lt;br&gt;
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
+A disciplina .blue["Estatística Computacional com R (PPGBC0030)"] está organizada em 2 partes:
 &lt;br&gt;&lt;br&gt;
+
+**Parte 2** - .green[**Estatística Básica com R**]
 
 .pull-left-4[
 .font80[
@@ -313,10 +317,6 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 &lt;img src="https://github.com/dcomtois/summarytools/raw/master/img/st-banner-fuzzy.png" width="100%" style="display: block; margin: auto;" /&gt;
 ]
 
-.pull-right-4[
-&lt;img src="https://dplyr.tidyverse.org/logo.png" width="35%" style="display: block; margin: auto;" /&gt;
-]
-
 .pull-left-4[
 &lt;img src="https://ggplot2.tidyverse.org/logo.png" width="35%" style="display: block; margin: auto;" /&gt;
 ]
@@ -327,36 +327,7 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 
 .pull-right-4[
 .font80[
-**Módulo 4** - .orange[**Análise de Experimentos com R**]
-
-- Análise de Variância (ANOVA) de dados experimentais
-- Pós-testes de comparações de médias (Paramétricos)
-- Avaliação de pressupostos da ANOVA Paramétrica
-- Uso de pacotes R na análise de experimentos (AgroR; agricolae, etc.)
-]
-
-
-.pull-right-15[
-.pull-left-4[
-&lt;img src="https://raw.githubusercontent.com/cran/AgroR/master/man/figures/logo.png" width="35%" style="display: block; margin: auto;" /&gt;
-]
-
-.pull-right-4[
-&lt;img src="https://indrajeetpatil.github.io/ggstatsplot/reference/figures/logo.png" width="35%" style="display: block; margin: auto;" /&gt;
-]
-]
-]
-
----
-
-## Programação
-&lt;br&gt;
-A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em 5 módulos:
-&lt;br&gt;&lt;br&gt;
-
-.pull-left-4[
-.font80[
-**Módulo 5** - .orange[**R markdown: Relatórios Dinâmicos**]
+**Módulo 4** - .orange[**R markdown: Relatórios Dinâmicos**]
 
 - Sintaxe da linguagem de marcação Markdown.
 - Estrutura do R markdown.
@@ -364,8 +335,15 @@ A disciplina .blue["Estatística Computacional (PPGBC0030)"] está organizada em
 - Construindo um relatório estatístico para Iris Flower.
 ]
 
+
+.pull-right-15[
 .pull-left-4[
-&lt;img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://github.com/rstudio/rmarkdown/raw/main/man/figures/logo.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-4[
+&lt;img src="https://indrajeetpatil.github.io/ggstatsplot/reference/figures/logo.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
 ]
 ]
 
