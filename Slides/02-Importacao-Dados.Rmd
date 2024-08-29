@@ -1,5 +1,5 @@
 ---
-title: "Estatística Computacional (PPGBC0030)"
+title: "Estatística Computacional com R (PPGBC0030)"
 subtitle: "Tidyverse: importação de dados"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
@@ -131,7 +131,7 @@ CustomDT <- function(data){
 
 
 <!-- title-slide -->
-# .font120[Estatística Computacional <br> (PPGBC0030)]
+# .font120[Estatística Computacional com R <br> (PPGBC0030)]
 
 ## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Introdução ao Tidyverse: .orange[readr]`r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
@@ -148,7 +148,7 @@ CustomDT <- function(data){
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 2 - Introdução ao Tidyverse</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional com R (PPGBC0030)</div3>/ <div2>Módulo 2 - Introdução ao Tidyverse</div2> </div>
 
 ---
 
@@ -226,7 +226,7 @@ knitr::include_graphics("https://readr.tidyverse.org/logo.png")
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional (PPGBC0030)</div3>/ <div2>Módulo 2 - Introdução ao Tidyverse</div2> </div>
+<!-- <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Estatística Computacional com R (PPGBC0030)</div3>/ <div2>Módulo 2 - Introdução ao Tidyverse</div2> </div> -->
 
 ---
 name: import

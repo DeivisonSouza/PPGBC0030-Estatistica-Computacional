@@ -1,5 +1,5 @@
 ---
-title: "Estatística Computacional (PPGBC0030)"
+title: "Estatística Computacional com R (PPGBC0030)"
 subtitle: "Introdução ao Tidyverse: .orange[ggplot2]"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
@@ -123,7 +123,7 @@ CustomDT <- function(data){
 
 
 <!-- title-slide -->
-# .font120[Estatística Computacional <br> (PPGBC0030)]
+# .font120[Estatística Computacional com R<br> (PPGBC0030)]
 
 ## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Introdução ao Tidyverse: .orange[ggplot2]`r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
